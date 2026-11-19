@@ -1,0 +1,1 @@
+La preparación técnica del notebook se realizó con asistencia de ChatGPT, utilizando como referencia el código de la Unidad I, la versión 0.3 y la propuesta de informes AAF de Claude. La estudiante deberá registrar sus ejecuciones, revisión, correcciones y los usos reales posteriores. No se atribuyen pruebas o resultados no efectuados.
