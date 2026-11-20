@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-19
+# Fecha de extracción: 2026-11-20
 """Vía 2: boletines mensuales públicos AAF. Una página de catálogo, un PDF por mes.
 No se consulta la SMV (HTTP 418 documentado). --local reparsea PDF entregados.
 --demo coteja un PDF vivo con su copia original. No usa Drive ni sesiones previas.
@@ -68,7 +68,8 @@ CABECERAS=[('Fondo de fondos',r'(?:fondos? de fondos)(?: en (?:soles|dolares))?'
 ADMIN += ['Andean Crown','Prudential SAF','El Dorado','BTG Pactual Perú','Blum SAF','Coril SAF','BD Capital','Faro Capital SAFI','AC SAF','MCC','Sura SAF','Adcap','Credicorp Capital SAF']
 N=r'[-+]?\d[\d.,]*'; FALTA=r'(?:n/a|n\.d\.|nd|[-–—])'
 PATRON=re.compile(rf'^(?P<nombre>.+?)\s+(?P<mon>US\s*\$|S/\.?|USD|PEN|\$)\s+(?P<vc>{N}|{FALTA})\s+(?P<ret>{N}\s*%|{FALTA})(?:\s|$)',re.I)
-def leer_pdf(ruta,mes):
+def leer_moderno(ruta,mes):
+    """Lee portada, títulos y filas del área visible. Registra descartes sin inventar valores."""
     filas=[]; descartes=[]; candidatos=0; tipo=None
     with pdfplumber.open(ruta) as f:
         portada=f.pages[0].crop((0,0,f.pages[0].width,f.pages[0].height)).extract_text() or ''
@@ -106,6 +107,58 @@ def leer_pdf(ruta,mes):
                 filas.append({'mes':mes,'tipo':tipo,'fondo':fondo,'administradora':safm,'denominacion_original':nombre,'moneda':'USD' if '$' in m['mon'] or m['mon'].upper()=='USD' else 'PEN','estado':'no informado','valor_cuota':vc,'rent_mes':rm,'archivo':ruta.name,'pagina':i,'fila_original':linea})
     return filas,descartes,candidatos
 
+import fitz
+
+def leer_historico(ruta, mes):
+    """Lee las líneas ordenadas espacialmente de los PDF históricos con texto.
+    Solo se admiten filas de tablas de rentabilidad, con moneda, cuota y retorno explícitos.
+    El nombre de la administradora se separa por el espacio entre columnas.
+    """
+    filas=[]; descartes=[]; candidatos=0; tipo=None; activo=False
+    categorias=[('Fondo de fondos',r'fondos? de fondos'),('Estructurados',r'estructurad'),('ETF',r'\b(?:bursatil|etf)\b'),('Acciones',r'\bacciones\b|renta variable'),('Mixtos',r'\bmixtos?\b'),('Deuda',r'\bdeuda\b'),('Flexibles',r'\bflexibles?\b')]
+    patron=re.compile(rf'^(?P<nombre>.+?)\s{{2,}}(?P<admin>[^\n]+?)\s{{2,}}(?P<mon>US\s*\$|S/\.?|USD|PEN|\$)\s+(?P<vc>{N}|{FALTA})\s+(?P<ret>{N}\s*%|{FALTA})(?:\s|$)',re.I)
+    with fitz.open(ruta) as doc:
+        portada=plano(doc[0].get_text(sort=True))
+        y,m=mes.split('-'); alternativas=[k for k,v in {**MESES,**ABREV}.items() if v==int(m)]
+        # El mes de portada debe aparecer en título o comentario del cierre; no basta el nombre del archivo.
+        patmes='(?:'+'|'.join(alternativas)+')'
+        if not (re.search(rf'\b{patmes}\s*[-/]?\s*{y}(?![0-9])',portada) or re.search(rf'cierre(?:\s+de)?\s+{patmes}\b',portada) and y in portada):
+            raise ValueError('Mes de portada no comprobado: '+mes)
+        for i,p in enumerate(doc,1):
+            texto=p.get_text(sort=True)
+            for linea in texto.splitlines():
+                s=unicodedata.normalize('NFKC',linea).replace('−','-').strip();t=plano(s)
+                if 'rentabilidad de los fondos mutuos' in t or ('safm' in t and 'moneda' in t):activo=True
+                if not activo:continue
+                # Encabezados de categoría de los cuadros (no interpretamos nombres de fondos como títulos).
+                if ('safm' in t and 'moneda' in t) or re.match(r'^fondos mutuos\b',t) or re.fullmatch(r'(?:de )?(?:deuda(?:\s*\([^)]*\))?|acciones|mixtos|flexibles|estructurados|fondos de fondos(?:\s*\([^)]*\))?|fondo bursatil(?: etf)?)',t):
+                    # El rótulo de la tabla se encuentra a veces después de SAFM (texto superpuesto).
+                    despues=t.split('safm',1)[-1] if 'safm' in t else ''
+                    final=re.search(r'(?:mes)\s*((?:de )?deuda|de acciones|mixtos|fondo bursatil|estructurados|fondos? de fondos|flexibles)\b',despues)
+                    texto_tipo=final.group(1) if final else t.split('safm')[0]
+                    nuevo=next((k for k,pat in categorias if re.search(pat,texto_tipo)),None)
+                    if nuevo:tipo=nuevo
+                if not tipo:continue
+                if not re.search(rf'\s(?:US\s*\$|S/\.?|USD|PEN|\$)\s+(?:{N}|{FALTA})\s+(?:{N}\s*%|{FALTA})(?:\s|$)',s,re.I):continue
+                candidatos+=1
+                m=patron.match(s)
+                if not m:
+                    descartes.append({'mes':mes,'pagina':i,'archivo':ruta.name,'fila_original':linea});continue
+                vc=numero(m['vc']);rm=numero(m['ret'],True)
+                if vc is None or vc<=0 or rm is None or rm< -1:
+                    descartes.append({'mes':mes,'pagina':i,'archivo':ruta.name,'fila_original':linea});continue
+                fondo=' '.join(m['nombre'].split());admin=' '.join(m['admin'].split())
+                filas.append({'mes':mes,'tipo':tipo,'fondo':fondo,'administradora':admin,'denominacion_original':fondo+' '+admin,'moneda':'USD' if '$' in m['mon'] or m['mon'].upper()=='USD' else 'PEN','estado':'no informado','valor_cuota':vc,'rent_mes':rm,'archivo':ruta.name,'pagina':i,'fila_original':linea})
+    return filas,descartes,candidatos
+
+
+def leer_pdf(ruta,mes):
+    # Selección congelada por formato, no por resultados financieros.
+    if mes=='2025-12':raise ValueError('PDF de diciembre 2025 con capas de texto superpuestas: no se valida la lectura de categorías')
+    if mes < '2022-12':return leer_historico(ruta,mes)
+    try:return leer_moderno(ruta,mes)
+    except ValueError:return leer_historico(ruta,mes)
+
 def pedir(url,reglas=None,es_robots=False):
     # Seguir únicamente redirecciones normales dentro del mismo portal; nunca un rechazo.
     for _ in range(4):
@@ -132,6 +185,7 @@ def reglas_portal():
     r=RobotFileParser();r.parse(contenido.decode('utf-8',errors='replace').splitlines());return r
 
 def enlaces(contenido):
+    """Identifica URL publicadas a partir del catálogo y comprueba el mes del enlace."""
     sopa=BeautifulSoup(contenido,'html.parser'); candidatos={}
     for a in sopa.find_all('a',href=True):
         href=urljoin(LISTADO,a['href']); etiqueta=plano(a.get_text(' ',strip=True))
@@ -154,6 +208,7 @@ def enlaces(contenido):
     return links
 
 def procesar(manifiesto):
+    """Verifica SHA de cada PDF antes de parsearlo y conserva la evidencia de calidad."""
     todas=[]; descartes=[]; control=[]
     for row in manifiesto.sort_values('mes').itertuples():
         ruta=PDF/row.archivo
@@ -176,7 +231,7 @@ def procesar(manifiesto):
     print('Cobertura preliminar:',df.mes.nunique(),'meses;',len(df),'filas; revisar control de parseo.')
     # No se acepta un parser que, en conjunto, omite la mayoría de las líneas candidatas.
     cand=sum(r['candidatos'] for r in control)
-    if df.mes.nunique()<24:raise RuntimeError('Menos de 24 meses legibles; revisar control de parseo y no estimar.')
+    if df.mes.nunique()<60:raise RuntimeError('Menos de 60 meses legibles; revisar control de parseo antes de estimar.')
     return df
 
 def main(local=False,demo=False):
@@ -205,7 +260,9 @@ def main(local=False,demo=False):
     registros=[]
     if MANIFIESTO.exists():registros=pd.read_csv(MANIFIESTO).to_dict('records')
     # Primero se prueba un único informe antes de descargar los demás.
-    orden=['2025-01']+sorted(m for m in links if m!='2025-01')
+    pilotos=['2025-01','2020-06']
+    if any(m not in links for m in pilotos):raise RuntimeError('El catálogo no contiene ambos boletines piloto.')
+    orden=pilotos+sorted(m for m in links if m not in pilotos)
     for mes in orden:
         u=links[mes];nombre=f'aaf_boletin_2024200501G_{mes}.pdf';ruta=PDF/nombre
         anterior=next((x for x in registros if x['mes']==mes),None)
@@ -215,13 +272,13 @@ def main(local=False,demo=False):
             try:
                 b=pedir(u,reglas)
             except RuntimeError as e:
-                if mes != '2025-01' and str(e).startswith(('HTTP 404;', 'HTTP 410;')):
+                if mes not in pilotos and str(e).startswith(('HTTP 404;', 'HTTP 410;')):
                     anotar(f'{mes}: enlace no disponible. Se omite.')
                     continue
                 raise
 
             if not b.startswith(b'%PDF'):
-                if mes == '2025-01':
+                if mes in pilotos:
                     raise RuntimeError('El piloto no es PDF')
                 anotar(f'{mes}: enlace sin PDF. Se omite.')
                 continue
@@ -229,7 +286,7 @@ def main(local=False,demo=False):
             registros=[x for x in registros if x['mes']!=mes]
             registros.append({'mes':mes,'archivo':nombre,'url':u,'http':200,'fecha_consulta':datetime.now(timezone(timedelta(hours=-5))).isoformat(),'sha256':hashlib.sha256(b).hexdigest()})
             pd.DataFrame(registros).sort_values('mes').to_csv(MANIFIESTO,index=False)
-        if mes=='2025-01':
+        if mes in pilotos:
             f,d,c=leer_pdf(ruta,mes);print(f'PILOTO: {len(f)} filas / {c} candidatas.')
             if len(f)<25 or (c and len(f)/c<.90):raise RuntimeError('El piloto no confirma extracción suficiente. No se descargan los demás boletines.')
             print(pd.DataFrame(f)[['fondo','moneda','tipo','valor_cuota','rent_mes']].head(10).to_string(index=False))

@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-19
+# Fecha de extracción: 2026-11-20
 """Vía API BCRPData. Una consulta por serie; guarda JSON original y CSV.
 --local: reconstruye exclusivamente desde los JSON incluidos. --demo: consulta
 el tramo de cierre y coteja diez valores disponibles, sin sobrescribir crudos.
@@ -33,10 +33,12 @@ def anotar(s):
     with (RAIZ/'log_ejecucion.txt').open('a',encoding='utf-8') as f: f.write(linea+'\n')
 
 def url(codigo, inicio=FECHA_INICIO, fin=FECHA_CORTE):
+    """Construye el endpoint con fecha fija y formato compatible con la frecuencia."""
     if SERIES[codigo][1]=='mensual': inicio,fin=inicio[:7],fin[:7]
     return f'{BASE}/{codigo}/json/{inicio}/{fin}/esp'
 
 def consultar(direccion):
+    """Respeta la pausa entre solicitudes y registra el código HTTP antes de guardar."""
     time.sleep(1.5)
     r=requests.get(direccion,headers={'User-Agent':UA},timeout=90)
     anotar(f'HTTP {r.status_code} | {direccion}')
@@ -53,6 +55,7 @@ def fecha(texto):
     return pd.to_datetime(s,format='%Y-%m-%d',errors='raise')
 
 def leer(codigo,contenido):
+    """Interpreta JSON conservando el valor original y valida nombre y fechas de la serie."""
     j=json.loads(contenido.decode('utf-8-sig'))
     nombre=j['config']['series'][0]['name']
     clave,frec,esperado,unidad=SERIES[codigo]

@@ -1,1 +1,3 @@
-La preparación técnica del notebook se realizó con asistencia de ChatGPT, utilizando como referencia el código de la Unidad I, la versión 0.3 y la propuesta de informes AAF de Claude. La estudiante deberá registrar sus ejecuciones, revisión, correcciones y los usos reales posteriores. No se atribuyen pruebas o resultados no efectuados.
+# Uso de IA y desarrollo técnico
+
+Asistencia de Claude y ChatGPT en diseño, extracción y programación. Referencia metodológica: Unidad I. La revisión Plan B recupera formatos históricos de AAF mediante PyMuPDF; homologa identificadores, completa vacíos interiores limitados mediante interpolación geométrica, winsoriza, selecciona panel mensual balanceado por cobertura y reestima los modelos. Conserva crudos, tres X, verificador y documentación. No se afirma permiso ni ejecución viva no realizada. La estudiante verifica su ejecución y registra intervenciones posteriores. No se afirma autorización docente ni cotejo vivo no realizado.

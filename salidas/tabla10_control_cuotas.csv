@@ -1,0 +1,11 @@
+tipo,moneda,filas,cuotas_comparables,saltos_50pct,discrepancias
+Acciones,PEN,114,106,0,4
+Acciones,USD,456,422,0,4
+Deuda,PEN,399,371,0,1
+Deuda,USD,399,369,0,0
+Flexibles,PEN,171,149,0,2
+Flexibles,USD,285,260,0,0
+Fondo de fondos,PEN,228,208,0,6
+Fondo de fondos,USD,1710,1552,0,20
+Mixtos,PEN,114,106,0,0
+Mixtos,USD,171,157,0,4

@@ -1,83 +1,65 @@
 mes,tipo,fondo,administradora,denominacion_original,moneda,estado,valor_cuota,rent_mes,archivo,pagina,fila_original,id_fondo_serie
-2023-03,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1020.05,0.0055,aaf_boletin_2024200501G_2023-03.pdf,7,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,020.05 0.55% 1.61% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-03,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.04,0.0036,aaf_boletin_2024200501G_2023-03.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.04 0.36% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-04,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1025.53,0.0054,aaf_boletin_2024200501G_2023-04.pdf,7,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,025.53 0.54% 2.15% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-04,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.08,0.0043,aaf_boletin_2024200501G_2023-04.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.08 0.43% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-05,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1031.1,0.0054,aaf_boletin_2024200501G_2023-05.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,031.10 0.54% 2.71% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-05,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.14,0.006,aaf_boletin_2024200501G_2023-05.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.14 0.60% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-06,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.19,0.0051,aaf_boletin_2024200501G_2023-06.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.19 0.51% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-06,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1036.55,0.0053,aaf_boletin_2024200501G_2023-06.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,036.55 0.53% 3.25% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-07,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.23,0.0043,aaf_boletin_2024200501G_2023-07.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.23 0.43% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-07,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1042.37,0.0056,aaf_boletin_2024200501G_2023-07.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,042.37 0.56% 3.83% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-08,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.28,0.0046999999999999,aaf_boletin_2024200501G_2023-08.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.28 0.47% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-08,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1048.18,0.0056,aaf_boletin_2024200501G_2023-08.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,048.18 0.56% 4.41% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-09,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.33,0.0046,aaf_boletin_2024200501G_2023-09.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.33 0.46% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-09,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1053.76,0.0053,aaf_boletin_2024200501G_2023-09.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,053.76 0.53% 4.97% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-10,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.38,0.0046,aaf_boletin_2024200501G_2023-10.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.38 0.46% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-10,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1059.54,0.0055,aaf_boletin_2024200501G_2023-10.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,059.54 0.55% 5.54% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-11,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.43,0.0049,aaf_boletin_2024200501G_2023-11.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.43 0.49% N/A -,SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2023-11,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1065.12,0.0053,aaf_boletin_2024200501G_2023-11.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,065.12 0.53% 6.10% -",SF RENTA DOLARES 1Y V SCOTIA FONDOS | USD
-2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,114.32,0.0046,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 114.32 0.46% 2.04% 4.13%,FONDOS SURA | PEN
-2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.39,0.0054,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 102.39 0.54% 2.07% -,FONDOS SURA | PEN
-2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.71,0.006,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 100.71 0.60% - -,FONDOS SURA | PEN
-2025-05,Deuda,Interfondos,,Interfondos,PEN,no informado,223.03,0.0039,aaf_boletin_2024200501G_2025-05.pdf,3,Interfondos S/ 223.03 0.39% 2.46% 6.47%,INTERFONDOS | PEN
-2025-05,Deuda,Interfondos,,Interfondos,PEN,no informado,139.04,0.0034,aaf_boletin_2024200501G_2025-05.pdf,3,Interfondos S/ 139.04 0.34% 1.58% 4.24%,INTERFONDOS | PEN
-2025-05,Deuda,Interfondos,,Interfondos,PEN,no informado,139.97,0.0034999999999999,aaf_boletin_2024200501G_2025-05.pdf,3,Interfondos S/ 139.97 0.35% 1.66% 4.43%,INTERFONDOS | PEN
-2025-05,Deuda,Interfondos,,Interfondos,PEN,no informado,139.12,0.0034,aaf_boletin_2024200501G_2025-05.pdf,3,Interfondos S/ 139.12 0.34% 1.61% -,INTERFONDOS | PEN
-2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,231.62,0.0079,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 231.62 0.79% - -,FONDOS SURA | PEN
-2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.84,0.0077,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 100.84 0.77% - -,FONDOS SURA | PEN
-2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,114.91,0.0052,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 114.91 0.52% 2.57% 5.04%,FONDOS SURA | PEN
-2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.77,0.0037,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 102.77 0.37% 2.45% -,FONDOS SURA | PEN
-2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.99,0.0028,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 100.99 0.28% - -,FONDOS SURA | PEN
-2025-06,Deuda,Interfondos,,Interfondos,PEN,no informado,224.72,0.0076,aaf_boletin_2024200501G_2025-06.pdf,3,Interfondos S/ 224.72 0.76% 3.23% 6.66%,INTERFONDOS | PEN
-2025-06,Deuda,Interfondos,,Interfondos,PEN,no informado,139.46,0.003,aaf_boletin_2024200501G_2025-06.pdf,3,Interfondos S/ 139.46 0.30% 1.89% 4.15%,INTERFONDOS | PEN
-2025-06,Deuda,Interfondos,,Interfondos,PEN,no informado,140.41,0.0032,aaf_boletin_2024200501G_2025-06.pdf,3,Interfondos S/ 140.41 0.32% 1.98% 4.43%,INTERFONDOS | PEN
-2025-06,Deuda,Interfondos,,Interfondos,PEN,no informado,139.55,0.0031,aaf_boletin_2024200501G_2025-06.pdf,3,Interfondos S/ 139.55 0.31% 1.92% 4.21%,INTERFONDOS | PEN
-2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,232.64,0.0044,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 232.64 0.44% - -,FONDOS SURA | PEN
-2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.27,0.0043,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 101.27 0.43% - -,FONDOS SURA | PEN
-2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,115.41,0.0044,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 115.41 0.44% 3.02% 4.59%,FONDOS SURA | PEN
-2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.21,0.0043,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 103.21 0.43% 2.89% -,FONDOS SURA | PEN
-2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.39,0.0039,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 101.39 0.39% - -,FONDOS SURA | PEN
-2025-07,Deuda,Interfondos,,Interfondos,PEN,no informado,225.97,0.0056,aaf_boletin_2024200501G_2025-07.pdf,3,Interfondos S/ 225.97 0.56% 3.81% 6.54%,INTERFONDOS | PEN
-2025-07,Deuda,Interfondos,,Interfondos,PEN,no informado,139.9,0.0032,aaf_boletin_2024200501G_2025-07.pdf,3,Interfondos S/ 139.90 0.32% 2.21% 4.07%,INTERFONDOS | PEN
-2025-07,Deuda,Interfondos,,Interfondos,PEN,no informado,140.88,0.0033,aaf_boletin_2024200501G_2025-07.pdf,3,Interfondos S/ 140.88 0.33% 2.32% 4.26%,INTERFONDOS | PEN
-2025-07,Deuda,Interfondos,,Interfondos,PEN,no informado,140.0,0.0032,aaf_boletin_2024200501G_2025-07.pdf,3,Interfondos S/ 140.00 0.32% 2.25% 4.13%,INTERFONDOS | PEN
-2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,234.08,0.0062,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 234.08 0.62% - -,FONDOS SURA | PEN
-2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.88,0.006,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 101.88 0.60% - -,FONDOS SURA | PEN
-2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.35,0.0081,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 116.35 0.81% 3.86% 3.52%,FONDOS SURA | PEN
-2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.66,0.0044,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 103.66 0.44% 3.34% -,FONDOS SURA | PEN
-2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.89,0.005,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 101.89 0.50% - -,FONDOS SURA | PEN
-2025-08,Deuda,Interfondos,,Interfondos,PEN,no informado,227.23,0.0056,aaf_boletin_2024200501G_2025-08.pdf,4,Interfondos S/ 227.23 0.56% 4.39% 5.89%,INTERFONDOS | PEN
-2025-08,Deuda,Interfondos,,Interfondos,PEN,no informado,140.35,0.0032,aaf_boletin_2024200501G_2025-08.pdf,4,Interfondos S/ 140.35 0.32% 2.54% 3.99%,INTERFONDOS | PEN
-2025-08,Deuda,Interfondos,,Interfondos,PEN,no informado,141.35,0.0034,aaf_boletin_2024200501G_2025-08.pdf,4,Interfondos S/ 141.35 0.34% 2.67% 4.18%,INTERFONDOS | PEN
-2025-08,Deuda,Interfondos,,Interfondos,PEN,no informado,140.46,0.0033,aaf_boletin_2024200501G_2025-08.pdf,4,Interfondos S/ 140.46 0.33% 2.59% 4.05%,INTERFONDOS | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,235.8,0.0073,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 235.80 0.73% - -,FONDOS SURA | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.61,0.0072,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 102.61 0.72% - -,FONDOS SURA | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.11,-0.0021,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 116.11 -0.21% 3.64% 3.13%,FONDOS SURA | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,104.09,0.0040999999999999,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 104.09 0.41% - -,FONDOS SURA | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.27,0.0037,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 102.27 0.37% - -,FONDOS SURA | PEN
-2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.41,0.0037,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 100.41 0.37% - -,FONDOS SURA | PEN
-2025-09,Deuda,Interfondos,,Interfondos,PEN,no informado,228.79,0.0069,aaf_boletin_2024200501G_2025-09.pdf,4,Interfondos S/ 228.79 0.69% 5.11% 5.78%,INTERFONDOS | PEN
-2025-09,Deuda,Interfondos,,Interfondos,PEN,no informado,140.77,0.003,aaf_boletin_2024200501G_2025-09.pdf,4,Interfondos S/ 140.77 0.30% 2.85% 3.90%,INTERFONDOS | PEN
-2025-09,Deuda,Interfondos,,Interfondos,PEN,no informado,141.8,0.0032,aaf_boletin_2024200501G_2025-09.pdf,4,Interfondos S/ 141.80 0.32% 2.99% 4.09%,INTERFONDOS | PEN
-2025-09,Deuda,Interfondos,,Interfondos,PEN,no informado,140.89,0.0031,aaf_boletin_2024200501G_2025-09.pdf,4,Interfondos S/ 140.89 0.31% 2.90% 3.96%,INTERFONDOS | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,236.34,0.0023,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 236.34 0.23% - -,FONDOS SURA | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.83,0.0021,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 102.83 0.21% - -,FONDOS SURA | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.48,0.0031,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 116.48 0.31% 3.97% 4.50%,FONDOS SURA | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,104.5,0.004,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 104.50 0.40% - -,FONDOS SURA | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.6,0.0032,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 102.60 0.32% - -,FONDOS SURA | PEN
-2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.64,0.0023,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 100.64 0.23% - -,FONDOS SURA | PEN
-2025-10,Deuda,Interfondos,,Interfondos,PEN,no informado,229.29,0.0022,aaf_boletin_2024200501G_2025-10.pdf,4,Interfondos S/ 229.29 0.22% 5.33% 6.42%,INTERFONDOS | PEN
-2025-10,Deuda,Interfondos,,Interfondos,PEN,no informado,141.19,0.0029,aaf_boletin_2024200501G_2025-10.pdf,4,Interfondos S/ 141.19 0.29% 3.15% 3.83%,INTERFONDOS | PEN
-2025-10,Deuda,Interfondos,,Interfondos,PEN,no informado,142.24,0.0031,aaf_boletin_2024200501G_2025-10.pdf,4,Interfondos S/ 142.24 0.31% 3.31% 4.01%,INTERFONDOS | PEN
-2025-10,Deuda,Interfondos,,Interfondos,PEN,no informado,141.31,0.003,aaf_boletin_2024200501G_2025-10.pdf,4,Interfondos S/ 141.31 0.30% 3.21% 3.89%,INTERFONDOS | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,237.84,0.0064,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 237.84 0.64% - -,FONDOS SURA | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.47,0.0062,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 103.47 0.62% - -,FONDOS SURA | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,117.69,0.0104,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 117.69 1.04% 5.05% 4.28%,FONDOS SURA | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.8,0.0043,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 100.80 0.43% - -,FONDOS SURA | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.06,0.0045,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 103.06 0.45% - -,FONDOS SURA | PEN
-2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.18,0.0053,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 101.18 0.53% - -,FONDOS SURA | PEN
-2025-11,Deuda,Interfondos,,Interfondos,PEN,no informado,230.49,0.0053,aaf_boletin_2024200501G_2025-11.pdf,4,Interfondos S/ 230.49 0.53% 5.89% 6.30%,INTERFONDOS | PEN
-2025-11,Deuda,Interfondos,,Interfondos,PEN,no informado,141.6,0.0029,aaf_boletin_2024200501G_2025-11.pdf,4,Interfondos S/ 141.60 0.29% 3.46% 3.80%,INTERFONDOS | PEN
-2025-11,Deuda,Interfondos,,Interfondos,PEN,no informado,142.68,0.0031,aaf_boletin_2024200501G_2025-11.pdf,4,Interfondos S/ 142.68 0.31% 3.63% 3.98%,INTERFONDOS | PEN
-2025-11,Deuda,Interfondos,,Interfondos,PEN,no informado,141.73,0.003,aaf_boletin_2024200501G_2025-11.pdf,4,Interfondos S/ 141.73 0.30% 3.52% 3.86%,INTERFONDOS | PEN
+2020-10,Fondo de fondos,Credicorp Capital Vision II,Credicorp Capital,Credicorp Capital Vision II Credicorp Capital,USD,no informado,130.06,-0.0115,aaf_boletin_2024200501G_2020-10.pdf,7,Credicorp Capital Vision II                                                             Credicorp Capital          US$        130.06            -1.15%           -0.87%         2.51%,CREDICORP | VISION II | USD
+2020-10,Fondo de fondos,Credicorp Capital Vision II,Credicorp Capital,Credicorp Capital Vision II Credicorp Capital,USD,no informado,127.87,-0.0070999999999999,aaf_boletin_2024200501G_2020-10.pdf,7,Credicorp Capital Vision II                                                             Credicorp Capital          US$        127.87           -0.71%          0.20%                    -,CREDICORP | VISION II | USD
+2021-02,Deuda,IF Libre Disponibilidad $,Interfondos,IF Libre Disponibilidad $ Interfondos,USD,no informado,50.12,0.0023,aaf_boletin_2024200501G_2021-02.pdf,5,IF Libre Disponibilidad $                                                              Interfondos           US$          50.12          0.23%           N/A                     -,INTERFONDOS | IF LIBRE DISPONIBILIDAD $ | USD
+2021-02,Deuda,IF Libre Disponibilidad $,Interfondos,IF Libre Disponibilidad $ Interfondos,USD,no informado,106.92,0.0003,aaf_boletin_2024200501G_2021-02.pdf,5,IF Libre Disponibilidad $                                                              Interfondos           US$         106.92          0.03%          0.06%         0.78%,INTERFONDOS | IF LIBRE DISPONIBILIDAD $ | USD
+2022-05,Fondo de fondos,FDF IF VI Rendimiento Global,Interfondos,FDF IF VI Rendimiento Global Interfondos,USD,no informado,50.06,0.0012,aaf_boletin_2024200501G_2022-05.pdf,6,FDF IF VI Rendimiento Global                                    Interfondos         US$       50.06       0.12%         N/A             -,INTERFONDOS | FDF IF VI RENDIMIENTO GLOBAL | USD
+2022-05,Fondo de fondos,FDF IF VI Rendimiento Global,Interfondos,FDF IF VI Rendimiento Global Interfondos,USD,no informado,50.27,0.0018,aaf_boletin_2024200501G_2022-05.pdf,6,FDF IF VI Rendimiento Global                                    Interfondos         US$       50.27       0.18%         N/A             -,INTERFONDOS | FDF IF VI RENDIMIENTO GLOBAL | USD
+2022-06,Estructurados,Barrera Condicional XI,Credicorp Capital,Barrera Condicional XI Credicorp Capital,USD,no informado,99.52,0.0016,aaf_boletin_2024200501G_2022-06.pdf,5, Barrera Condicional XI                                            Credicorp Capital    US$      99.52        0.16%        -3.82%      -2.79%,CREDICORP | BARRERA CONDICIONAL XI | USD
+2022-06,Estructurados,Barrera Condicional XI,Credicorp Capital,Barrera Condicional XI Credicorp Capital,USD,no informado,98.57,-0.0046999999999999,aaf_boletin_2024200501G_2022-06.pdf,5, Barrera Condicional XI                                            Credicorp Capital    US$      98.57        -0.47%        -2.84%      -3.26%,CREDICORP | BARRERA CONDICIONAL XI | USD
+2022-07,Estructurados,Barrera Condicional XI,Credicorp Capital,Barrera Condicional XI Credicorp Capital,USD,no informado,99.7,0.0018,aaf_boletin_2024200501G_2022-07.pdf,5, Barrera Condicional XI                                            Credicorp Capital    US$      99.70        0.18%        -3.65%      -3.38%,CREDICORP | BARRERA CONDICIONAL XI | USD
+2022-07,Estructurados,Barrera Condicional XI,Credicorp Capital,Barrera Condicional XI Credicorp Capital,USD,no informado,98.83,-0.0026,aaf_boletin_2024200501G_2022-07.pdf,5, Barrera Condicional XI                                            Credicorp Capital    US$      98.83        -0.26%        -2.58%      -2.84%,CREDICORP | BARRERA CONDICIONAL XI | USD
+2023-03,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1020.05,0.0055,aaf_boletin_2024200501G_2023-03.pdf,7,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,020.05 0.55% 1.61% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-03,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.04,0.0036,aaf_boletin_2024200501G_2023-03.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.04 0.36% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-04,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1025.53,0.0054,aaf_boletin_2024200501G_2023-04.pdf,7,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,025.53 0.54% 2.15% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-04,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.08,0.0043,aaf_boletin_2024200501G_2023-04.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.08 0.43% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-05,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1031.1,0.0054,aaf_boletin_2024200501G_2023-05.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,031.10 0.54% 2.71% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-05,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,10.14,0.006,aaf_boletin_2024200501G_2023-05.pdf,8,SF Renta Dólares 1Y V Scotia Fondos US$ 10.14 0.60% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-06,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.19,0.0051,aaf_boletin_2024200501G_2023-06.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.19 0.51% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-06,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1036.55,0.0053,aaf_boletin_2024200501G_2023-06.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,036.55 0.53% 3.25% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-07,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.23,0.0043,aaf_boletin_2024200501G_2023-07.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.23 0.43% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-07,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1042.37,0.0056,aaf_boletin_2024200501G_2023-07.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,042.37 0.56% 3.83% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-08,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.28,0.0046999999999999,aaf_boletin_2024200501G_2023-08.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.28 0.47% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-08,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1048.18,0.0056,aaf_boletin_2024200501G_2023-08.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,048.18 0.56% 4.41% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-09,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.33,0.0046,aaf_boletin_2024200501G_2023-09.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.33 0.46% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-09,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1053.76,0.0053,aaf_boletin_2024200501G_2023-09.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,053.76 0.53% 4.97% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-10,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.38,0.0046,aaf_boletin_2024200501G_2023-10.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.38 0.46% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-10,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1059.54,0.0055,aaf_boletin_2024200501G_2023-10.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,059.54 0.55% 5.54% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-11,Flexibles,SF RENTA DÓLARES 1Y V,Scotia Fondos,SF RENTA DÓLARES 1Y V Scotia Fondos,USD,no informado,10.43,0.0049,aaf_boletin_2024200501G_2023-11.pdf,8,SF RENTA DÓLARES 1Y V Scotia Fondos US$ 10.43 0.49% N/A -,SCOTIA | SF RENTA DOLARES 1Y V | USD
+2023-11,Flexibles,SF Renta Dólares 1Y V,Scotia Fondos,SF Renta Dólares 1Y V Scotia Fondos,USD,no informado,1065.12,0.0053,aaf_boletin_2024200501G_2023-11.pdf,8,"SF Renta Dólares 1Y V Scotia Fondos US$ 1,065.12 0.53% 6.10% -",SCOTIA | SF RENTA DOLARES 1Y V | USD
+2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,114.32,0.0046,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 114.32 0.46% 2.04% 4.13%,SURA | FONDOS | PEN
+2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.39,0.0054,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 102.39 0.54% 2.07% -,SURA | FONDOS | PEN
+2025-05,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.71,0.006,aaf_boletin_2024200501G_2025-05.pdf,3,Fondos Sura S/ 100.71 0.60% - -,SURA | FONDOS | PEN
+2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,231.62,0.0079,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 231.62 0.79% - -,SURA | FONDOS | PEN
+2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.84,0.0077,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 100.84 0.77% - -,SURA | FONDOS | PEN
+2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,114.91,0.0052,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 114.91 0.52% 2.57% 5.04%,SURA | FONDOS | PEN
+2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.77,0.0037,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 102.77 0.37% 2.45% -,SURA | FONDOS | PEN
+2025-06,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.99,0.0028,aaf_boletin_2024200501G_2025-06.pdf,3,Fondos Sura S/ 100.99 0.28% - -,SURA | FONDOS | PEN
+2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,232.64,0.0044,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 232.64 0.44% - -,SURA | FONDOS | PEN
+2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.27,0.0043,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 101.27 0.43% - -,SURA | FONDOS | PEN
+2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,115.41,0.0044,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 115.41 0.44% 3.02% 4.59%,SURA | FONDOS | PEN
+2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.21,0.0043,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 103.21 0.43% 2.89% -,SURA | FONDOS | PEN
+2025-07,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.39,0.0039,aaf_boletin_2024200501G_2025-07.pdf,3,Fondos Sura S/ 101.39 0.39% - -,SURA | FONDOS | PEN
+2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,234.08,0.0062,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 234.08 0.62% - -,SURA | FONDOS | PEN
+2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.88,0.006,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 101.88 0.60% - -,SURA | FONDOS | PEN
+2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.35,0.0081,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 116.35 0.81% 3.86% 3.52%,SURA | FONDOS | PEN
+2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.66,0.0044,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 103.66 0.44% 3.34% -,SURA | FONDOS | PEN
+2025-08,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.89,0.005,aaf_boletin_2024200501G_2025-08.pdf,4,Fondos Sura S/ 101.89 0.50% - -,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,235.8,0.0073,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 235.80 0.73% - -,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.61,0.0072,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 102.61 0.72% - -,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.11,-0.0021,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 116.11 -0.21% 3.64% 3.13%,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,104.09,0.0040999999999999,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 104.09 0.41% - -,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.27,0.0037,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 102.27 0.37% - -,SURA | FONDOS | PEN
+2025-09,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.41,0.0037,aaf_boletin_2024200501G_2025-09.pdf,4,Fondos Sura S/ 100.41 0.37% - -,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,236.34,0.0023,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 236.34 0.23% - -,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.83,0.0021,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 102.83 0.21% - -,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,116.48,0.0031,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 116.48 0.31% 3.97% 4.50%,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,104.5,0.004,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 104.50 0.40% - -,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,102.6,0.0032,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 102.60 0.32% - -,SURA | FONDOS | PEN
+2025-10,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.64,0.0023,aaf_boletin_2024200501G_2025-10.pdf,4,Fondos Sura S/ 100.64 0.23% - -,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,237.84,0.0064,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 237.84 0.64% - -,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.47,0.0062,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 103.47 0.62% - -,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,117.69,0.0104,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 117.69 1.04% 5.05% 4.28%,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,100.8,0.0043,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 100.80 0.43% - -,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,103.06,0.0045,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 103.06 0.45% - -,SURA | FONDOS | PEN
+2025-11,Deuda,Fondos,Sura,Fondos Sura,PEN,no informado,101.18,0.0053,aaf_boletin_2024200501G_2025-11.pdf,4,Fondos Sura S/ 101.18 0.53% - -,SURA | FONDOS | PEN
