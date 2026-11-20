@@ -15,6 +15,9 @@ python codigo/05_verificacion_fuente.py --sin-internet
 ```
 05 coteja hash de lo entregado antes de ejecutar, copia originales a un directorio temporal, ejecuta 01 y 02 localmente para reparsear JSON/PDF, 03 y 04 para regenerar la base y tablas. 03 y 04 son ejecutables independientemente. No necesita token ni Drive. Para una nueva extracción, usar otra copia del repositorio y ejecutar 01, 02, 03 y 04 en orden; no modificar originales entregados. Demostración en vivo: `python codigo/01_extraccion_api.py --demo` y `python codigo/02_scraping_web.py --demo`, solo si el acceso está permitido. No confundir esta demostración con la reproducción local.
 
+## Cuaderno completo
+`codigo/00_pipeline_colab.ipynb` contiene los cinco scripts y las salidas reales de la ejecución hasta la verificación. El último paso publica la copia guardada mediante el token de la estudiante; la reproducción por el profesor no necesita ese token.
+
 ## Integridad
 SHA-256 de la base: `218d06420bc257a2ce6f336295a18bc184444d2fa8b3d9164bb6e0e4dbc97dd2`. Manifiesto `hash_sha256.txt`. Cobertura por variable: `salidas/tabla_cobertura_variables.csv`. Tablas y figuras en `salidas/`; cada archivo empírico es generado por código. Integridad y equivalencia se verifican en el paso siguiente; no se anticipa el veredicto.
 

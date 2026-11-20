@@ -1,259 +1,259 @@
-2026-11-19 16:19:09 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01216PM/json/2018-12/2025-12/esp
-2026-11-19 16:19:09 | 01_api | GUARDADO datos_crudos/api/PN01216PM.json | 85 filas | SHA256 e3775d27abb5b6081b853ab6320321d8d872c0f1e9926c3c35ceb4ba6f918692
-2026-11-19 16:19:11 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04692MD/json/2018-12-01/2025-12-31/esp
-2026-11-19 16:19:12 | 01_api | GUARDADO datos_crudos/api/PD04692MD.json | 1848 filas | SHA256 e49242e40d400a291c7bc7ac97e69eec4e31c45cdfcaa2666e06a0e1d372d45c
-2026-11-19 16:19:14 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04693MD/json/2018-12-01/2025-12-31/esp
-2026-11-19 16:19:14 | 01_api | GUARDADO datos_crudos/api/PD04693MD.json | 1848 filas | SHA256 8fd1ed7c03ceb7221aed97ac5691825a97b1d3deab91116ca39dda434ece7cba
-2026-11-19 16:19:15 | 01_api | CSV BCRP: 3781 filas originales
-2026-11-19 16:19:20 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/robots.txt
-2026-11-19 16:19:24 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
-2026-11-19 16:19:27 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/02/Boletin-Enero-2025-9.pdf
-2026-11-19 16:19:33 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/Boletin-Enero-2019-AAFM.pdf
-2026-11-19 16:19:36 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
-2026-11-19 16:19:36 | 02_aaf | 2019-01: enlace sin PDF. Se omite.
-2026-11-19 16:19:39 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/Boletin-Febrero-2019-AAFM-Entregable.pdf
-2026-11-19 16:19:42 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
-2026-11-19 16:19:42 | 02_aaf | 2019-02: enlace sin PDF. Se omite.
-2026-11-19 16:19:45 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/Boletin-Marzo-2019-AAFM..pdf
-2026-11-19 16:19:45 | 02_aaf | 2019-03: enlace no disponible. Se omite.
-2026-11-19 16:19:48 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/BOLETIN-ABRIL.pdf
-2026-11-19 16:19:51 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
-2026-11-19 16:19:51 | 02_aaf | 2019-04: enlace sin PDF. Se omite.
-2026-11-19 16:19:54 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/BOLETIN-MAYO.pdf
-2026-11-19 16:19:54 | 02_aaf | 2019-05: enlace no disponible. Se omite.
-2026-11-19 16:19:56 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/08/Boletin-Junio-2019-AAFM..pdf
-2026-11-19 16:19:59 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/BOLETINJULIO2019.pdf
-2026-11-19 16:19:59 | 02_aaf | 2019-07: enlace no disponible. Se omite.
-2026-11-19 16:20:01 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/09/BOLETIN.pdf
-2026-11-19 16:20:03 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/10/boletinsetiembre2019.pdf
-2026-11-19 16:20:04 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/11/BOLETIN.pdf
-2026-11-19 16:20:06 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/12/BOLETIN-NOVIEMBRE-2019-2.pdf
-2026-11-19 16:20:08 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/01/boletin-diciembre-2019-AAFM-D.pdf
-2026-11-19 16:20:10 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/02/boletin-enero-2020.pdf
-2026-11-19 16:20:12 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/03/Boletin-Febrero-2020-AAFM....pdf
-2026-11-19 16:20:14 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/04/BOLETIN-MARZO.pdf
-2026-11-19 16:20:16 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/05/BOLETIN-ABRIL.pdf
-2026-11-19 16:20:17 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/06/BOLETIN-MAYO.pdf
-2026-11-19 16:20:19 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/07/BOLETIN-Junio.pdf
-2026-11-19 16:20:21 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/08/boletin-julio-1.pdf
-2026-11-19 16:20:23 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/09/boletin-agosto.pdf
-2026-11-19 16:20:25 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/10/BOLETIN-SETIEMBRE.pdf
-2026-11-19 16:20:27 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/11/BOLETIN-OCTUBREMOD.pdf
-2026-11-19 16:20:28 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/12/BOLETIN-NOV_MOD3-1.pdf
-2026-11-19 16:20:30 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/03/boletin-DIC4.pdf
-2026-11-19 16:20:32 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/02/Boletin-enero-2021.pdf
-2026-11-19 16:20:34 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/05/BOLETIN-FEB21_C-3.pdf
-2026-11-19 16:20:35 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/04/BOLETIN-MAR21_b.pdf
-2026-11-19 16:20:37 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/05/BOLETIN-ABR21v3.pdf
-2026-11-19 16:20:39 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/06/BOLETIN-MAY21.pdf
-2026-11-19 16:20:41 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/07/boletin-junio-2021-web.pdf
-2026-11-19 16:20:42 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/07-Boletin-Julio-2021-AAFM.pdf
-2026-11-19 16:20:44 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/08-Boletin-Agosto-2021AAFM.pdf
-2026-11-19 16:20:46 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/09-Boletin-septiembre-2021AAFM.pdf
-2026-11-19 16:20:48 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/10-boletin-OCT21.pdf
-2026-11-19 16:20:50 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/11-BOLETIN-NOV21.pdf
-2026-11-19 16:20:51 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/12-BOLETIN-DIC21.pdf
-2026-11-19 16:20:53 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/BOLETIN-ENE22.pdf
-2026-11-19 16:20:55 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/03/BOLETIN-FEB22.pdf
-2026-11-19 16:20:57 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/04/BOLETIN-MAR22.pdf
-2026-11-19 16:20:58 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/05/BOLETIN-ABR22.pdf
-2026-11-19 16:21:00 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/06/BOLETIN-MAY22.pdf
-2026-11-19 16:21:02 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/07/BOLETIN-JUN22.pdf
-2026-11-19 16:21:04 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/08/BOLETIN-JUL22.pdf
-2026-11-19 16:21:06 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/09/BOLETIN-AGO22-1.pdf
-2026-11-19 16:21:08 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/10/boletin-setiembre-22.pdf
-2026-11-19 16:21:09 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/12/boletin-octubre-22.pdf
-2026-11-19 16:21:11 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/01/botetin-noviembre-22..pdf
-2026-11-19 16:21:13 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/01/botetin-diciembre-22.pdf
-2026-11-19 16:21:15 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/02/ene2023.pdf
-2026-11-19 16:21:17 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/03/feb2023-2.pdf
-2026-11-19 16:21:19 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/04/mar2023.pdf
-2026-11-19 16:21:20 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/07/abr2023.pdf
-2026-11-19 16:21:22 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/06/may2023.pdf
-2026-11-19 16:21:24 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/07/Boletin-Junio-2023-AAFM-vF.pdf
-2026-11-19 16:21:26 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/08/jul2023.pdf
-2026-11-19 16:21:28 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/10/Boletin-Agosto-2023-AAFM.pdf
-2026-11-19 16:21:30 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/11/set2023.pdf
-2026-11-19 16:21:31 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/11/oct2023.pdf
-2026-11-19 16:21:33 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/12/Noviembre2023.pdf
-2026-11-19 16:21:35 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/01/Diciembre2023-3.pdf
-2026-11-19 16:21:37 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/02/ENERO-1.pdf
-2026-11-19 16:21:39 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/04/boletin-febrero-2024.pdf
-2026-11-19 16:21:40 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/04/MARZO1.1.pdf
-2026-11-19 16:21:42 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/05/ABRIL-SIN-COMENTARIOS.pdf
-2026-11-19 16:21:44 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/08/JUNIO-CON-COMENTARIOS-1-1.pdf
-2026-11-19 16:21:46 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/08/JULIO-CON-COMENTARIOS.pdf
-2026-11-19 16:21:47 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/09/AGOSTO-SIN-COMENTARIOS-4.pdf
-2026-11-19 16:21:49 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/10/SETIEMBRE-SIN-COMENTARIOS.pdf
-2026-11-19 16:21:51 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/11/OCTUBRE-SIN-COMENTARIOS-1.pdf
-2026-11-19 16:21:53 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/12/NOVIEMBRE-SIN-COMENTARIOS-5.pdf
-2026-11-19 16:21:55 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/01/DICIEMBRE-SIN-COMENTARIOS-1.pdf
-2026-11-19 16:21:56 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/03/BOLETIN-FEBRERO-CORREGIDO.pdf
-2026-11-19 16:21:58 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/04/BOLETIN-MARZO-FONDOSMUTUOS-2025.pdf
-2026-11-19 16:22:00 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/05/BOLETIN-ABRIL-2025-FONDOS-MUTUOS.pdf
-2026-11-19 16:22:02 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/BOLETIN-2025-MAYO-FONDOS-MUTUOS.pdf
-2026-11-19 16:22:03 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/07/BOLETIN-FONDOS-MUTUOS-JUNIO-2025.pdf
-2026-11-19 16:22:05 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/08/BOLETIN-DE-JULIO-2025.pdf
-2026-11-19 16:22:07 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/09/BOLETIN-MENSUAL-AGOSTO-2025.pdf
-2026-11-19 16:22:09 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/10/BOLETIN-FONDOS-MUTUOS-SEPTIEMBRE-2025.pdf
-2026-11-19 16:22:11 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/11/BOLETIN-FONDOS-MUTUOS-OCTUBRE-2025.pdf
-2026-11-19 16:22:13 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/12/BOLETIN-FONDOS-MUTUOS-NOVIEMBRE-2025.pdf
-2026-11-19 16:22:15 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2026/01/BOLETIN-FONDOS-MUTUOS-DICIEMBRE-2025.pdf
-2026-11-19 16:22:18 | 02_aaf | 2019-06: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:18 | 02_aaf | 2019-06 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-06.pdf
-2026-11-19 16:22:21 | 02_aaf | 2019-08: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:21 | 02_aaf | 2019-08 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-08.pdf
-2026-11-19 16:22:24 | 02_aaf | 2019-09: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:24 | 02_aaf | 2019-09 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-09.pdf
-2026-11-19 16:22:28 | 02_aaf | 2019-10: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:28 | 02_aaf | 2019-10 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-10.pdf
-2026-11-19 16:22:32 | 02_aaf | 2019-11: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:32 | 02_aaf | 2019-11 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-11.pdf
-2026-11-19 16:22:35 | 02_aaf | 2019-12: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:35 | 02_aaf | 2019-12 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-12.pdf
-2026-11-19 16:22:38 | 02_aaf | 2020-01: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:38 | 02_aaf | 2020-01 | 5 filas reconocidas de 5 candidatas | aaf_boletin_2024200501G_2020-01.pdf
-2026-11-19 16:22:41 | 02_aaf | 2020-02: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:41 | 02_aaf | 2020-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-02.pdf
-2026-11-19 16:22:42 | 02_aaf | 2020-03 | parseo fallido: Portada None no coincide con 2020-03
-2026-11-19 16:22:42 | 02_aaf | 2020-03: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:42 | 02_aaf | 2020-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-03.pdf
-2026-11-19 16:22:42 | 02_aaf | 2020-04 | parseo fallido: Portada None no coincide con 2020-04
-2026-11-19 16:22:42 | 02_aaf | 2020-04: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:42 | 02_aaf | 2020-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-04.pdf
-2026-11-19 16:22:43 | 02_aaf | 2020-05 | parseo fallido: Portada None no coincide con 2020-05
-2026-11-19 16:22:43 | 02_aaf | 2020-05: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:43 | 02_aaf | 2020-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-05.pdf
-2026-11-19 16:22:43 | 02_aaf | 2020-06 | parseo fallido: Portada None no coincide con 2020-06
-2026-11-19 16:22:43 | 02_aaf | 2020-06: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:43 | 02_aaf | 2020-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-06.pdf
-2026-11-19 16:22:43 | 02_aaf | 2020-07 | parseo fallido: Portada None no coincide con 2020-07
-2026-11-19 16:22:43 | 02_aaf | 2020-07: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:43 | 02_aaf | 2020-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-07.pdf
-2026-11-19 16:22:44 | 02_aaf | 2020-08 | parseo fallido: Portada None no coincide con 2020-08
-2026-11-19 16:22:44 | 02_aaf | 2020-08: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:44 | 02_aaf | 2020-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-08.pdf
-2026-11-19 16:22:44 | 02_aaf | 2020-09 | parseo fallido: Portada None no coincide con 2020-09
-2026-11-19 16:22:44 | 02_aaf | 2020-09: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:44 | 02_aaf | 2020-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-09.pdf
-2026-11-19 16:22:44 | 02_aaf | 2020-10 | parseo fallido: Portada None no coincide con 2020-10
-2026-11-19 16:22:44 | 02_aaf | 2020-10: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:44 | 02_aaf | 2020-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-10.pdf
-2026-11-19 16:22:45 | 02_aaf | 2020-11 | parseo fallido: Portada None no coincide con 2020-11
-2026-11-19 16:22:45 | 02_aaf | 2020-11: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:45 | 02_aaf | 2020-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-11.pdf
-2026-11-19 16:22:45 | 02_aaf | 2020-12 | parseo fallido: Portada None no coincide con 2020-12
-2026-11-19 16:22:45 | 02_aaf | 2020-12: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:45 | 02_aaf | 2020-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-12.pdf
-2026-11-19 16:22:45 | 02_aaf | 2021-01 | parseo fallido: Portada None no coincide con 2021-01
-2026-11-19 16:22:45 | 02_aaf | 2021-01: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:45 | 02_aaf | 2021-01 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-01.pdf
-2026-11-19 16:22:46 | 02_aaf | 2021-02 | parseo fallido: Portada None no coincide con 2021-02
-2026-11-19 16:22:46 | 02_aaf | 2021-02: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:46 | 02_aaf | 2021-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-02.pdf
-2026-11-19 16:22:46 | 02_aaf | 2021-03 | parseo fallido: Portada None no coincide con 2021-03
-2026-11-19 16:22:46 | 02_aaf | 2021-03: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:46 | 02_aaf | 2021-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-03.pdf
-2026-11-19 16:22:47 | 02_aaf | 2021-04 | parseo fallido: Portada None no coincide con 2021-04
-2026-11-19 16:22:47 | 02_aaf | 2021-04: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:47 | 02_aaf | 2021-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-04.pdf
-2026-11-19 16:22:47 | 02_aaf | 2021-05 | parseo fallido: Portada None no coincide con 2021-05
-2026-11-19 16:22:47 | 02_aaf | 2021-05: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:47 | 02_aaf | 2021-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-05.pdf
-2026-11-19 16:22:47 | 02_aaf | 2021-06 | parseo fallido: Portada None no coincide con 2021-06
-2026-11-19 16:22:47 | 02_aaf | 2021-06: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:47 | 02_aaf | 2021-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-06.pdf
-2026-11-19 16:22:48 | 02_aaf | 2021-07 | parseo fallido: Portada None no coincide con 2021-07
-2026-11-19 16:22:48 | 02_aaf | 2021-07: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:48 | 02_aaf | 2021-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-07.pdf
-2026-11-19 16:22:48 | 02_aaf | 2021-08 | parseo fallido: Portada None no coincide con 2021-08
-2026-11-19 16:22:48 | 02_aaf | 2021-08: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:48 | 02_aaf | 2021-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-08.pdf
-2026-11-19 16:22:48 | 02_aaf | 2021-09 | parseo fallido: Portada None no coincide con 2021-09
-2026-11-19 16:22:48 | 02_aaf | 2021-09: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:48 | 02_aaf | 2021-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-09.pdf
-2026-11-19 16:22:49 | 02_aaf | 2021-10 | parseo fallido: Portada None no coincide con 2021-10
-2026-11-19 16:22:49 | 02_aaf | 2021-10: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:49 | 02_aaf | 2021-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-10.pdf
-2026-11-19 16:22:49 | 02_aaf | 2021-11 | parseo fallido: Portada None no coincide con 2021-11
-2026-11-19 16:22:49 | 02_aaf | 2021-11: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:49 | 02_aaf | 2021-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-11.pdf
-2026-11-19 16:22:49 | 02_aaf | 2021-12 | parseo fallido: Portada None no coincide con 2021-12
-2026-11-19 16:22:49 | 02_aaf | 2021-12: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:49 | 02_aaf | 2021-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-12.pdf
-2026-11-19 16:22:50 | 02_aaf | 2022-01 | parseo fallido: Portada None no coincide con 2022-01
-2026-11-19 16:22:50 | 02_aaf | 2022-01: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:50 | 02_aaf | 2022-01 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-01.pdf
-2026-11-19 16:22:50 | 02_aaf | 2022-02 | parseo fallido: Portada None no coincide con 2022-02
-2026-11-19 16:22:50 | 02_aaf | 2022-02: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:50 | 02_aaf | 2022-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-02.pdf
-2026-11-19 16:22:50 | 02_aaf | 2022-03 | parseo fallido: Portada None no coincide con 2022-03
-2026-11-19 16:22:50 | 02_aaf | 2022-03: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:50 | 02_aaf | 2022-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-03.pdf
-2026-11-19 16:22:51 | 02_aaf | 2022-04 | parseo fallido: Portada None no coincide con 2022-04
-2026-11-19 16:22:51 | 02_aaf | 2022-04: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:51 | 02_aaf | 2022-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-04.pdf
-2026-11-19 16:22:51 | 02_aaf | 2022-05 | parseo fallido: Portada None no coincide con 2022-05
-2026-11-19 16:22:51 | 02_aaf | 2022-05: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:51 | 02_aaf | 2022-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-05.pdf
-2026-11-19 16:22:51 | 02_aaf | 2022-06 | parseo fallido: Portada None no coincide con 2022-06
-2026-11-19 16:22:51 | 02_aaf | 2022-06: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:51 | 02_aaf | 2022-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-06.pdf
-2026-11-19 16:22:51 | 02_aaf | 2022-07 | parseo fallido: Portada None no coincide con 2022-07
-2026-11-19 16:22:51 | 02_aaf | 2022-07: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:51 | 02_aaf | 2022-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-07.pdf
-2026-11-19 16:22:52 | 02_aaf | 2022-08 | parseo fallido: Portada None no coincide con 2022-08
-2026-11-19 16:22:52 | 02_aaf | 2022-08: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:52 | 02_aaf | 2022-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-08.pdf
-2026-11-19 16:22:52 | 02_aaf | 2022-09 | parseo fallido: Portada None no coincide con 2022-09
-2026-11-19 16:22:52 | 02_aaf | 2022-09: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:52 | 02_aaf | 2022-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-09.pdf
-2026-11-19 16:22:52 | 02_aaf | 2022-10 | parseo fallido: Portada None no coincide con 2022-10
-2026-11-19 16:22:52 | 02_aaf | 2022-10: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:52 | 02_aaf | 2022-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-10.pdf
-2026-11-19 16:22:53 | 02_aaf | 2022-11 | parseo fallido: Portada None no coincide con 2022-11
-2026-11-19 16:22:53 | 02_aaf | 2022-11: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:22:53 | 02_aaf | 2022-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-11.pdf
-2026-11-19 16:22:56 | 02_aaf | 2022-12 | 205 filas reconocidas de 205 candidatas | aaf_boletin_2024200501G_2022-12.pdf
-2026-11-19 16:22:59 | 02_aaf | 2023-01 | 209 filas reconocidas de 209 candidatas | aaf_boletin_2024200501G_2023-01.pdf
-2026-11-19 16:23:01 | 02_aaf | 2023-02 | 208 filas reconocidas de 208 candidatas | aaf_boletin_2024200501G_2023-02.pdf
-2026-11-19 16:23:04 | 02_aaf | 2023-03 | 213 filas reconocidas de 213 candidatas | aaf_boletin_2024200501G_2023-03.pdf
-2026-11-19 16:23:06 | 02_aaf | 2023-04 | 215 filas reconocidas de 215 candidatas | aaf_boletin_2024200501G_2023-04.pdf
-2026-11-19 16:23:10 | 02_aaf | 2023-05 | 226 filas reconocidas de 226 candidatas | aaf_boletin_2024200501G_2023-05.pdf
-2026-11-19 16:23:13 | 02_aaf | 2023-06 | 232 filas reconocidas de 234 candidatas | aaf_boletin_2024200501G_2023-06.pdf
-2026-11-19 16:23:15 | 02_aaf | 2023-07 | 235 filas reconocidas de 235 candidatas | aaf_boletin_2024200501G_2023-07.pdf
-2026-11-19 16:23:18 | 02_aaf | 2023-08 | 239 filas reconocidas de 239 candidatas | aaf_boletin_2024200501G_2023-08.pdf
-2026-11-19 16:23:21 | 02_aaf | 2023-09 | 238 filas reconocidas de 239 candidatas | aaf_boletin_2024200501G_2023-09.pdf
-2026-11-19 16:23:24 | 02_aaf | 2023-10 | 237 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2023-10.pdf
-2026-11-19 16:23:27 | 02_aaf | 2023-11 | 237 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2023-11.pdf
-2026-11-19 16:23:30 | 02_aaf | 2023-12 | 247 filas reconocidas de 247 candidatas | aaf_boletin_2024200501G_2023-12.pdf
-2026-11-19 16:23:32 | 02_aaf | 2024-01 | 244 filas reconocidas de 246 candidatas | aaf_boletin_2024200501G_2024-01.pdf
-2026-11-19 16:23:36 | 02_aaf | 2024-02 | 248 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2024-02.pdf
-2026-11-19 16:23:39 | 02_aaf | 2024-03 | 244 filas reconocidas de 244 candidatas | aaf_boletin_2024200501G_2024-03.pdf
-2026-11-19 16:23:41 | 02_aaf | 2024-04 | 248 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2024-04.pdf
-2026-11-19 16:23:42 | 02_aaf | 2024-06 | parseo fallido: Portada '2024-05' no coincide con 2024-06
-2026-11-19 16:23:42 | 02_aaf | 2024-06: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:23:42 | 02_aaf | 2024-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2024-06.pdf
-2026-11-19 16:23:45 | 02_aaf | 2024-07 | 265 filas reconocidas de 265 candidatas | aaf_boletin_2024200501G_2024-07.pdf
-2026-11-19 16:23:48 | 02_aaf | 2024-08 | 263 filas reconocidas de 263 candidatas | aaf_boletin_2024200501G_2024-08.pdf
-2026-11-19 16:23:51 | 02_aaf | 2024-09 | 267 filas reconocidas de 267 candidatas | aaf_boletin_2024200501G_2024-09.pdf
-2026-11-19 16:23:53 | 02_aaf | 2024-10 | 267 filas reconocidas de 267 candidatas | aaf_boletin_2024200501G_2024-10.pdf
-2026-11-19 16:23:56 | 02_aaf | 2024-11 | 264 filas reconocidas de 264 candidatas | aaf_boletin_2024200501G_2024-11.pdf
-2026-11-19 16:23:58 | 02_aaf | 2024-12 | 265 filas reconocidas de 265 candidatas | aaf_boletin_2024200501G_2024-12.pdf
-2026-11-19 16:24:02 | 02_aaf | 2025-01 | 259 filas reconocidas de 259 candidatas | aaf_boletin_2024200501G_2025-01.pdf
-2026-11-19 16:24:05 | 02_aaf | 2025-02 | 236 filas reconocidas de 236 candidatas | aaf_boletin_2024200501G_2025-02.pdf
-2026-11-19 16:24:07 | 02_aaf | 2025-03 | 235 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2025-03.pdf
-2026-11-19 16:24:10 | 02_aaf | 2025-04 | 243 filas reconocidas de 243 candidatas | aaf_boletin_2024200501G_2025-04.pdf
-2026-11-19 16:24:13 | 02_aaf | 2025-05 | 202 filas reconocidas de 214 candidatas | aaf_boletin_2024200501G_2025-05.pdf
-2026-11-19 16:24:16 | 02_aaf | 2025-06 | 238 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-06.pdf
-2026-11-19 16:24:19 | 02_aaf | 2025-07 | 239 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-07.pdf
-2026-11-19 16:24:22 | 02_aaf | 2025-08 | 237 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-08.pdf
-2026-11-19 16:24:25 | 02_aaf | 2025-09 | 236 filas reconocidas de 244 candidatas | aaf_boletin_2024200501G_2025-09.pdf
-2026-11-19 16:24:29 | 02_aaf | 2025-10 | 238 filas reconocidas de 249 candidatas | aaf_boletin_2024200501G_2025-10.pdf
-2026-11-19 16:24:32 | 02_aaf | 2025-11 | 246 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2025-11.pdf
-2026-11-19 16:24:37 | 02_aaf | 2025-12 | parseo fallido: Portada None no coincide con 2025-12
-2026-11-19 16:24:37 | 02_aaf | 2025-12: boletín excluido por calidad del parseo; revisar original.
-2026-11-19 16:24:37 | 02_aaf | 2025-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2025-12.pdf
-2026-11-19 16:24:41 | 03_limpieza | 8038 filas | 772 fondos/series identificados | 34 meses | 4454 filas completas
-2026-11-19 16:24:41 | 03_limpieza | Base procesada guardada; datos crudos intactos.
-2026-11-19 16:24:46 | 04_analisis | 4454 filas; tablas y figuras guardadas
+2026-11-19 19:32:55 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01216PM/json/2018-12/2025-12/esp
+2026-11-19 19:32:55 | 01_api | GUARDADO datos_crudos/api/PN01216PM.json | 85 filas | SHA256 e3775d27abb5b6081b853ab6320321d8d872c0f1e9926c3c35ceb4ba6f918692
+2026-11-19 19:32:57 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04692MD/json/2018-12-01/2025-12-31/esp
+2026-11-19 19:32:57 | 01_api | GUARDADO datos_crudos/api/PD04692MD.json | 1848 filas | SHA256 e49242e40d400a291c7bc7ac97e69eec4e31c45cdfcaa2666e06a0e1d372d45c
+2026-11-19 19:33:00 | 01_api | HTTP 200 | https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04693MD/json/2018-12-01/2025-12-31/esp
+2026-11-19 19:33:00 | 01_api | GUARDADO datos_crudos/api/PD04693MD.json | 1848 filas | SHA256 8fd1ed7c03ceb7221aed97ac5691825a97b1d3deab91116ca39dda434ece7cba
+2026-11-19 19:33:00 | 01_api | CSV BCRP: 3781 filas originales
+2026-11-19 19:33:05 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/robots.txt
+2026-11-19 19:33:09 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
+2026-11-19 19:33:12 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/02/Boletin-Enero-2025-9.pdf
+2026-11-19 19:33:19 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/Boletin-Enero-2019-AAFM.pdf
+2026-11-19 19:33:23 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
+2026-11-19 19:33:23 | 02_aaf | 2019-01: enlace sin PDF. Se omite.
+2026-11-19 19:33:26 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/Boletin-Febrero-2019-AAFM-Entregable.pdf
+2026-11-19 19:33:29 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
+2026-11-19 19:33:29 | 02_aaf | 2019-02: enlace sin PDF. Se omite.
+2026-11-19 19:33:32 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/Boletin-Marzo-2019-AAFM..pdf
+2026-11-19 19:33:32 | 02_aaf | 2019-03: enlace no disponible. Se omite.
+2026-11-19 19:33:34 | 02_aaf | HTTP 301 | https://fondosmutuos.pe/boletines/BOLETIN-ABRIL.pdf
+2026-11-19 19:33:38 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/estadisticas/
+2026-11-19 19:33:38 | 02_aaf | 2019-04: enlace sin PDF. Se omite.
+2026-11-19 19:33:41 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/BOLETIN-MAYO.pdf
+2026-11-19 19:33:41 | 02_aaf | 2019-05: enlace no disponible. Se omite.
+2026-11-19 19:33:42 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/08/Boletin-Junio-2019-AAFM..pdf
+2026-11-19 19:33:45 | 02_aaf | HTTP 404 | https://fondosmutuos.pe/boletines/BOLETINJULIO2019.pdf
+2026-11-19 19:33:45 | 02_aaf | 2019-07: enlace no disponible. Se omite.
+2026-11-19 19:33:47 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/09/BOLETIN.pdf
+2026-11-19 19:33:49 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/10/boletinsetiembre2019.pdf
+2026-11-19 19:33:51 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/11/BOLETIN.pdf
+2026-11-19 19:33:52 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2019/12/BOLETIN-NOVIEMBRE-2019-2.pdf
+2026-11-19 19:33:54 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/01/boletin-diciembre-2019-AAFM-D.pdf
+2026-11-19 19:33:56 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/02/boletin-enero-2020.pdf
+2026-11-19 19:33:58 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/03/Boletin-Febrero-2020-AAFM....pdf
+2026-11-19 19:33:59 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/04/BOLETIN-MARZO.pdf
+2026-11-19 19:34:01 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/05/BOLETIN-ABRIL.pdf
+2026-11-19 19:34:03 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/06/BOLETIN-MAYO.pdf
+2026-11-19 19:34:05 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/07/BOLETIN-Junio.pdf
+2026-11-19 19:34:06 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/08/boletin-julio-1.pdf
+2026-11-19 19:34:08 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/09/boletin-agosto.pdf
+2026-11-19 19:34:10 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/10/BOLETIN-SETIEMBRE.pdf
+2026-11-19 19:34:12 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/11/BOLETIN-OCTUBREMOD.pdf
+2026-11-19 19:34:13 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2020/12/BOLETIN-NOV_MOD3-1.pdf
+2026-11-19 19:34:15 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/03/boletin-DIC4.pdf
+2026-11-19 19:34:17 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/02/Boletin-enero-2021.pdf
+2026-11-19 19:34:18 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/05/BOLETIN-FEB21_C-3.pdf
+2026-11-19 19:34:20 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/04/BOLETIN-MAR21_b.pdf
+2026-11-19 19:34:22 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/05/BOLETIN-ABR21v3.pdf
+2026-11-19 19:34:24 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/06/BOLETIN-MAY21.pdf
+2026-11-19 19:34:25 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2021/07/boletin-junio-2021-web.pdf
+2026-11-19 19:34:27 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/07-Boletin-Julio-2021-AAFM.pdf
+2026-11-19 19:34:29 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/08-Boletin-Agosto-2021AAFM.pdf
+2026-11-19 19:34:30 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/09-Boletin-septiembre-2021AAFM.pdf
+2026-11-19 19:34:32 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/10-boletin-OCT21.pdf
+2026-11-19 19:34:34 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/11-BOLETIN-NOV21.pdf
+2026-11-19 19:34:36 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/12-BOLETIN-DIC21.pdf
+2026-11-19 19:34:37 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/BOLETIN-ENE22.pdf
+2026-11-19 19:34:39 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/03/BOLETIN-FEB22.pdf
+2026-11-19 19:34:41 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/04/BOLETIN-MAR22.pdf
+2026-11-19 19:34:42 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/05/BOLETIN-ABR22.pdf
+2026-11-19 19:34:44 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/06/BOLETIN-MAY22.pdf
+2026-11-19 19:34:46 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/07/BOLETIN-JUN22.pdf
+2026-11-19 19:34:48 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/08/BOLETIN-JUL22.pdf
+2026-11-19 19:34:49 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/09/BOLETIN-AGO22-1.pdf
+2026-11-19 19:34:51 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/10/boletin-setiembre-22.pdf
+2026-11-19 19:34:53 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2022/12/boletin-octubre-22.pdf
+2026-11-19 19:34:55 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/01/botetin-noviembre-22..pdf
+2026-11-19 19:34:56 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/01/botetin-diciembre-22.pdf
+2026-11-19 19:34:58 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/02/ene2023.pdf
+2026-11-19 19:35:00 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/03/feb2023-2.pdf
+2026-11-19 19:35:02 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/04/mar2023.pdf
+2026-11-19 19:35:03 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/07/abr2023.pdf
+2026-11-19 19:35:05 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/06/may2023.pdf
+2026-11-19 19:35:07 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/07/Boletin-Junio-2023-AAFM-vF.pdf
+2026-11-19 19:35:09 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/08/jul2023.pdf
+2026-11-19 19:35:10 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/10/Boletin-Agosto-2023-AAFM.pdf
+2026-11-19 19:35:12 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/11/set2023.pdf
+2026-11-19 19:35:14 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/11/oct2023.pdf
+2026-11-19 19:35:16 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2023/12/Noviembre2023.pdf
+2026-11-19 19:35:17 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/01/Diciembre2023-3.pdf
+2026-11-19 19:35:19 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/02/ENERO-1.pdf
+2026-11-19 19:35:21 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/04/boletin-febrero-2024.pdf
+2026-11-19 19:35:22 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/04/MARZO1.1.pdf
+2026-11-19 19:35:24 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/05/ABRIL-SIN-COMENTARIOS.pdf
+2026-11-19 19:35:26 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/08/JUNIO-CON-COMENTARIOS-1-1.pdf
+2026-11-19 19:35:28 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/08/JULIO-CON-COMENTARIOS.pdf
+2026-11-19 19:35:29 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/09/AGOSTO-SIN-COMENTARIOS-4.pdf
+2026-11-19 19:35:31 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/10/SETIEMBRE-SIN-COMENTARIOS.pdf
+2026-11-19 19:35:33 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/11/OCTUBRE-SIN-COMENTARIOS-1.pdf
+2026-11-19 19:35:34 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2024/12/NOVIEMBRE-SIN-COMENTARIOS-5.pdf
+2026-11-19 19:35:36 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/01/DICIEMBRE-SIN-COMENTARIOS-1.pdf
+2026-11-19 19:35:38 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/03/BOLETIN-FEBRERO-CORREGIDO.pdf
+2026-11-19 19:35:40 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/04/BOLETIN-MARZO-FONDOSMUTUOS-2025.pdf
+2026-11-19 19:35:41 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/05/BOLETIN-ABRIL-2025-FONDOS-MUTUOS.pdf
+2026-11-19 19:35:43 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/06/BOLETIN-2025-MAYO-FONDOS-MUTUOS.pdf
+2026-11-19 19:35:45 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/07/BOLETIN-FONDOS-MUTUOS-JUNIO-2025.pdf
+2026-11-19 19:35:46 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/08/BOLETIN-DE-JULIO-2025.pdf
+2026-11-19 19:35:48 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/09/BOLETIN-MENSUAL-AGOSTO-2025.pdf
+2026-11-19 19:35:50 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/10/BOLETIN-FONDOS-MUTUOS-SEPTIEMBRE-2025.pdf
+2026-11-19 19:35:52 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/11/BOLETIN-FONDOS-MUTUOS-OCTUBRE-2025.pdf
+2026-11-19 19:35:54 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2025/12/BOLETIN-FONDOS-MUTUOS-NOVIEMBRE-2025.pdf
+2026-11-19 19:35:55 | 02_aaf | HTTP 200 | https://fondosmutuos.pe/wp-content/uploads/2026/01/BOLETIN-FONDOS-MUTUOS-DICIEMBRE-2025.pdf
+2026-11-19 19:35:59 | 02_aaf | 2019-06: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:35:59 | 02_aaf | 2019-06 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-06.pdf
+2026-11-19 19:36:03 | 02_aaf | 2019-08: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:03 | 02_aaf | 2019-08 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-08.pdf
+2026-11-19 19:36:06 | 02_aaf | 2019-09: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:06 | 02_aaf | 2019-09 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-09.pdf
+2026-11-19 19:36:09 | 02_aaf | 2019-10: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:09 | 02_aaf | 2019-10 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-10.pdf
+2026-11-19 19:36:13 | 02_aaf | 2019-11: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:13 | 02_aaf | 2019-11 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-11.pdf
+2026-11-19 19:36:17 | 02_aaf | 2019-12: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:17 | 02_aaf | 2019-12 | 6 filas reconocidas de 6 candidatas | aaf_boletin_2024200501G_2019-12.pdf
+2026-11-19 19:36:20 | 02_aaf | 2020-01: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:20 | 02_aaf | 2020-01 | 5 filas reconocidas de 5 candidatas | aaf_boletin_2024200501G_2020-01.pdf
+2026-11-19 19:36:23 | 02_aaf | 2020-02: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:23 | 02_aaf | 2020-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-02.pdf
+2026-11-19 19:36:23 | 02_aaf | 2020-03 | parseo fallido: Portada None no coincide con 2020-03
+2026-11-19 19:36:23 | 02_aaf | 2020-03: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:23 | 02_aaf | 2020-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-03.pdf
+2026-11-19 19:36:23 | 02_aaf | 2020-04 | parseo fallido: Portada None no coincide con 2020-04
+2026-11-19 19:36:23 | 02_aaf | 2020-04: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:23 | 02_aaf | 2020-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-04.pdf
+2026-11-19 19:36:24 | 02_aaf | 2020-05 | parseo fallido: Portada None no coincide con 2020-05
+2026-11-19 19:36:24 | 02_aaf | 2020-05: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:24 | 02_aaf | 2020-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-05.pdf
+2026-11-19 19:36:24 | 02_aaf | 2020-06 | parseo fallido: Portada None no coincide con 2020-06
+2026-11-19 19:36:24 | 02_aaf | 2020-06: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:24 | 02_aaf | 2020-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-06.pdf
+2026-11-19 19:36:24 | 02_aaf | 2020-07 | parseo fallido: Portada None no coincide con 2020-07
+2026-11-19 19:36:24 | 02_aaf | 2020-07: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:24 | 02_aaf | 2020-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-07.pdf
+2026-11-19 19:36:25 | 02_aaf | 2020-08 | parseo fallido: Portada None no coincide con 2020-08
+2026-11-19 19:36:25 | 02_aaf | 2020-08: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:25 | 02_aaf | 2020-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-08.pdf
+2026-11-19 19:36:25 | 02_aaf | 2020-09 | parseo fallido: Portada None no coincide con 2020-09
+2026-11-19 19:36:25 | 02_aaf | 2020-09: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:25 | 02_aaf | 2020-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-09.pdf
+2026-11-19 19:36:25 | 02_aaf | 2020-10 | parseo fallido: Portada None no coincide con 2020-10
+2026-11-19 19:36:25 | 02_aaf | 2020-10: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:25 | 02_aaf | 2020-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-10.pdf
+2026-11-19 19:36:26 | 02_aaf | 2020-11 | parseo fallido: Portada None no coincide con 2020-11
+2026-11-19 19:36:26 | 02_aaf | 2020-11: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:26 | 02_aaf | 2020-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-11.pdf
+2026-11-19 19:36:26 | 02_aaf | 2020-12 | parseo fallido: Portada None no coincide con 2020-12
+2026-11-19 19:36:26 | 02_aaf | 2020-12: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:26 | 02_aaf | 2020-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2020-12.pdf
+2026-11-19 19:36:27 | 02_aaf | 2021-01 | parseo fallido: Portada None no coincide con 2021-01
+2026-11-19 19:36:27 | 02_aaf | 2021-01: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:27 | 02_aaf | 2021-01 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-01.pdf
+2026-11-19 19:36:28 | 02_aaf | 2021-02 | parseo fallido: Portada None no coincide con 2021-02
+2026-11-19 19:36:28 | 02_aaf | 2021-02: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:28 | 02_aaf | 2021-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-02.pdf
+2026-11-19 19:36:29 | 02_aaf | 2021-03 | parseo fallido: Portada None no coincide con 2021-03
+2026-11-19 19:36:29 | 02_aaf | 2021-03: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:29 | 02_aaf | 2021-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-03.pdf
+2026-11-19 19:36:29 | 02_aaf | 2021-04 | parseo fallido: Portada None no coincide con 2021-04
+2026-11-19 19:36:29 | 02_aaf | 2021-04: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:29 | 02_aaf | 2021-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-04.pdf
+2026-11-19 19:36:29 | 02_aaf | 2021-05 | parseo fallido: Portada None no coincide con 2021-05
+2026-11-19 19:36:29 | 02_aaf | 2021-05: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:29 | 02_aaf | 2021-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-05.pdf
+2026-11-19 19:36:30 | 02_aaf | 2021-06 | parseo fallido: Portada None no coincide con 2021-06
+2026-11-19 19:36:30 | 02_aaf | 2021-06: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:30 | 02_aaf | 2021-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-06.pdf
+2026-11-19 19:36:30 | 02_aaf | 2021-07 | parseo fallido: Portada None no coincide con 2021-07
+2026-11-19 19:36:30 | 02_aaf | 2021-07: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:30 | 02_aaf | 2021-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-07.pdf
+2026-11-19 19:36:30 | 02_aaf | 2021-08 | parseo fallido: Portada None no coincide con 2021-08
+2026-11-19 19:36:30 | 02_aaf | 2021-08: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:30 | 02_aaf | 2021-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-08.pdf
+2026-11-19 19:36:31 | 02_aaf | 2021-09 | parseo fallido: Portada None no coincide con 2021-09
+2026-11-19 19:36:31 | 02_aaf | 2021-09: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:31 | 02_aaf | 2021-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-09.pdf
+2026-11-19 19:36:31 | 02_aaf | 2021-10 | parseo fallido: Portada None no coincide con 2021-10
+2026-11-19 19:36:31 | 02_aaf | 2021-10: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:31 | 02_aaf | 2021-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-10.pdf
+2026-11-19 19:36:31 | 02_aaf | 2021-11 | parseo fallido: Portada None no coincide con 2021-11
+2026-11-19 19:36:31 | 02_aaf | 2021-11: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:31 | 02_aaf | 2021-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-11.pdf
+2026-11-19 19:36:32 | 02_aaf | 2021-12 | parseo fallido: Portada None no coincide con 2021-12
+2026-11-19 19:36:32 | 02_aaf | 2021-12: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:32 | 02_aaf | 2021-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2021-12.pdf
+2026-11-19 19:36:32 | 02_aaf | 2022-01 | parseo fallido: Portada None no coincide con 2022-01
+2026-11-19 19:36:32 | 02_aaf | 2022-01: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:32 | 02_aaf | 2022-01 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-01.pdf
+2026-11-19 19:36:32 | 02_aaf | 2022-02 | parseo fallido: Portada None no coincide con 2022-02
+2026-11-19 19:36:32 | 02_aaf | 2022-02: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:32 | 02_aaf | 2022-02 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-02.pdf
+2026-11-19 19:36:33 | 02_aaf | 2022-03 | parseo fallido: Portada None no coincide con 2022-03
+2026-11-19 19:36:33 | 02_aaf | 2022-03: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:33 | 02_aaf | 2022-03 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-03.pdf
+2026-11-19 19:36:33 | 02_aaf | 2022-04 | parseo fallido: Portada None no coincide con 2022-04
+2026-11-19 19:36:33 | 02_aaf | 2022-04: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:33 | 02_aaf | 2022-04 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-04.pdf
+2026-11-19 19:36:33 | 02_aaf | 2022-05 | parseo fallido: Portada None no coincide con 2022-05
+2026-11-19 19:36:33 | 02_aaf | 2022-05: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:33 | 02_aaf | 2022-05 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-05.pdf
+2026-11-19 19:36:34 | 02_aaf | 2022-06 | parseo fallido: Portada None no coincide con 2022-06
+2026-11-19 19:36:34 | 02_aaf | 2022-06: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:34 | 02_aaf | 2022-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-06.pdf
+2026-11-19 19:36:34 | 02_aaf | 2022-07 | parseo fallido: Portada None no coincide con 2022-07
+2026-11-19 19:36:34 | 02_aaf | 2022-07: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:34 | 02_aaf | 2022-07 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-07.pdf
+2026-11-19 19:36:34 | 02_aaf | 2022-08 | parseo fallido: Portada None no coincide con 2022-08
+2026-11-19 19:36:34 | 02_aaf | 2022-08: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:34 | 02_aaf | 2022-08 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-08.pdf
+2026-11-19 19:36:35 | 02_aaf | 2022-09 | parseo fallido: Portada None no coincide con 2022-09
+2026-11-19 19:36:35 | 02_aaf | 2022-09: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:35 | 02_aaf | 2022-09 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-09.pdf
+2026-11-19 19:36:35 | 02_aaf | 2022-10 | parseo fallido: Portada None no coincide con 2022-10
+2026-11-19 19:36:35 | 02_aaf | 2022-10: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:35 | 02_aaf | 2022-10 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-10.pdf
+2026-11-19 19:36:35 | 02_aaf | 2022-11 | parseo fallido: Portada None no coincide con 2022-11
+2026-11-19 19:36:35 | 02_aaf | 2022-11: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:36:35 | 02_aaf | 2022-11 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2022-11.pdf
+2026-11-19 19:36:37 | 02_aaf | 2022-12 | 205 filas reconocidas de 205 candidatas | aaf_boletin_2024200501G_2022-12.pdf
+2026-11-19 19:36:40 | 02_aaf | 2023-01 | 209 filas reconocidas de 209 candidatas | aaf_boletin_2024200501G_2023-01.pdf
+2026-11-19 19:36:44 | 02_aaf | 2023-02 | 208 filas reconocidas de 208 candidatas | aaf_boletin_2024200501G_2023-02.pdf
+2026-11-19 19:36:46 | 02_aaf | 2023-03 | 213 filas reconocidas de 213 candidatas | aaf_boletin_2024200501G_2023-03.pdf
+2026-11-19 19:36:49 | 02_aaf | 2023-04 | 215 filas reconocidas de 215 candidatas | aaf_boletin_2024200501G_2023-04.pdf
+2026-11-19 19:36:51 | 02_aaf | 2023-05 | 226 filas reconocidas de 226 candidatas | aaf_boletin_2024200501G_2023-05.pdf
+2026-11-19 19:36:55 | 02_aaf | 2023-06 | 232 filas reconocidas de 234 candidatas | aaf_boletin_2024200501G_2023-06.pdf
+2026-11-19 19:36:58 | 02_aaf | 2023-07 | 235 filas reconocidas de 235 candidatas | aaf_boletin_2024200501G_2023-07.pdf
+2026-11-19 19:37:00 | 02_aaf | 2023-08 | 239 filas reconocidas de 239 candidatas | aaf_boletin_2024200501G_2023-08.pdf
+2026-11-19 19:37:03 | 02_aaf | 2023-09 | 238 filas reconocidas de 239 candidatas | aaf_boletin_2024200501G_2023-09.pdf
+2026-11-19 19:37:05 | 02_aaf | 2023-10 | 237 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2023-10.pdf
+2026-11-19 19:37:09 | 02_aaf | 2023-11 | 237 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2023-11.pdf
+2026-11-19 19:37:12 | 02_aaf | 2023-12 | 247 filas reconocidas de 247 candidatas | aaf_boletin_2024200501G_2023-12.pdf
+2026-11-19 19:37:15 | 02_aaf | 2024-01 | 244 filas reconocidas de 246 candidatas | aaf_boletin_2024200501G_2024-01.pdf
+2026-11-19 19:37:17 | 02_aaf | 2024-02 | 248 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2024-02.pdf
+2026-11-19 19:37:20 | 02_aaf | 2024-03 | 244 filas reconocidas de 244 candidatas | aaf_boletin_2024200501G_2024-03.pdf
+2026-11-19 19:37:23 | 02_aaf | 2024-04 | 248 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2024-04.pdf
+2026-11-19 19:37:24 | 02_aaf | 2024-06 | parseo fallido: Portada '2024-05' no coincide con 2024-06
+2026-11-19 19:37:24 | 02_aaf | 2024-06: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:37:24 | 02_aaf | 2024-06 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2024-06.pdf
+2026-11-19 19:37:26 | 02_aaf | 2024-07 | 265 filas reconocidas de 265 candidatas | aaf_boletin_2024200501G_2024-07.pdf
+2026-11-19 19:37:29 | 02_aaf | 2024-08 | 263 filas reconocidas de 263 candidatas | aaf_boletin_2024200501G_2024-08.pdf
+2026-11-19 19:37:31 | 02_aaf | 2024-09 | 267 filas reconocidas de 267 candidatas | aaf_boletin_2024200501G_2024-09.pdf
+2026-11-19 19:37:35 | 02_aaf | 2024-10 | 267 filas reconocidas de 267 candidatas | aaf_boletin_2024200501G_2024-10.pdf
+2026-11-19 19:37:38 | 02_aaf | 2024-11 | 264 filas reconocidas de 264 candidatas | aaf_boletin_2024200501G_2024-11.pdf
+2026-11-19 19:37:40 | 02_aaf | 2024-12 | 265 filas reconocidas de 265 candidatas | aaf_boletin_2024200501G_2024-12.pdf
+2026-11-19 19:37:43 | 02_aaf | 2025-01 | 259 filas reconocidas de 259 candidatas | aaf_boletin_2024200501G_2025-01.pdf
+2026-11-19 19:37:45 | 02_aaf | 2025-02 | 236 filas reconocidas de 236 candidatas | aaf_boletin_2024200501G_2025-02.pdf
+2026-11-19 19:37:49 | 02_aaf | 2025-03 | 235 filas reconocidas de 237 candidatas | aaf_boletin_2024200501G_2025-03.pdf
+2026-11-19 19:37:51 | 02_aaf | 2025-04 | 243 filas reconocidas de 243 candidatas | aaf_boletin_2024200501G_2025-04.pdf
+2026-11-19 19:37:54 | 02_aaf | 2025-05 | 202 filas reconocidas de 214 candidatas | aaf_boletin_2024200501G_2025-05.pdf
+2026-11-19 19:37:57 | 02_aaf | 2025-06 | 238 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-06.pdf
+2026-11-19 19:37:59 | 02_aaf | 2025-07 | 239 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-07.pdf
+2026-11-19 19:38:03 | 02_aaf | 2025-08 | 237 filas reconocidas de 241 candidatas | aaf_boletin_2024200501G_2025-08.pdf
+2026-11-19 19:38:06 | 02_aaf | 2025-09 | 236 filas reconocidas de 244 candidatas | aaf_boletin_2024200501G_2025-09.pdf
+2026-11-19 19:38:09 | 02_aaf | 2025-10 | 238 filas reconocidas de 249 candidatas | aaf_boletin_2024200501G_2025-10.pdf
+2026-11-19 19:38:12 | 02_aaf | 2025-11 | 246 filas reconocidas de 248 candidatas | aaf_boletin_2024200501G_2025-11.pdf
+2026-11-19 19:38:18 | 02_aaf | 2025-12 | parseo fallido: Portada None no coincide con 2025-12
+2026-11-19 19:38:18 | 02_aaf | 2025-12: boletín excluido por calidad del parseo; revisar original.
+2026-11-19 19:38:18 | 02_aaf | 2025-12 | 0 filas reconocidas de 0 candidatas | aaf_boletin_2024200501G_2025-12.pdf
+2026-11-19 19:38:22 | 03_limpieza | 8038 filas | 772 fondos/series identificados | 34 meses | 4454 filas completas
+2026-11-19 19:38:22 | 03_limpieza | Base procesada guardada; datos crudos intactos.
+2026-11-19 19:38:26 | 04_analisis | 4454 filas; tablas y figuras guardadas
