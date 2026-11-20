@@ -14,7 +14,7 @@ import pandas as pd
 RAIZ=Path(__file__).resolve().parents[1]; CR=RAIZ/'datos_crudos'; PR=RAIZ/'datos_procesados'; S=RAIZ/'salidas'; PR.mkdir(exist_ok=True); S.mkdir(exist_ok=True)
 FECHA_INICIO='2019-01'; FECHA_CORTE='2025-12'; MINIMO=1000; META=4000
 VARIABLES=['rent_mes','vol12','var_tc','rent_lag1']
-MAX_HUECO=2; MAX_PROP=.10; HISTORIA=12; MIN_MESES=24
+MAX_HUECO=3; MAX_PROP=.15; HISTORIA=12; MIN_MESES=60
 
 def anotar(s):
     linea=f'{datetime.now(timezone(timedelta(hours=-5))):%Y-%m-%d %H:%M:%S} | 03_limpieza | {s}'; print(linea)
@@ -50,10 +50,15 @@ def identidad(fondo,admin,moneda):
         if n.startswith(pref+' ') and len(n[len(pref):].strip())>=4:
             n=n[len(pref):].strip();break
     if not n or n==a or n in opciones or len(n)<3:return None
+    # Continuidad documentada de la clase A: la clase B se creó el 16/05/2025.
+    # Fuente: https://www.fondossura.pe/productos (consulta 20/11/2026).
+    # Solo los cuatro nombres exactos, sin fusionar la clase B.
+    if a=='SURA' and n in {'CORTO PLAZO SOLES','CORTO PLAZO DOLARES','ULTRA CASH SOLES','ULTRA CASH DOLARES'}:
+        n+=' SERIE A'
     return a+' | '+n+' | '+moneda
 
 def completar(g,cal):
-    """Vacíos internos <=2 meses y <=10% del historial. No extrapola.
+    """Vacíos internos <=3 meses y <=15% del historial. No extrapola.
     Retorno faltante: tasa geométrica residual de cuotas que respeta el retorno
     publicado del mes posterior. No usar si el salto implícito es desmesurado.
     El retorno publicado del mes siguiente se conserva. La cuota es estimada.
@@ -109,7 +114,7 @@ def main():
     d=d.merge(referencia.reset_index(),on=['tipo','moneda'],how='left',validate='many_to_one');d['rent_mes']=d.rent_original.clip(d.lim_inf,d.lim_sup);d['atipico']=(d.rent_original.notna()&d.rent_mes.ne(d.rent_original)).astype(int);d['exceso']=d.rent_mes-d.rf_mensual
     d=d.sort_values(['id_fondo_serie','mes']);g=d.groupby('id_fondo_serie',sort=False)
     d['vol12']=g.rent_mes.transform(lambda z:z.shift().rolling(HISTORIA,min_periods=6).std());d['rent_lag1']=g.rent_mes.shift();d['vol12_original']=g.rent_original.transform(lambda z:z.shift().rolling(HISTORIA,min_periods=6).std());d['rent_lag1_original']=g.rent_original.shift();d['historia_n']=g.rent_original.transform(lambda z:z.shift().rolling(HISTORIA,min_periods=1).count());d['historia_imputada']=g.imputado.transform(lambda z:z.shift().rolling(HISTORIA,min_periods=6).sum());d['historia_atipica']=g.atipico.transform(lambda z:z.shift().rolling(HISTORIA,min_periods=6).sum())
-    # Selección por disponibilidad; se evalúan ventanas de >=24 meses y se privilegia >=60 si supera meta.
+    # Selección por disponibilidad; se evalúan ventanas de >=60 meses; meta mínima de 4000 filas.
     requeridas=VARIABLES+['valor_cuota','rf_mensual','rent_original','vol12_original','rent_lag1_original','historia_imputada','historia_atipica','historia_n','tipo','moneda','fondo','administradora','archivo','pagina','fila_original','denominacion_original','estado','tc_fin','tasa_pen','tasa_usd','rf_pen','rf_usd','exceso','atipico','imputado']
     d['completo']=d[requeridas].notna().all(axis=1)&np.isfinite(d[VARIABLES]).all(axis=1)
     ids=d.id_fondo_serie.unique();c=d.pivot(index='id_fondo_serie',columns='mes',values='completo').reindex(index=ids,columns=cal).to_numpy(dtype=bool);imp=d.pivot(index='id_fondo_serie',columns='mes',values='imputado').reindex(index=ids,columns=cal).fillna(0).to_numpy();hist=d.pivot(index='id_fondo_serie',columns='mes',values='historia_imputada').reindex(index=ids,columns=cal).fillna(999).to_numpy();nh=d.pivot(index='id_fondo_serie',columns='mes',values='historia_n').reindex(index=ids,columns=cal).fillna(0).to_numpy();tip=d.dropna(subset=['tipo']).drop_duplicates('id_fondo_serie').set_index('id_fondo_serie').tipo.reindex(ids).to_numpy()
@@ -119,7 +124,7 @@ def main():
             t=j-i; ok=c[:,i:j].all(axis=1)&((imp[:,i:j].sum(axis=1)+hist[:,i])/(t+nh[:,i])<=MAX_PROP);n=int(ok.sum());nfil=n*t;nt=len(set(tip[ok]));
             if nfil<=MINIMO or nt<4:continue
             candidatos.append(dict(inicio=cal[i],fin=cal[j-1],meses=t,series=n,filas=nfil,tipos=nt))
-            # Prioridad: llegar a 4000 con >=60 meses; después maximizar cobertura por tipos y filas.
+            # Prioridad: cumplir 60 meses y 4000 filas; después maximizar cobertura por tipos y filas.
             prioridad=(int(t>=60 and nfil>=META),int(nfil>=META),nt,nfil,t)
             if mejor is None or prioridad>mejor[0]:mejor=(prioridad,i,j,ok)
     pd.DataFrame(candidatos).to_csv(S/'tabla_ventanas_candidatas.csv',index=False)

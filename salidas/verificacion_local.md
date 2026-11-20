@@ -1,6 +1,6 @@
 # Verificación computacional local
 
-Fecha de ejecución: 2026-11-20T00:24:46-05:00
+Fecha de ejecución: 2026-11-20T07:46:09-05:00
 
 Prueba 1. Integridad: 128 hashes originales conformes.
 
@@ -22,7 +22,7 @@ Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 fi
 
 - datos_procesados/base_integrada_observada.csv: 175318/175318 celdas (100.00%); tipos y claves conformes.
 
-- datos_procesados/datos_procesados_2024200501G.csv: 129504/129504 celdas (100.00%); tipos y claves conformes.
+- datos_procesados/datos_procesados_2024200501G.csv: 128832/128832 celdas (100.00%); tipos y claves conformes.
 
 - salidas/duplicados_conflictivos.csv: 832/832 celdas (100.00%); tipos y claves conformes.
 
@@ -48,13 +48,13 @@ Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 fi
 
 - salidas/tabla19_sharpe_contraste_exploratorio.csv: 84/84 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla1_metricas_por_fondo_serie.csv: 568/568 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla1_metricas_por_fondo_serie.csv: 528/528 celdas (100.00%); tipos y claves conformes.
 
 - salidas/tabla20_cobertura_tipos_observados.csv: 140/140 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla21_desempeno_observado_contextual.csv: 1863/1863 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla21_desempeno_observado_contextual.csv: 2205/2205 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla22_desempeno_sin_winsorizar.csv: 497/497 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla22_desempeno_sin_winsorizar.csv: 462/462 celdas (100.00%); tipos y claves conformes.
 
 - salidas/tabla2_riesgo_rentabilidad_por_tipo.csv: 70/70 celdas (100.00%); tipos y claves conformes.
 
@@ -68,11 +68,11 @@ Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 fi
 
 - salidas/tabla7_diagnosticos.csv: 5/5 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla8_rentabilidades_mensuales.csv: 2280/2280 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla8_rentabilidades_mensuales.csv: 2440/2440 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla9_auditoria_financiera.csv: 697/697 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla9_auditoria_financiera.csv: 680/680 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla_cobertura_mensual.csv: 285/285 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla_cobertura_mensual.csv: 305/305 celdas (100.00%); tipos y claves conformes.
 
 - salidas/tabla_cobertura_variables.csv: 16/16 celdas (100.00%); tipos y claves conformes.
 
@@ -82,10 +82,10 @@ Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 fi
 
 - salidas/tabla_limites_tukey.csv: 84/84 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla_seleccion_series.csv: 2229/2229 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla_seleccion_series.csv: 2217/2217 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla_tratamientos.csv: 18612/18612 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla_tratamientos.csv: 18732/18732 celdas (100.00%); tipos y claves conformes.
 
-- salidas/tabla_ventanas_candidatas.csv: 4536/4536 celdas (100.00%); tipos y claves conformes.
+- salidas/tabla_ventanas_candidatas.csv: 90/90 celdas (100.00%); tipos y claves conformes.
 
 APROBADO: reproducción computacional local. No equivale a acreditar una consulta nueva de las fuentes vivas.

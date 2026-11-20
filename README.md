@@ -26,7 +26,7 @@ La unidad es fondo-serie homologado por administradora, denominación y moneda, 
 
 ## 3. Fuentes y endpoints exactos
 
-**Vía 1: API REST BCRPData**, pública y sin clave de API. Los nombres de las series proceden de los metadatos JSON.
+**Vía 1: API REST BCRPData**, pública y sin clave de API. Los nombres de las series proceden de los metadatos JSON. En esta versión se conservan las respuestas auténticas del 19/11/2026, recuperadas desde el commit e3d794e con verificación SHA-256 tras el HTTP 403 del 20/11/2026; no se presenta esta recuperación como consulta nueva. El script 01 conserva la consulta directa.
 
 | Código | Serie publicada | Frecuencia | Unidad | Endpoint congelado |
 |---|---|---|---|---|
@@ -61,29 +61,29 @@ Fecha de consulta API: 2026-11-19; consultas AAF: 2026-11-20 a 2026-11-20.
 | PDF originales conservados | 77 |
 | Boletines aceptados por parser | 75 |
 | Boletines descargados excluidos por parser | 2 |
-| Periodo observado en panel | 2020-08 a 2025-04 |
-| Meses calendario del panel | 57 |
+| Periodo observado en panel | 2020-08 a 2025-08 |
+| Meses calendario del panel | 61 |
 | Meses legibles en crudo AAF | 75 |
-| Filas interpoladas del panel | 174 |
-| Filas con retorno winsorizado | 131 |
+| Filas interpoladas del panel | 175 |
+| Filas con retorno winsorizado | 133 |
 | Valores faltantes de la base definitiva | 0 |
 | Tipos presentes en panel | Acciones, Deuda, Flexibles, Fondo de fondos, Mixtos |
 | Tipos solo en análisis contextual | ETF, Estructurados |
 | Meses faltantes dentro del periodo observado | Ninguno |
-| Filas finales y columnas | 4047 × 32 |
-| Denominaciones/series distintas | 71 |
-| Filas completas en MCO | 4047 |
-| Meses de estimación | 57 |
-| Series de estimación | 71 |
+| Filas finales y columnas | 4026 × 32 |
+| Denominaciones/series distintas | 66 |
+| Filas completas en MCO | 4026 |
+| Meses de estimación | 61 |
+| Series de estimación | 66 |
 
 | Variable | Filas válidas | Meses distintos |
 |---|---:|---:|
-| rent_mes | 4047 | 57 |
-| vol12 | 4047 | 57 |
-| var_tc | 4047 | 57 |
-| rent_lag1 | 4047 | 57 |
+| rent_mes | 4026 | 61 |
+| vol12 | 4026 | 61 |
+| var_tc | 4026 | 61 |
+| rent_lag1 | 4026 | 61 |
 
-El control del script 03 exige al menos 4 000 filas completas, sin NA ni duplicados, con todas las unidades sobre exactamente los mismos meses. Esta es una meta interna superior al mínimo general de la rúbrica. Cada Y y X dispone de igual número de filas. La frecuencia es mensual y la cantidad de observaciones macroeconómicas independientes corresponde a los meses del panel, no a sus filas. El mínimo se interpreta como datos de panel; el tipo de cambio se repite entre fondos del mismo mes y no convierte esas repeticiones en observaciones macroeconómicas independientes. La cobertura lograda es inferior a la sugerida de 2018 a 2025 diaria y 60 000 filas; No se generan observaciones diarias artificiales ni se extrapolan series. Las interpolaciones limitadas están identificadas y no se presentan como datos publicados. No se dispone de patrimonio ni partícipes por serie de manera homogénea.
+El control del script 03 exige al menos 4 000 filas completas y 60 meses comunes, sin NA ni duplicados, con todas las unidades sobre exactamente los mismos meses. Esta es una meta interna superior al mínimo general de la rúbrica. Cada Y y X dispone de igual número de filas. La frecuencia es mensual y la cantidad de observaciones macroeconómicas independientes corresponde a los meses del panel, no a sus filas. El mínimo se interpreta como datos de panel; el tipo de cambio se repite entre fondos del mismo mes y no convierte esas repeticiones en observaciones macroeconómicas independientes. La cobertura lograda es inferior a la sugerida de 2018 a 2025 diaria y 60 000 filas; No se generan observaciones diarias artificiales ni se extrapolan series. Las interpolaciones limitadas están identificadas y no se presentan como datos publicados. No se dispone de patrimonio ni partícipes por serie de manera homogénea.
 
 ## 5. Estructura del repositorio (Carpeta N.º 3)
 
@@ -183,10 +183,10 @@ Las API y boletines son públicos y no requieren claves. `GITHUB-TOKEN` es el no
 ## 9. Limpieza, unión y memoria de cálculo
 
 - Se convierte cada rentabilidad publicada en porcentaje a decimal. PDF, captura textual y CSV crudo permanecen intactos. Se excluyen retornos no numéricos, inferiores a -100 %, cuotas no positivas y administradoras no identificadas del conjunto candidato. Los registros excluidos y los duplicados conflictivos se documentan.
-- Llave `id_fondo_serie`: administradora homologada mediante alias explícitos, denominación normalizada y moneda; se conservan los sufijos de clase, numerales y características distintivas. Se eliminan etiquetas genéricas de categoría/administradora repetidas y FMIV/FM como sufijos o tokens legales. Las colisiones conflictivas se excluyen, no se promedian. Se restringe a categorías estables en la historia observada. Consultar `tabla_homologacion.csv` para las variantes, no asumir que son identificadores registrales. BCRP se une mediante `mes` con cardinalidad `many_to_one`.
-- Interpolación geométrica únicamente en huecos interiores de una o dos filas totalmente ausentes y delimitados por cuotas positivas. Si faltan k retornos, sea C_a la cuota anterior, C_b la cuota posterior y r_b el retorno publicado de ese mes posterior. La tasa estimada de cada mes faltante es (C_b / (C_a × (1+r_b)))^(1/k) − 1. Las cuotas intermedias se calculan acumulando esa tasa. Se preserva el retorno posterior publicado; no se reemplazan valores observados. Se rechaza la interpolación si el factor no es positivo o el retorno implícito absoluto es ≥50 %. Nunca se inventan datos antes del inicio o después del último registro, ni se interpola una tasa BCRP. Se identifica `imputado=1`, `archivo=INTERPOLACION`, `pagina=0` y se registra la evidencia de ambos meses. Posibles distribuciones o cambios de escala impiden considerar la estimación un retorno observado.
+- Llave `id_fondo_serie`: administradora homologada mediante alias explícitos, denominación normalizada y moneda; se conservan los sufijos de clase, numerales y características distintivas. Se eliminan etiquetas genéricas de categoría/administradora repetidas y FMIV/FM como sufijos o tokens legales. Las colisiones conflictivas se excluyen, no se promedian. Se restringe a categorías estables en la historia observada. La continuidad de cuatro fondos SURA (Corto Plazo y Ultra Cash, en soles y dólares) con la Serie A se documenta mediante el historial anterior a 2025 que la administradora publica para la Serie A y el inicio de la Serie B el 16 de mayo de 2025. Fuente: Fondos SURA, sección Productos, https://www.fondossura.pe/productos (consulta: 20/11/2026). No se fusiona la Serie B ni se altera el nombre publicado. Consultar `tabla_homologacion.csv` para las variantes, no asumir que son identificadores registrales. BCRP se une mediante `mes` con cardinalidad `many_to_one`.
+- Interpolación geométrica únicamente en huecos interiores de una a tres filas totalmente ausentes y delimitados por cuotas positivas. Si faltan k retornos, sea C_a la cuota anterior, C_b la cuota posterior y r_b el retorno publicado de ese mes posterior. La tasa estimada de cada mes faltante es (C_b / (C_a × (1+r_b)))^(1/k) − 1. Las cuotas intermedias se calculan acumulando esa tasa. Se preserva el retorno posterior publicado; no se reemplazan valores observados. Se rechaza la interpolación si el factor no es positivo o el retorno implícito absoluto es ≥50 %. Nunca se inventan datos antes del inicio o después del último registro, ni se interpola una tasa BCRP. Se identifica `imputado=1`, `archivo=INTERPOLACION`, `pagina=0` y se registra la evidencia de ambos meses. Posibles distribuciones o cambios de escala impiden considerar la estimación un retorno observado.
 - Winsorización de retornos pretratamiento: límites Q1−3RIQ y Q3+3RIQ calculados por tipo y moneda con registros observados (no interpolados); límite inferior no menor que −100 %. Si RIQ=0 no se recorta automáticamente. El retorno utilizado es el original o estimado recortado al límite correspondiente; la cuota no se recorta. Se registran `rent_original`, `atipico`, los límites y el historial. Las X derivadas se recalculan desde la serie de retornos tratada; los crudos se conservan.
-- Panel balanceado: se examinan ventanas consecutivas de mínimo 24 meses, al menos 4 tipos, historia suficiente para X1/X3, todas las variables y trazabilidad presentes. Se admite un máximo del 10 % de retornos imputados por serie en la ventana y su historial efectivamente disponible al inicio. Se elige primero una ventana de ≥60 meses que alcance 4 000 filas si existe; si no, se prioriza llegar a 4 000 filas, mayor número de tipos, luego mayor número de filas y duración. La lista de ventanas y selección se guarda. No se usa R², p ni resultados de Sharpe como criterio. Todas las series seleccionadas tienen las mismas fechas; no se obliga a los grupos a tener el mismo número de fondos. Las categorías sin suficiente historia se describen por separado con datos observados.
+- Panel balanceado: se examinan ventanas consecutivas de mínimo 60 meses, al menos 4 tipos, historia suficiente para X1/X3, todas las variables y trazabilidad presentes. Se admite un máximo del 15 % de retornos imputados por serie en la ventana y su historial efectivamente disponible al inicio. Se exige una ventana de ≥60 meses y ≥4 000 filas; entre las candidatas se prioriza el número de categorías, las filas y la duración. Si no se alcanza el mínimo, se detiene la entrega. La lista de ventanas y selección se guarda. No se usa R², p ni resultados de Sharpe como criterio. Todas las series seleccionadas tienen las mismas fechas; no se obliga a los grupos a tener el mismo número de fondos. Las categorías sin suficiente historia se describen por separado con datos observados.
 - Variable dependiente Y: `rent_mes`, rentabilidad mensual en decimal tras winsorización, con interpolaciones marcadas. Esta no es una función algebraica de las X del mismo periodo.
 - X1 `vol12`: desviación estándar muestral de las rentabilidades tratadas de los 12 meses calendario anteriores, con mínimo 6 retornos disponibles. `historia_n`, `historia_imputada` y `historia_atipica` describen esa ventana. Se calcula también X1 sin winsorizar para sensibilidad.
 - X2 `var_tc`: ln(TC_t) - ln(TC_(t-1)), con TC expresado en soles por dólar. Positivo indica depreciación del sol.
@@ -255,7 +255,7 @@ Las tablas y figuras se producen exclusivamente desde los datos y scripts. `tabl
 SHA-256 del archivo procesado entregado:
 
 ```text
-6a17ba9715173882053f0ab0356ce37e510486d455acc57647cfb4f7704dff64
+77da558e99a819df5496dd7385767b1b90e34ae44cfa98589100684e4162c669
 ```
 
 El manifiesto `hash_sha256.txt` se genera antes de ejecutar 05, incluye crudos, procesado y salidas empíricas y excluye los informes posteriores de verificación. Consultar `salidas/verificacion_local.md` para el resultado real después de la ejecución. No se anticipa una aprobación; si el verificador falla el cuaderno no ofrece ZIP ni publica. El cotejo vivo se ejecuta aparte para no depender de la red al preparar la entrega. Revisiones oficiales deben documentarse, no asumirse.
@@ -264,7 +264,7 @@ El manifiesto `hash_sha256.txt` se genera antes de ejecutar 05, incluye crudos, 
 
 | Numeral | Evidencia disponible / condición |
 |---|---|
-| 2.4.1 | Dos vías automatizadas, panel balanceado con al menos 4 000 filas y más de seis columnas, integración mensual; cobertura menor a sugerida y serie macro común por mes. |
+| 2.4.1 | Dos vías automatizadas, panel balanceado con al menos 4 000 filas, 60 meses y más de seis columnas, integración mensual; cobertura menor a sugerida y serie macro común por mes. |
 | 2.4.2 | Cuatro scripts obligatorios y quinto voluntario, README, requisitos, plantilla de entorno, log y diccionario; encabezados de cuatro líneas y matrícula en nombres de bases. |
 | 2.4.3 | Solicitud programática y parseo de PDF, originales intactos; incidente SMV documentado; no se presume autorización escrita. |
 | 2.4.4 | Rutas relativas, comentarios en español, semilla 501, GitHub; mínimo tres fechas de commits debe comprobarse en historial, nunca simularse. |

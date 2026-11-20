@@ -1,10 +1,10 @@
 variable,VIF
-Intercept,26.82017756
-C(tipo)[T.Deuda],4.481710036
-C(tipo)[T.Flexibles],3.124454404
-C(tipo)[T.Fondo de fondos],3.340543801
-C(tipo)[T.Mixtos],1.650047265
-C(moneda)[T.USD],1.164351402
-vol12,2.738274461
-var_tc,1.001661333
-rent_lag1,1.023899543
+Intercept,25.62545387
+C(tipo)[T.Deuda],4.192531384
+C(tipo)[T.Flexibles],3.147128301
+C(tipo)[T.Fondo de fondos],3.477878964
+C(tipo)[T.Mixtos],1.727173318
+C(moneda)[T.USD],1.14993461
+vol12,2.437926525
+var_tc,1.003426756
+rent_lag1,1.021078255
