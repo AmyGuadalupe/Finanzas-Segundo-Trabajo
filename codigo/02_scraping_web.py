@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-20
+# Fecha de extracción: 2026-11-21
 """Vía 2: boletines mensuales públicos AAF. Una página de catálogo, un PDF por mes.
 No se consulta la SMV (HTTP 418 documentado). --local reparsea PDF entregados.
 --demo coteja un PDF vivo con su copia original. No usa Drive ni sesiones previas.

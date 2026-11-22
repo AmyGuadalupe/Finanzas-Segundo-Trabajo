@@ -52,7 +52,7 @@ La unidad es fondo-serie homologado por administradora, denominación y moneda, 
 
 ## 4. Cobertura observada y control de tamaño
 
-Fecha de consulta API: 2026-11-20; consultas AAF: 2026-11-20 a 2026-11-20.
+Fecha de consulta API: 2026-11-21; consultas AAF: 2026-11-21 a 2026-11-21.
 
 | Indicador | Valor |
 |---|---:|
@@ -279,6 +279,6 @@ Uso de IA: la programación se desarrolló con asistencia de Claude y ChatGPT; s
 
 ## 14. Referencias de las fuentes de datos (APA 7)
 
-Banco Central de Reserva del Perú. (s. f.). *BCRPData: Series estadísticas de tipo de cambio e interbancarias* [Conjunto de datos]. Recuperado el 20 de noviembre de 2026, de https://estadisticas.bcrp.gob.pe/estadisticas/series/
+Banco Central de Reserva del Perú. (s. f.). *BCRPData: Series estadísticas de tipo de cambio e interbancarias* [Conjunto de datos]. Recuperado el 21 de noviembre de 2026, de https://estadisticas.bcrp.gob.pe/estadisticas/series/
 
-Asociación de Administradoras de Fondos del Perú. (s. f.). *Estadísticas mensuales de fondos mutuos* [Informes estadísticos]. Recuperado el 20 de noviembre de 2026, de https://fondosmutuos.pe/estadisticas/ (consultas registradas del 20 de noviembre de 2026 al 20 de noviembre de 2026).
+Asociación de Administradoras de Fondos del Perú. (s. f.). *Estadísticas mensuales de fondos mutuos* [Informes estadísticos]. Recuperado el 21 de noviembre de 2026, de https://fondosmutuos.pe/estadisticas/ (consultas registradas del 21 de noviembre de 2026 al 21 de noviembre de 2026).
