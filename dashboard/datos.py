@@ -18,6 +18,7 @@ import pandas as pd
 DIR_DASHBOARD = Path(__file__).resolve().parent
 CODIGO_MATRICULA = "2024200501G"
 NOMBRE_CARPETA_3 = "3_Base_de_datos_y_codigo_Amy_Pamela_Guadalupe_Cordova"
+NOMBRE_GENERAL = "Amy_Pamela_Guadalupe_Cordova_UNIDAD_II"
 
 # Columnas documentadas en diccionario_variables.md (32). Se exige su existencia.
 COLUMNAS_PANEL = [
@@ -70,7 +71,7 @@ def localizar_proyecto() -> Path:
     if os.environ.get("FM_PROYECTO_RAIZ"):
         candidatos.append(Path(os.environ["FM_PROYECTO_RAIZ"]))
     padre = DIR_DASHBOARD.parent
-    candidatos += [padre, padre / NOMBRE_CARPETA_3, Path.cwd(), Path.cwd() / NOMBRE_CARPETA_3]
+    candidatos += [padre, padre / NOMBRE_CARPETA_3, padre / NOMBRE_GENERAL / NOMBRE_CARPETA_3, Path.cwd(), Path.cwd() / NOMBRE_CARPETA_3]
     for c in candidatos:
         if _es_raiz(c):
             return c.resolve()

@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-21
+# Fecha de extracción: 2026-11-25
 """Vía API BCRPData. Una consulta por serie; guarda JSON original y CSV.
 --local: reconstruye exclusivamente desde los JSON incluidos. --demo: consulta
 el tramo de cierre y coteja diez valores disponibles, sin sobrescribir crudos.
