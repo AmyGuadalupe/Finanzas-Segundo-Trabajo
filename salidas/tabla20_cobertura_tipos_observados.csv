@@ -1,0 +1,15 @@
+tipo,moneda,series_observadas,filas_observadas,meses_observados,retorno_mediano_observado,series_panel,filas_panel,imputadas,winsorizadas
+Acciones,PEN,5,210,59,0.0106,2,122,4,0
+Acciones,USD,10,513,59,0.0072,6,366,13,0
+Deuda,PEN,35,892,59,0.0039,5,305,12,0
+Deuda,USD,69,1168,59,0.0034,7,427,17,20
+ETF,PEN,1,5,5,0.0115,0,0,0,0
+ETF,USD,1,50,50,0.00795,0,0,0,0
+Estructurados,PEN,13,78,28,0.00535,0,0,0,0
+Estructurados,USD,119,842,59,0.0034,0,0,0,0
+Flexibles,PEN,35,587,58,0.0039,4,244,17,33
+Flexibles,USD,97,1541,59,0.0033,4,244,15,8
+Fondo de fondos,PEN,11,276,59,0.0027,4,244,10,0
+Fondo de fondos,USD,174,4424,59,0.0035,29,1769,76,64
+Mixtos,PEN,5,172,59,0.00455,2,122,4,6
+Mixtos,USD,4,225,59,0.0034,3,183,7,2
