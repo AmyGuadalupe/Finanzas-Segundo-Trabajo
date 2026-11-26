@@ -1,0 +1,121 @@
+/* =====================================================================
+   00 · BASE: tokens, reducción de la interfaz por defecto de Streamlit,
+        pulido de controles y animaciones compartidas.
+   Todo es CSS puro: sigue funcionando aunque el motor JS no se cargue.
+   ===================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap');
+
+:root{
+  --tinta:#1d2a44; --tinta2:#4a5368; --acento:#13917f; --acento2:#5aa6c4;
+  --papel:#f8f7f4; --linea:#e1ded6; --superficie:#fffefb;
+  --sans:'DM Sans','Segoe UI',system-ui,sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --ease-pop:cubic-bezier(.2,.9,.25,1.12);
+  --sombra-1:0 8px 22px rgba(40,36,28,.07);
+  --sombra-2:0 22px 46px rgba(40,36,28,.13);
+}
+html{scroll-behavior:smooth}
+html,body,[data-testid="stApp"]{font-family:var(--sans)}
+[data-testid="stApp"]{
+  background:radial-gradient(1100px 620px at 92% -8%,rgba(19,145,127,.055),transparent 62%),
+             radial-gradient(900px 540px at -6% 100%,rgba(29,42,68,.04),transparent 60%),var(--papel);
+}
+.block-container{max-width:1240px;padding-top:1rem;padding-bottom:3rem}
+h1,h2,h3{font-family:var(--serif);color:var(--tinta);letter-spacing:-.01em}
+hr{border-color:var(--linea)}
+*{scrollbar-width:thin;scrollbar-color:#cfc9bb transparent}
+
+/* ---------- Streamlit: se conserva solo lo necesario ---------- */
+[data-testid="stAppDeployButton"],.stAppDeployButton,.stDeployButton,
+[data-testid="stDecoration"],[data-testid="stHeaderActionElements"],
+[data-testid="stStatusWidget"] img,[data-testid="stStatusWidget"] svg{display:none!important}
+footer,[data-testid="stToolbarActions"]{visibility:hidden}
+[data-testid="stHeader"]{background:transparent!important;backdrop-filter:none}
+[data-testid="stMainMenu"] button{opacity:.5;transition:opacity .2s}
+[data-testid="stMainMenu"] button:hover,[data-testid="stMainMenu"] button:focus-visible{opacity:1}
+[data-testid="stStatusWidget"]{font-size:.72rem;opacity:.8}
+/* Estado «en ejecución»: barra fina superior en lugar del indicador por defecto */
+@keyframes fmCarga{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes fmAparece{to{opacity:1}}
+[data-testid="stApp"][data-test-script-state="running"]::before{
+  content:"";position:fixed;top:0;left:0;width:100%;height:3px;z-index:1000002;pointer-events:none;opacity:0;
+  background:linear-gradient(90deg,transparent 0,var(--acento) 38%,var(--acento2) 62%,transparent 100%);
+  animation:fmCarga 1.05s linear infinite,fmAparece .2s ease .32s forwards}
+/* Los elementos en recálculo se atenúan menos (el cambio es más suave) */
+[data-stale="true"]{opacity:.6!important;transition:opacity .25s ease .12s!important}
+
+/* ---------- foco visible y accesibilidad ---------- */
+:is(a,button,summary,[role="tab"],[tabindex]):focus-visible{outline:3px solid var(--acento)!important;outline-offset:2px}
+.fm-solo-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.fm-saltar{position:fixed;left:12px;top:-60px;z-index:1000003;background:var(--tinta);color:#fff!important;padding:9px 16px;border-radius:999px;
+  font-weight:600;font-size:.86rem;text-decoration:none;transition:top .2s var(--ease)}
+.fm-saltar:focus{top:10px}
+.st-key-fm_motor{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;
+  border:0!important;opacity:0;pointer-events:none}
+
+/* ---------- animaciones compartidas ---------- */
+@keyframes fmEntra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fmEntraIzq{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@keyframes fmEntraDer{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
+@keyframes fmDespliega{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes fmGira{to{transform:rotate(360deg)}}
+@keyframes fmRespira{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.045);opacity:1}}
+@keyframes fmPulso{0%,100%{box-shadow:0 14px 30px rgba(60,48,30,.18),0 0 0 0 rgba(19,145,127,.30)}55%{box-shadow:0 14px 30px rgba(60,48,30,.18),0 0 0 9px rgba(19,145,127,0)}}
+.fm-entra{animation:fmEntra .55s var(--ease) both}
+.fm-desde-izq{animation:fmEntraIzq .5s var(--ease) both}
+.fm-desde-der{animation:fmEntraDer .5s var(--ease) both}
+
+/* ---------- barra superior ---------- */
+.st-key-topbar{border-bottom:1px solid var(--linea);padding-bottom:.55rem;margin-bottom:1.1rem;animation:fmDespliega .5s var(--ease) both}
+.st-key-topbar button,.st-key-topbar a{border-radius:999px!important;font-weight:600;font-size:.86rem;white-space:nowrap}
+.st-key-topbar [data-testid="stBaseButton-secondary"]{background:#fff;border:1px solid var(--linea);color:var(--tinta)}
+.st-key-topbar [data-testid="stBaseButton-secondary"]:hover{border-color:var(--acento);color:var(--acento)}
+.st-key-topbar [data-testid="stBaseButton-primary"]{background:var(--tinta);border-color:var(--tinta);color:#fff;box-shadow:0 8px 18px rgba(29,42,68,.2)}
+.st-key-topbar [data-testid="stToggle"] label p,.st-key-topbar [data-testid="stCheckbox"] label p{font-size:.74rem;color:var(--tinta2);line-height:1.15;margin:0}
+@media (max-width:900px){
+  .st-key-topbar [data-testid="stHorizontalBlock"]{flex-wrap:wrap;gap:.45rem}
+  .st-key-topbar [data-testid="stColumn"]{flex:1 1 calc(50% - .45rem)!important;min-width:calc(50% - .45rem)!important}
+}
+
+/* ---------- pulido de los controles por defecto (sin cambiar su comportamiento) ---------- */
+:where(button[data-testid="stBaseButton-secondary"],button[data-testid="stBaseButton-primary"]){
+  border-radius:12px;font-weight:600;
+  transition:transform .18s var(--ease),box-shadow .22s,border-color .2s,background-color .2s,color .2s}
+:where(button[data-testid="stBaseButton-secondary"]){background:var(--superficie);border:1px solid var(--linea);color:var(--tinta)}
+:where(button[data-testid="stBaseButton-secondary"]):hover:not(:disabled){border-color:var(--acento);color:var(--acento);transform:translateY(-1px);box-shadow:0 8px 18px rgba(40,36,28,.08)}
+:where(button[data-testid="stBaseButton-secondary"]):active:not(:disabled){transform:translateY(0) scale(.985)}
+:where(button[data-testid="stBaseButton-primary"]):hover:not(:disabled){transform:translateY(-1px);box-shadow:0 10px 22px rgba(29,42,68,.22)}
+:where(button[data-testid="stBaseButton-primary"]):active:not(:disabled){transform:translateY(0) scale(.985)}
+:where(a[data-testid="stBaseLinkButton-secondary"]){border-radius:12px;font-weight:600;border-color:var(--linea);transition:transform .18s var(--ease),box-shadow .22s,border-color .2s,color .2s}
+:where(a[data-testid="stBaseLinkButton-secondary"]):hover{border-color:var(--acento);color:var(--acento);transform:translateY(-1px);box-shadow:0 8px 18px rgba(40,36,28,.08)}
+[data-baseweb="select"]>div,[data-baseweb="input"]>div,[data-baseweb="textarea"]{
+  border-radius:12px!important;border-color:var(--linea)!important;transition:border-color .2s,box-shadow .2s}
+[data-baseweb="select"]>div:focus-within,[data-baseweb="input"]>div:focus-within,[data-baseweb="textarea"]:focus-within{
+  border-color:var(--acento)!important;box-shadow:0 0 0 3px rgba(19,145,127,.16)}
+[data-testid="stAlert"]{border-radius:14px}
+[data-testid="stMetric"]{background:var(--superficie);border:1px solid var(--linea);border-radius:14px;padding:12px 14px;transition:transform .22s var(--ease),box-shadow .22s}
+[data-testid="stMetric"]:hover{transform:translateY(-2px);box-shadow:var(--sombra-1)}
+[data-testid="stExpander"]{border:1px solid var(--linea)!important;border-radius:16px!important;background:var(--superficie);overflow:hidden;transition:box-shadow .25s,border-color .25s}
+[data-testid="stExpander"]:hover{border-color:#cfc9bb!important;box-shadow:0 10px 26px rgba(40,36,28,.06)}
+[data-testid="stExpander"] summary{font-weight:600;transition:background .2s}
+[data-testid="stExpander"] summary:hover{background:rgba(19,145,127,.05)}
+[data-testid="stExpander"] details[open] [data-testid="stExpanderDetails"]{animation:fmDespliega .38s var(--ease) both}
+[data-baseweb="tab-list"]{border-bottom:1px solid var(--linea)}
+[data-baseweb="tab-list"] button[role="tab"]{font-weight:600;transition:background .2s,color .2s;border-radius:10px 10px 0 0}
+[data-baseweb="tab-list"] button[role="tab"]:hover{background:rgba(19,145,127,.07)}
+[data-baseweb="tab-list"] button[role="tab"][aria-selected="true"]{color:var(--acento)}
+[data-baseweb="tab-highlight"]{background-color:var(--acento)!important;height:3px!important}
+[data-baseweb="tab-panel"]{animation:fmEntra .42s var(--ease) both}
+[data-testid="stDataFrame"]{border-radius:12px;overflow:hidden}
+[data-testid="stSidebar"]{background:#f1efe9}
+[data-testid="stSidebar"] [data-testid="stSidebarHeader"]{padding-bottom:0}
+
+/* ---------- cortina de apertura (la crea el motor JS al pulsar una tarjeta de navegación) ---------- */
+.fm-velo{position:fixed;inset:0;z-index:1000001;pointer-events:none;
+  background:radial-gradient(circle at var(--vx,50%) var(--vy,50%),#ffffff 0,var(--papel) 38%,#eceee8 100%);
+  clip-path:circle(0 at var(--vx,50%) var(--vy,50%));opacity:1;
+  transition:clip-path .5s cubic-bezier(.5,0,.2,1),opacity .5s ease}
+.fm-velo.on{clip-path:circle(150vmax at var(--vx,50%) var(--vy,50%))}
+.fm-velo.off{opacity:0}
+.fm-velo.reinicio{transition:none!important}

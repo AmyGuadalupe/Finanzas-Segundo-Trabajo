@@ -1,0 +1,17 @@
+/* =====================================================================
+   90 · MOVIMIENTO: respeto a prefers-reduced-motion y al toggle manual.
+   Última hoja: pisa animaciones y transiciones cuando corresponde.
+   ===================================================================== */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .fm-barrido,.fm-marcas,.fm-orbita,.fm-orbita2,.fm-orbita3,.fm-punteado,.fm-halo,.fm-serie,.fm-onda{animation:none!important}
+  .fm-hero::after{animation:none!important}
+}
+[data-fm-reducir="1"] *,[data-fm-reducir="1"] *::before,[data-fm-reducir="1"] *::after{
+  animation-duration:.001ms!important;animation-iteration-count:1!important;
+  transition-duration:.01ms!important}
+[data-fm-reducir="1"] .fm-barrido,[data-fm-reducir="1"] .fm-marcas,[data-fm-reducir="1"] .fm-orbita,
+[data-fm-reducir="1"] .fm-orbita2,[data-fm-reducir="1"] .fm-orbita3,[data-fm-reducir="1"] .fm-punteado,
+[data-fm-reducir="1"] .fm-halo,[data-fm-reducir="1"] .fm-serie,[data-fm-reducir="1"] .fm-onda{animation:none!important}
+[data-fm-reducir="1"] .fm-hero::after{animation:none!important}
