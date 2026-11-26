@@ -17,17 +17,17 @@ import streamlit as st
 AQUI = Path(__file__).resolve().parent
 CARPETA_CSS = AQUI / "static" / "css"
 
-TINTA = "#1d2a44"
-TINTA2 = "#4a5368"
-ACENTO = "#13917f"
-PAPEL = "#f8f7f4"
-LINEA = "#e1ded6"
+TINTA = "#303744"
+TINTA2 = "#61616c"
+ACENTO = "#783F53"
+PAPEL = "#F8F6F3"
+LINEA = "#E9E4E6"
 
 # Colores de cada categoría del panel (idénticos a los de los gráficos: graficos.color_tipo con la paleta clara).
 COLOR_TIPO = {"Acciones": "#2a78d6", "Deuda": "#eb6834", "Flexibles": "#1baf7a", "Fondo de fondos": "#eda100", "Mixtos": "#e87ba4"}
 
 # ------------------------------------------------------------------ iconos (viewBox 48)
-_N, _T, _A = TINTA, ACENTO, "#5aa6c4"
+_N, _T, _A = TINTA, ACENTO, "#B78A99"
 
 
 def _svg(contenido: str) -> str:
@@ -112,7 +112,7 @@ def svg_anillos(claves: list[str], activa: str | None = None) -> str:
   <circle class="r k5" cx="50" cy="50" r="18.6" fill="#ece9e2"/>
   <g class="fm-orbita"><circle cx="50" cy="3.4" r=".95" fill="{ACENTO}"/><circle cx="96.6" cy="50" r=".55" fill="#b9b3a5"/></g>
   <g class="fm-orbita2"><circle cx="50" cy="19.2" r=".7" fill="#b9b3a5"/><circle cx="50" cy="80.8" r=".7" fill="{ACENTO}" opacity=".7"/></g>
-  <g class="fm-orbita3"><circle cx="50" cy="15.8" r=".5" fill="#5aa6c4"/></g>
+  <g class="fm-orbita3"><circle cx="50" cy="15.8" r=".5" fill="#B78A99"/></g>
   <g class="fm-nucleo">
     <circle class="fm-halo" cx="50" cy="50" r="15.2" fill="none" stroke="{ACENTO}" stroke-opacity=".2" stroke-width=".5"/>
     <circle cx="50" cy="50" r="12.6" fill="url(#fmN)" stroke="#dcd8ce" stroke-width=".4" filter="url(#fmS)"/>
@@ -153,7 +153,7 @@ def css_radial(claves: list[str], activa: str | None) -> str:
             f"{sel} .s-{c}{{opacity:1;transform:none}}")
         if c == activa:
             reglas.append(
-                f".st-key-nav_{c} button{{background:linear-gradient(180deg,#e9e4db,#e3ddd2)!important;border-color:#a8998a!important;"
+                f".st-key-nav_{c} button{{background:linear-gradient(180deg,#F5EEF1,#EDE2E6)!important;border-color:#D6B9C4!important;"
                 f"box-shadow:0 14px 30px rgba(60,48,30,.18),inset 0 1px 0 rgba(255,255,255,.6)!important}}"
                 f".st-key-nav_{c}::before{{content:\"\";position:absolute;inset:0;border-radius:18px;z-index:-1;pointer-events:none;animation:fmAnilloPulso 3.4s ease-out infinite}}")
     reglas.append("@keyframes fmAnilloPulso{0%{box-shadow:0 0 0 0 rgba(19,145,127,.38)}72%,100%{box-shadow:0 0 0 13px rgba(19,145,127,0)}}")
@@ -172,7 +172,7 @@ def rueda_mini(claves: list[str], activa: str) -> str:
         else:
             pts.append(f'<circle class="pt" cx="{x:.1f}" cy="{y:.1f}" r="2.1"/>')
     return ('<svg class="fm-rueda" viewBox="0 0 60 60" aria-hidden="true" focusable="false"><circle class="anillo" cx="30" cy="30" r="21"/>'
-            '<circle class="anillo" cx="30" cy="30" r="11" stroke-dasharray="1 3"/>' + "".join(pts) + '<circle cx="30" cy="30" r="3.2" fill="#1d2a44"/></svg>')
+            '<circle class="anillo" cx="30" cy="30" r="11" stroke-dasharray="1 3"/>' + "".join(pts) + '<circle cx="30" cy="30" r="3.2" fill="#303744"/></svg>')
 
 
 # ------------------------------------------------------------------ portada: fondo financiero y títulos
@@ -185,7 +185,7 @@ def fondo_financiero() -> str:
         "".join(f'<line class="rej" x1="{x}" y1="0" x2="{x}" y2="600"/>' for x in range(150, 1200, 150))
     a = "M0,430 C90,400 150,455 240,420 S390,330 480,365 S640,455 740,385 S900,300 990,330 S1120,250 1200,215"
     return f"""<svg class="fm-fondo" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-  <defs><linearGradient id="fmArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#13917f" stop-opacity=".16"/><stop offset="1" stop-color="#13917f" stop-opacity="0"/></linearGradient></defs>
+  <defs><linearGradient id="fmArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#783F53" stop-opacity=".16"/><stop offset="1" stop-color="#783F53" stop-opacity="0"/></linearGradient></defs>
   {rejilla}{barras}
   <path class="area" d="{a} L1200,600 L0,600 Z"/>
   <path class="lin c" d="M0,350 C100,330 200,380 310,345 S480,280 590,310 S760,360 880,300 S1060,240 1200,270"/>
@@ -202,7 +202,7 @@ def titulo_palabras(texto: str) -> str:
 
 
 def _prev_svg(tipo: str) -> str:
-    n, a, g = TINTA, "#13917f", "#cfc9bb"
+    n, a, g = TINTA, "#783F53", "#cfc9bb"
     if tipo == "poster":
         cuerpo = (f"<rect x='6' y='4' width='88' height='112' rx='6' fill='#fff' stroke='{n}' stroke-width='2'/><rect x='14' y='12' width='72' height='16' rx='3' fill='{n}'/>"
                   f"<rect x='14' y='36' width='34' height='30' rx='3' fill='{a}' opacity='.8'/><rect x='52' y='36' width='34' height='30' rx='3' fill='{g}'/>"

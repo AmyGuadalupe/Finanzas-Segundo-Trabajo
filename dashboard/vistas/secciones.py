@@ -9,6 +9,7 @@ from __future__ import annotations
 import pandas as pd
 import streamlit as st
 
+from vistas import descargas_resultados as dr
 import cargas
 import catalogo_figuras as cf
 import econometria as eco
@@ -77,6 +78,7 @@ def resultados() -> None:
         st.info("Los archivos de gráficos actuales todavía no están completos en GitHub. "
                 "Se muestran los disponibles, con un aviso cuando proceden de la versión anterior. "
                 "La base de datos y los modelos no se modifican.")
+    dr.mostrar(proy)
     tabs = st.tabs(["Desempeño por tipo y moneda", "Modelo econométrico", "Contrastes y distribución"])
 
     def _figura(f: cf.Figura) -> None:
