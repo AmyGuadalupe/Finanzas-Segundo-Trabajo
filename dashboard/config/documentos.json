@@ -1,0 +1,1573 @@
+{
+  "version": 1,
+  "instrucciones": "Edite SOLO este archivo para incorporar documentos. Estados válidos: disponible, en_elaboracion, pendiente, no_distribuible. Un enlace vacío nunca se muestra como botón activo. Enlaces de Google Drive: pegue el enlace de 'Compartir' (cualquiera con el enlace puede ver); el portal deriva la vista previa y la descarga. Los artículos y traducciones que no puedan distribuirse públicamente deben usar 'enlace_editorial' o 'doi' y estado 'no_distribuible'.",
+  "alojamiento": "Google Drive u otro servicio compatible (los documentos no se suben a GitHub)",
+  "productos": {
+    "journal": {
+      "titulo": "Journal científico",
+      "descripcion": "Artículo científico de la investigación (LaTeX, APA 7). Se incorporará al finalizar su elaboración.",
+      "estado": "en_elaboracion",
+      "miniatura": "",
+      "visualizacion_url": "",
+      "descarga_pdf_url": "",
+      "proyecto_zip_url": ""
+    },
+    "poster_principal": {
+      "titulo": "Póster principal de la investigación",
+      "descripcion": "Póster del artículo con fuente de datos y código QR del repositorio.",
+      "estado": "en_elaboracion",
+      "miniatura": "",
+      "visualizacion_url": "",
+      "descarga_pdf_url": "",
+      "proyecto_zip_url": ""
+    },
+    "presentacion": {
+      "titulo": "Presentación científica",
+      "descripcion": "Beamer de la exposición (máximo 10 diapositivas).",
+      "estado": "en_elaboracion",
+      "miniatura": "",
+      "visualizacion_url": "",
+      "descarga_pdf_url": "",
+      "proyecto_zip_url": ""
+    },
+    "paquete_general": {
+      "titulo": "Paquete general de plantillas y proyectos",
+      "descripcion": "ZIP con las plantillas editables de todos los productos académicos.",
+      "estado": "pendiente",
+      "descarga_url": ""
+    }
+  },
+  "articulos": [
+    {
+      "id": "A01",
+      "numero": 1,
+      "estado": "en_elaboracion",
+      "titulo_original": "Bond vs. equity mutual fund performance using false discovery rate (FDR)",
+      "titulo_es": "",
+      "autores": [
+        "Huang, L., Lee, W. Y., & Rennie, C. G."
+      ],
+      "anio": 2026,
+      "revista": "Journal of Risk and Financial Management",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.3390/jrfm19010089",
+      "enlace_editorial": "https://doi.org/10.3390/jrfm19010089",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Comparar el desempeño neto de los fondos activos de bonos y de acciones controlando la suerte estadística",
+      "datos_metodologia": "Muestra y periodo: 571 fondos de bonos y 3 986 de acciones de EE. UU. (CRSP), 1999–2016\n\nMétodo: t(α) neto, FDR modificado (q*) y %Sim < Act con 10 000 remuestreos; modelos de 4 a 12 factores",
+      "resultados": "El 33.9 % de los fondos de bonos tiene desempeño superior frente al 1.8 % de los de acciones; la ventaja es mayor en deuda corporativa y cae con el tamaño",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Comparar rentabilidad ajustada entre renta fija y renta variable",
+      "relacion_estudio": "",
+      "referencia_apa": "Huang, L., Lee, W. Y., & Rennie, C. G. (2026). Bond vs. equity mutual fund performance using false discovery rate (FDR). Journal of Risk and Financial Management, 19(1), Artículo 89. https://doi.org/10.3390/jrfm19010089",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A02",
+      "numero": 2,
+      "estado": "en_elaboracion",
+      "titulo_original": "Performance and investment styles of international multi-asset funds during market crises",
+      "titulo_es": "",
+      "autores": [
+        "Leite, P."
+      ],
+      "anio": 2024,
+      "revista": "Empirica",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1007/s10663-024-09614-2",
+      "enlace_editorial": "https://doi.org/10.1007/s10663-024-09614-2",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar el desempeño y el estilo de inversión de fondos multiactivo internacionales en crisis y fuera de ellas",
+      "datos_metodologia": "Muestra y periodo: Fondos multiactivo domiciliados en Portugal que invierten en el exterior, 2004–2021\n\nMétodo: Modelo multifactorial condicional de bonos y acciones con alfas y betas variables",
+      "resultados": "Rinden por debajo de su referencia incluso antes de comisiones; en crisis alcanzan un desempeño neutral y los más cargados a acciones mejoran",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Fondos mixtos y su comportamiento en periodos de estrés",
+      "relacion_estudio": "",
+      "referencia_apa": "Leite, P. (2024). Performance and investment styles of international multi-asset funds during market crises. Empirica, 51(3), 783–805. https://doi.org/10.1007/s10663-024-09614-2",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A03",
+      "numero": 3,
+      "estado": "en_elaboracion",
+      "titulo_original": "Bond mutual fund performance: Evidence from the skill ratio and false discovery rate",
+      "titulo_es": "",
+      "autores": [
+        "Huang, L., Lee, W. Y., & Rennie, C. G."
+      ],
+      "anio": 2025,
+      "revista": "The Financial Review",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1111/fire.12432",
+      "enlace_editorial": "https://doi.org/10.1111/fire.12432",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Medir la habilidad de los gestores de fondos de bonos con un skill ratio bajo el enfoque FDR",
+      "datos_metodologia": "Muestra y periodo: 571 gestores de fondos de bonos domésticos de EE. UU., 1999–2016\n\nMétodo: Skill ratio (valor agregado bruto con referencias Morningstar por el logaritmo del patrimonio) y FDR con nueva simulación",
+      "resultados": "El 28.7 % de los gestores es hábil, 36.3 % en fondos corporativos y 17.3 % en gubernamentales, sobre todo en beneficio de los patrocinadores",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Distinguir deuda corporativa y soberana dentro de los fondos de deuda",
+      "relacion_estudio": "",
+      "referencia_apa": "Huang, L., Lee, W. Y., & Rennie, C. G. (2025). Bond mutual fund performance: Evidence from the skill ratio and false discovery rate. The Financial Review, 60(3), 865–894. https://doi.org/10.1111/fire.12432",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A04",
+      "numero": 4,
+      "estado": "en_elaboracion",
+      "titulo_original": "Assessing the performance and risk-adjusted returns of financial mutual funds",
+      "titulo_es": "",
+      "autores": [
+        "Malhotra, D. K., Mooney, T., Poteau, R., & Russel, P."
+      ],
+      "anio": 2023,
+      "revista": "International Journal of Financial Studies",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.3390/ijfs11040136",
+      "enlace_editorial": "https://doi.org/10.3390/ijfs11040136",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar la rentabilidad ajustada por riesgo de los fondos del sector financiero durante 23 años",
+      "datos_metodologia": "Muestra y periodo: Fondos de la categoría Financial de Morningstar Direct, enero de 2000 a mayo de 2023\n\nMétodo: Ratios ajustados por riesgo, modelos multifactoriales condicionales e incondicionales, timing y selectividad",
+      "resultados": "Superan al mercado en desempeño ajustado por riesgo, pero sus alfas no difieren de cero y sus gestores no muestran timing ni selección",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Indicadores de Sharpe, Treynor y alfa por categoría de fondo",
+      "relacion_estudio": "",
+      "referencia_apa": "Malhotra, D. K., Mooney, T., Poteau, R., & Russel, P. (2023). Assessing the performance and risk-adjusted returns of financial mutual funds. International Journal of Financial Studies, 11(4), Artículo 136. https://doi.org/10.3390/ijfs11040136",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A05",
+      "numero": 5,
+      "estado": "en_elaboracion",
+      "titulo_original": "Navigating market volatility: Risk and return insights from Indian mutual funds",
+      "titulo_es": "",
+      "autores": [
+        "Malhotra, D., Singh, R., & Ramani, L."
+      ],
+      "anio": 2024,
+      "revista": "Cogent Economics & Finance",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1080/23322039.2024.2431535",
+      "enlace_editorial": "https://doi.org/10.1080/23322039.2024.2431535",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar riesgo y rentabilidad de los fondos mutuos de India frente a sus índices de referencia",
+      "datos_metodologia": "Muestra y periodo: Fondos indios con datos mensuales de Morningstar Direct, enero de 2010 a abril de 2023\n\nMétodo: Ratios de Sharpe y Omega, alfa de Jensen, modelo de Carhart, timing, selectividad y riesgo a la baja",
+      "resultados": "Menor rentabilidad y volatilidad que los índices, pero mejor rentabilidad por unidad de riesgo; alfa positivo no significativo y menor riesgo a la baja",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Evidencia de un mercado emergente comparable al peruano",
+      "relacion_estudio": "",
+      "referencia_apa": "Malhotra, D., Singh, R., & Ramani, L. (2024). Navigating market volatility: Risk and return insights from Indian mutual funds. Cogent Economics & Finance, 12(1), Artículo 2431535. https://doi.org/10.1080/23322039.2024.2431535",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A06",
+      "numero": 6,
+      "estado": "en_elaboracion",
+      "titulo_original": "Assessing energy mutual funds: Performance, risks, and managerial skills",
+      "titulo_es": "",
+      "autores": [
+        "Malhotra, D., & Nippani, S."
+      ],
+      "anio": 2024,
+      "revista": "International Journal of Financial Studies",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.3390/ijfs12010020",
+      "enlace_editorial": "https://doi.org/10.3390/ijfs12010020",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar desempeño, riesgo y habilidad de gestión de los fondos de acciones del sector energía",
+      "datos_metodologia": "Muestra y periodo: Fondos de renta variable de energía de Morningstar Direct, enero de 2000 a julio de 2023\n\nMétodo: Índice de riqueza acumulada, ratio de Sharpe, modelo de cuatro factores de Carhart y subperiodos de la COVID-19",
+      "resultados": "Superan a sus referencias en retornos mensuales, con alta sensibilidad al mercado; la habilidad de selección aparece tras la vacunación",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Riesgo sistemático en fondos sectoriales de renta variable",
+      "relacion_estudio": "",
+      "referencia_apa": "Malhotra, D., & Nippani, S. (2024). Assessing energy mutual funds: Performance, risks, and managerial skills. International Journal of Financial Studies, 12(1), Artículo 20. https://doi.org/10.3390/ijfs12010020",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A07",
+      "numero": 7,
+      "estado": "en_elaboracion",
+      "titulo_original": "Biodiversity mutual funds and ETFs: Characteristics, performance, risk, and fees",
+      "titulo_es": "",
+      "autores": [
+        "Fang, F., & Luo, D."
+      ],
+      "anio": 2026,
+      "revista": "International Journal of Financial Studies",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.3390/ijfs14050117",
+      "enlace_editorial": "https://doi.org/10.3390/ijfs14050117",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Caracterizar los fondos temáticos de biodiversidad y su desempeño, riesgo y comisiones",
+      "datos_metodologia": "Muestra y periodo: 24 fondos abiertos de biodiversidad, 18 fondos mutuos y 6 ETF, en su mayoría europeos\n\nMétodo: Análisis exploratorio de características, desempeño frente a referencias, riesgo, comisiones y métricas de sostenibilidad",
+      "resultados": "Fondos activos y pasivos rinden menos que su referencia y cobran comisiones más altas; el perfil del gestor no explica el desempeño",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Peso de las comisiones en la rentabilidad neta",
+      "relacion_estudio": "",
+      "referencia_apa": "Fang, F., & Luo, D. (2026). Biodiversity mutual funds and ETFs: Characteristics, performance, risk, and fees. International Journal of Financial Studies, 14(5), Artículo 117. https://doi.org/10.3390/ijfs14050117",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A08",
+      "numero": 8,
+      "estado": "en_elaboracion",
+      "titulo_original": "Socially responsible investment and fund performance: The moderating roles of mutual funds' operating environments",
+      "titulo_es": "",
+      "autores": [
+        "Li, D., & Li, H."
+      ],
+      "anio": 2025,
+      "revista": "International Review of Financial Analysis",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.irfa.2024.103804",
+      "enlace_editorial": "https://doi.org/10.1016/j.irfa.2024.103804",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Probar una relación en U invertida entre la integración de responsabilidad social y el desempeño del fondo",
+      "datos_metodologia": "Muestra y periodo: 1 145 fondos mutuos chinos, 2014–2022\n\nMétodo: Regresiones de panel con término cuadrático y moderación por incertidumbre de mercado y divulgación obligatoria",
+      "resultados": "El desempeño mejora con una integración baja y empeora con una alta; la incertidumbre debilita y la divulgación obligatoria refuerza esa relación",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Regulación y entorno como moderadores del desempeño",
+      "relacion_estudio": "",
+      "referencia_apa": "Li, D., & Li, H. (2025). Socially responsible investment and fund performance: The moderating roles of mutual funds' operating environments. International Review of Financial Analysis, 97, Artículo 103804. https://doi.org/10.1016/j.irfa.2024.103804",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A09",
+      "numero": 9,
+      "estado": "en_elaboracion",
+      "titulo_original": "Are ratings and past performance good predictors of future performance in emerging markets mutual funds?",
+      "titulo_es": "",
+      "autores": [
+        "Otero González, L., Durán Santomil, P., Marouf, D., & Vieito, J. P."
+      ],
+      "anio": 2025,
+      "revista": "The British Accounting Review",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.bar.2025.101688",
+      "enlace_editorial": "https://doi.org/10.1016/j.bar.2025.101688",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Examinar si las calificaciones y la rentabilidad pasada predicen el desempeño en fondos de mercados emergentes",
+      "datos_metodologia": "Muestra y periodo: Fondos de renta variable de mercados emergentes globales, 2000–2020\n\nMétodo: Regresiones de datos de panel, persistencia, valor en riesgo y flujos netos",
+      "resultados": "Los fondos de cinco estrellas logran más rentabilidad y alfa con menos riesgo; no hay persistencia general, pero a tres años los mejor calificados superan al resto",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Persistencia y calificaciones en mercados emergentes",
+      "relacion_estudio": "",
+      "referencia_apa": "Otero González, L., Durán Santomil, P., Marouf, D., & Vieito, J. P. (2025). Are ratings and past performance good predictors of future performance in emerging markets mutual funds? The British Accounting Review, Artículo 101688. Publicación anticipada en línea. https://doi.org/10.1016/j.bar.2025.101688",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A10",
+      "numero": 10,
+      "estado": "en_elaboracion",
+      "titulo_original": "Mutual fund performance: The model for selecting persistent winners",
+      "titulo_es": "",
+      "autores": [
+        "Mateus, C., Mateus, I. B., & Todorovic, N."
+      ],
+      "anio": 2025,
+      "revista": "The European Journal of Finance",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1080/1351847X.2024.2425401",
+      "enlace_editorial": "https://doi.org/10.1080/1351847X.2024.2425401",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Proponer un modelo que identifique fondos que superan a su referencia y a su grupo de pares",
+      "datos_metodologia": "Muestra y periodo: 603 fondos Large Cap Value y 785 Large Cap Growth activos de EE. UU. (Morningstar Direct)\n\nMétodo: Modelo de Carhart ampliado con alfas ajustados por referencia y por pares, con tablas de contingencia",
+      "resultados": "Identifica más ganadores que el modelo de Carhart, con mayores retornos netos y persistencia hasta 36 meses",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Evaluación frente a fondos de la misma categoría",
+      "relacion_estudio": "",
+      "referencia_apa": "Mateus, C., Mateus, I. B., & Todorovic, N. (2025). Mutual fund performance: The model for selecting persistent winners. The European Journal of Finance, 31(5), 647–669. https://doi.org/10.1080/1351847X.2024.2425401",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A11",
+      "numero": 11,
+      "estado": "en_elaboracion",
+      "titulo_original": "Flows, performance, and investor behavior: Evidence from mutual funds in China",
+      "titulo_es": "",
+      "autores": [
+        "Zhang, P., Lv, Z.-X., & Liu, J.-Y."
+      ],
+      "anio": 2024,
+      "revista": "Cogent Economics & Finance",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1080/23322039.2024.2373258",
+      "enlace_editorial": "https://doi.org/10.1080/23322039.2024.2373258",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Analizar el comportamiento del inversionista y la relación entre flujos y desempeño",
+      "datos_metodologia": "Muestra y periodo: 2 876 fondos activos de renta variable de China (CSMAR y RESET), 2011–2023\n\nMétodo: Regresiones de flujo y desempeño, inversionistas institucionales e individuales, mercados alcistas y bajistas",
+      "resultados": "Poca evidencia del rompecabezas de rescates y del efecto disposición; los inversionistas persiguen fondos estrella y aciertan al elegir",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Flujos de partícipes y rentabilidad pasada",
+      "relacion_estudio": "",
+      "referencia_apa": "Zhang, P., Lv, Z.-X., & Liu, J.-Y. (2024). Flows, performance, and investor behavior: Evidence from mutual funds in China. Cogent Economics & Finance, 12(1), Artículo 2373258. https://doi.org/10.1080/23322039.2024.2373258",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A12",
+      "numero": 12,
+      "estado": "en_elaboracion",
+      "titulo_original": "Do not always chase last year's best mutual fund: Strategies for independent investing",
+      "titulo_es": "",
+      "autores": [
+        "Kothapalli, R., Bokka, P. S., Puppala, S., & Pinsky, E."
+      ],
+      "anio": 2026,
+      "revista": "Journal of Risk and Financial Management",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.3390/jrfm19100750",
+      "enlace_editorial": "https://doi.org/10.3390/jrfm19100750",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar si conviene invertir en el mejor fondo del año anterior o en otra posición del ranking",
+      "datos_metodologia": "Muestra y periodo: 40 fondos de gran capitalización de crecimiento, ingreso, valor y balanceados, 2003–2024\n\nMétodo: Ranking anual por rendimiento, estrategias de rotación, rentabilidad acumulada, volatilidad y caída máxima",
+      "resultados": "En ingreso y balanceados rinde más un fondo de posición media; el primero es más volátil y revierte a la media, salvo en crecimiento y valor",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Rentabilidad y caída máxima por categoría de fondo",
+      "relacion_estudio": "",
+      "referencia_apa": "Kothapalli, R., Bokka, P. S., Puppala, S., & Pinsky, E. (2026). Do not always chase last year's best mutual fund: Strategies for independent investing. Journal of Risk and Financial Management, 19(10), Artículo 750. https://doi.org/10.3390/jrfm19100750",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A13",
+      "numero": 13,
+      "estado": "en_elaboracion",
+      "titulo_original": "Mutual funds' conditional performance free of data snooping bias",
+      "titulo_es": "",
+      "autores": [
+        "Hsu, P.-H., Kyriakou, I., Ma, T., & Sermpinis, G."
+      ],
+      "anio": 2025,
+      "revista": "Journal of Financial and Quantitative Analysis",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1017/S0022109024000097",
+      "enlace_editorial": "https://doi.org/10.1017/S0022109024000097",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar el desempeño condicional de los fondos corrigiendo el sesgo por minería de datos",
+      "datos_metodologia": "Muestra y periodo: Fondos mutuos de EE. UU. de la base CRSP, enero de 1975 a diciembre de 2022\n\nMétodo: Prueba fFDR+ que incorpora características del fondo, con simulaciones",
+      "resultados": "Controla los falsos descubrimientos con más potencia; las carteras elegidas con fFDR+ superan a las de pruebas sin información actualizada",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Control de la suerte al comparar muchos fondos",
+      "relacion_estudio": "",
+      "referencia_apa": "Hsu, P.-H., Kyriakou, I., Ma, T., & Sermpinis, G. (2025). Mutual funds' conditional performance free of data snooping bias. Journal of Financial and Quantitative Analysis, 60(3), 1373–1400. https://doi.org/10.1017/S0022109024000097",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A14",
+      "numero": 14,
+      "estado": "en_elaboracion",
+      "titulo_original": "Screening US mutual funds for social responsibility and irresponsibility",
+      "titulo_es": "",
+      "autores": [
+        "Artinger, J., & Kreuzer, C."
+      ],
+      "anio": 2026,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2025.109002",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2025.109002",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Examinar la responsabilidad e irresponsabilidad social de los fondos a partir de sus tenencias",
+      "datos_metodologia": "Muestra y periodo: 139 fondos socialmente responsables y 4 898 convencionales de EE. UU., 2013–2020\n\nMétodo: Revisión de tenencias con calificaciones ESG ponderadas y registro de escándalos corporativos",
+      "resultados": "Los fondos responsables tienen mejores puntajes ESG pero quedan rezagados en escándalos sociales y de gobierno; los pasivos puntúan más que los activos",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Clasificación de fondos por criterios ESG",
+      "relacion_estudio": "",
+      "referencia_apa": "Artinger, J., & Kreuzer, C. (2026). Screening US mutual funds for social responsibility and irresponsibility. Finance Research Letters, 87, Artículo 109002. https://doi.org/10.1016/j.frl.2025.109002",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A15",
+      "numero": 15,
+      "estado": "en_elaboracion",
+      "titulo_original": "Broken promises, competition, and capital allocation in the mutual fund industry",
+      "titulo_es": "",
+      "autores": [
+        "Abis, S., & Lines, A."
+      ],
+      "anio": 2024,
+      "revista": "Journal of Financial Economics",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.jfineco.2024.103948",
+      "enlace_editorial": "https://doi.org/10.1016/j.jfineco.2024.103948",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Identificar qué características del fondo valoran los inversionistas además de la rentabilidad y las comisiones",
+      "datos_metodologia": "Muestra y periodo: 2 995 fondos de EE. UU. y 315 190 observaciones fondo-mes, marzo de 2000 a diciembre de 2017\n\nMétodo: Aprendizaje automático sobre las estrategias del prospecto y variables instrumentales para los flujos",
+      "resultados": "Los flujos caen cuando el fondo se aleja de sus pares de estrategia y suben cuando los supera, lo que crea un dilema entre cumplir y destacar",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Coherencia entre la estrategia declarada y la cartera",
+      "relacion_estudio": "",
+      "referencia_apa": "Abis, S., & Lines, A. (2024). Broken promises, competition, and capital allocation in the mutual fund industry. Journal of Financial Economics, 162, Artículo 103948. https://doi.org/10.1016/j.jfineco.2024.103948",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A16",
+      "numero": 16,
+      "estado": "en_elaboracion",
+      "titulo_original": "Sustainability or performance? Ratings and fund managers' incentives",
+      "titulo_es": "",
+      "autores": [
+        "Gantchev, N., Giannetti, M., & Li, R."
+      ],
+      "anio": 2024,
+      "revista": "Journal of Financial Economics",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.jfineco.2024.103831",
+      "enlace_editorial": "https://doi.org/10.1016/j.jfineco.2024.103831",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Analizar cómo reaccionan gestores e inversionistas a las calificaciones de sostenibilidad de Morningstar",
+      "datos_metodologia": "Muestra y periodo: 1 959 fondos de EE. UU., julio de 2015 a septiembre de 2017\n\nMétodo: Introducción de las calificaciones de sostenibilidad como evento y análisis de flujos, tenencias y desempeño",
+      "resultados": "Los fondos compraron acciones sostenibles para atraer flujos, pero esas compras rindieron menos; luego las calificaciones dejaron de mover flujos",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Calificaciones públicas y decisiones del partícipe",
+      "relacion_estudio": "",
+      "referencia_apa": "Gantchev, N., Giannetti, M., & Li, R. (2024). Sustainability or performance? Ratings and fund managers' incentives. Journal of Financial Economics, 155, Artículo 103831. https://doi.org/10.1016/j.jfineco.2024.103831",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A17",
+      "numero": 17,
+      "estado": "en_elaboracion",
+      "titulo_original": "In the name of the law: How does legal distance affect US international mutual funds' financial performance?",
+      "titulo_es": "",
+      "autores": [
+        "Fleta-Asín, J., & Muñoz, F."
+      ],
+      "anio": 2025,
+      "revista": "Research in International Business and Finance",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.ribaf.2024.102661",
+      "enlace_editorial": "https://doi.org/10.1016/j.ribaf.2024.102661",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Medir cómo la distancia legal entre países afecta el desempeño de los fondos internacionales",
+      "datos_metodologia": "Muestra y periodo: 1 160 fondos de renta variable de EE. UU. con vocación internacional, 2000–2021\n\nMétodo: Regresiones de panel del desempeño ajustado por riesgo sobre la distancia legal y el tamaño del mercado",
+      "resultados": "Más exposición a mercados legalmente distantes reduce el desempeño; invertir en bolsas más grandes atenúa el efecto",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Exposición internacional y entorno legal",
+      "relacion_estudio": "",
+      "referencia_apa": "Fleta-Asín, J., & Muñoz, F. (2025). In the name of the law: How does legal distance affect US international mutual funds' financial performance? Research in International Business and Finance, 74, Artículo 102661. https://doi.org/10.1016/j.ribaf.2024.102661",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A18",
+      "numero": 18,
+      "estado": "en_elaboracion",
+      "titulo_original": "Institutional distance and US-based international mutual funds' financial performance",
+      "titulo_es": "",
+      "autores": [
+        "Fleta-Asín, J., & Muñoz, F."
+      ],
+      "anio": 2023,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2022.103412",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2022.103412",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Analizar el efecto de la distancia institucional sobre el desempeño ajustado por riesgo",
+      "datos_metodologia": "Muestra y periodo: 1 704 fondos internacionales de EE. UU., 1997–2021\n\nMétodo: Panel con indicadores mundiales de gobernanza y concentración de la cartera por país",
+      "resultados": "La distancia institucional deteriora el desempeño; concentrar la cartera por país lo mejora y modera el efecto negativo",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Diversificación internacional y riesgo país",
+      "relacion_estudio": "",
+      "referencia_apa": "Fleta-Asín, J., & Muñoz, F. (2023). Institutional distance and US-based international mutual funds' financial performance. Finance Research Letters, 51, Artículo 103412. https://doi.org/10.1016/j.frl.2022.103412",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A19",
+      "numero": 19,
+      "estado": "en_elaboracion",
+      "titulo_original": "Portfolio's weighted political risk and mutual fund performance: A text-based approach",
+      "titulo_es": "",
+      "autores": [
+        "Nguyen, H. G., Hoang, K., Nguyen, Q. M. P., Do, H. X., & Nguyen, D. K."
+      ],
+      "anio": 2024,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2024.105728",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2024.105728",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Medir el efecto del riesgo político de las empresas en cartera sobre el desempeño del fondo",
+      "datos_metodologia": "Muestra y periodo: Fondos de EE. UU., 55 537 observaciones fondo-trimestre, 2002–2017\n\nMétodo: Medidas textuales de riesgo político por empresa ponderadas por cartera y alfa de Carhart",
+      "resultados": "El riesgo político ponderado reduce el desempeño, mientras el riesgo geopolítico nacional, la incertidumbre estatal y el Brexit no lo afectan",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Riesgo idiosincrático frente a riesgo macroeconómico",
+      "relacion_estudio": "",
+      "referencia_apa": "Nguyen, H. G., Hoang, K., Nguyen, Q. M. P., Do, H. X., & Nguyen, D. K. (2024). Portfolio's weighted political risk and mutual fund performance: A text-based approach. Finance Research Letters, 66, Artículo 105728. https://doi.org/10.1016/j.frl.2024.105728",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A20",
+      "numero": 20,
+      "estado": "en_elaboracion",
+      "titulo_original": "The time-varying effects of geopolitical risk on mutual fund risk taking",
+      "titulo_es": "",
+      "autores": [
+        "Liu, J., Chen, Z., Zhu, Y., Chen, Y., & Huang, Y."
+      ],
+      "anio": 2024,
+      "revista": "PLOS ONE",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1371/journal.pone.0303766",
+      "enlace_editorial": "https://doi.org/10.1371/journal.pone.0303766",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Estimar los efectos variables en el tiempo del riesgo geopolítico sobre la toma de riesgo de los fondos",
+      "datos_metodologia": "Muestra y periodo: Fondos mutuos de China con datos mensuales de CSMAR, enero de 2000 a enero de 2023\n\nMétodo: Vector autorregresivo con parámetros variables y volatilidad estocástica (TVP-VAR-SV)",
+      "resultados": "El efecto es negativo hasta 2015 y luego se vuelve positivo a corto plazo; los fondos de crecimiento responden menos que los balanceados y de ingreso",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Respuesta al riesgo según el tipo de fondo",
+      "relacion_estudio": "",
+      "referencia_apa": "Liu, J., Chen, Z., Zhu, Y., Chen, Y., & Huang, Y. (2024). The time-varying effects of geopolitical risk on mutual fund risk taking. PLOS ONE, 19(6), Artículo e0303766. https://doi.org/10.1371/journal.pone.0303766",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A21",
+      "numero": 21,
+      "estado": "en_elaboracion",
+      "titulo_original": "Can managers' characteristics explain European bond mutual fund performance?",
+      "titulo_es": "",
+      "autores": [
+        "Durán-Santomil, P., Otero-González, L., Domingues, R., & Leite, P."
+      ],
+      "anio": 2023,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2023.104626",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2023.104626",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Determinar si las características del gestor explican desempeño y riesgo de los fondos de bonos europeos",
+      "datos_metodologia": "Muestra y periodo: 7 930 observaciones fondo-año de Morningstar, 2005–2019\n\nMétodo: Comparación de medidas de desempeño y riesgo entre fondos con equipos y con un solo gestor, y por diversidad de género",
+      "resultados": "No hay diferencias significativas entre equipos y gestores individuales ni por diversidad de género",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Fondos de renta fija y perfil del gestor",
+      "relacion_estudio": "",
+      "referencia_apa": "Durán-Santomil, P., Otero-González, L., Domingues, R., & Leite, P. (2023). Can managers' characteristics explain European bond mutual fund performance? Finance Research Letters, 58, Artículo 104626. https://doi.org/10.1016/j.frl.2023.104626",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A22",
+      "numero": 22,
+      "estado": "en_elaboracion",
+      "titulo_original": "Managerial characteristics and performance of eurozone mutual funds",
+      "titulo_es": "",
+      "autores": [
+        "Tolikas, K., & Callonnec, M."
+      ],
+      "anio": 2023,
+      "revista": "Journal of Financial Research",
+      "indexacion_scopus": null,
+      "cuartil": "Q2",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1111/jfir.12343",
+      "enlace_editorial": "https://doi.org/10.1111/jfir.12343",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Relacionar las características observables del gestor con el desempeño de fondos de renta variable",
+      "datos_metodologia": "Muestra y periodo: 383 fondos de renta variable diversificada de la eurozona, enero de 2005 a diciembre de 2020\n\nMétodo: Alfas del CAPM y multifactoriales por grupos y regresiones con edad, antigüedad, CFA, MBA y género",
+      "resultados": "La edad y el CFA elevan el desempeño ajustado por riesgo y la antigüedad lo reduce; el género y el MBA no influyen",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Perfil del gestor y riesgo en renta variable",
+      "relacion_estudio": "",
+      "referencia_apa": "Tolikas, K., & Callonnec, M. (2023). Managerial characteristics and performance of eurozone mutual funds. Journal of Financial Research, 46(4), 925–947. https://doi.org/10.1111/jfir.12343",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A23",
+      "numero": 23,
+      "estado": "en_elaboracion",
+      "titulo_original": "The role of passive effects in the relationship between active management and short-term performance: Evidence from mutual fund portfolio holdings",
+      "titulo_es": "",
+      "autores": [
+        "Matallín-Sáez, J. C., & de Mingo-López, D. V."
+      ],
+      "anio": 2024,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2024.105107",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2024.105107",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Medir la gestión activa trimestral y su relación con el desempeño de corto plazo",
+      "datos_metodologia": "Muestra y periodo: 1 136 fondos de renta variable de EE. UU., enero de 2000 a marzo de 2020\n\nMétodo: Correlación con una cartera sintética pasiva que replica las tenencias y diferencia de alfas",
+      "resultados": "El desempeño anormal agregado es negativo; la gestión activa baja en periodos volátiles y se asocia negativamente con el desempeño de corto plazo",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Separar la gestión activa del efecto pasivo",
+      "relacion_estudio": "",
+      "referencia_apa": "Matallín-Sáez, J. C., & de Mingo-López, D. V. (2024). The role of passive effects in the relationship between active management and short-term performance: Evidence from mutual fund portfolio holdings. Finance Research Letters, 62, Artículo 105107. https://doi.org/10.1016/j.frl.2024.105107",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A24",
+      "numero": 24,
+      "estado": "en_elaboracion",
+      "titulo_original": "Liquidity picking and fund performance",
+      "titulo_es": "",
+      "autores": [
+        "Jiao, F., Sarkissian, S., & Schumacher, D."
+      ],
+      "anio": 2025,
+      "revista": "Journal of Financial Economics",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.jfineco.2025.104085",
+      "enlace_editorial": "https://doi.org/10.1016/j.jfineco.2025.104085",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Probar si los fondos negocian las acciones con doble cotización en el mercado más líquido",
+      "datos_metodologia": "Muestra y periodo: Fondos mutuos globales y empresas con ADR, 2001–2021\n\nMétodo: Medidas de preferencia por lugar de negociación según liquidez y regresiones de desempeño",
+      "resultados": "Los fondos más hábiles eligen el mercado más líquido, y esa elección se asocia con mejor desempeño y selección de acciones",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Liquidez de los activos como fuente de rentabilidad",
+      "relacion_estudio": "",
+      "referencia_apa": "Jiao, F., Sarkissian, S., & Schumacher, D. (2025). Liquidity picking and fund performance. Journal of Financial Economics, 170, Artículo 104085. https://doi.org/10.1016/j.jfineco.2025.104085",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A25",
+      "numero": 25,
+      "estado": "en_elaboracion",
+      "titulo_original": "Country rotation and international mutual fund performance",
+      "titulo_es": "",
+      "autores": [
+        "Jiao, W., Karolyi, G. A., & Ng, D."
+      ],
+      "anio": 2025,
+      "revista": "Journal of Financial and Quantitative Analysis",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1017/S0022109025000055",
+      "enlace_editorial": "https://doi.org/10.1017/S0022109025000055",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Evaluar si la rotación activa entre países mejora el desempeño de los fondos internacionales",
+      "datos_metodologia": "Muestra y periodo: Fondos de renta variable internacional de EE. UU. con mandato global, 1991 a 2022\n\nMétodo: Nueva medida de intensidad de rotación por país y valor agregado del gestor",
+      "resultados": "Los fondos que más rotan agregan más valor, sobre todo al vender antes de caídas del mercado de cada país",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Asignación por país en fondos internacionales",
+      "relacion_estudio": "",
+      "referencia_apa": "Jiao, W., Karolyi, G. A., & Ng, D. (2025). Country rotation and international mutual fund performance. Journal of Financial and Quantitative Analysis, 60(8), 3866–3898. https://doi.org/10.1017/S0022109025000055",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A26",
+      "numero": 26,
+      "estado": "en_elaboracion",
+      "titulo_original": "Mutual fund performance and manager assets: The negative effect of outside holdings",
+      "titulo_es": "",
+      "autores": [
+        "Evans, R., Gil-Bazo, J., & Lipson, M."
+      ],
+      "anio": 2024,
+      "revista": "Financial Management",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1111/fima.12443",
+      "enlace_editorial": "https://doi.org/10.1111/fima.12443",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Analizar el efecto de los activos que los gestores administran fuera del fondo",
+      "datos_metodologia": "Muestra y periodo: Fondos de la base Morningstar Direct, enero de 1993 a diciembre de 2018\n\nMétodo: Regresiones con control por tamaño; fusiones de fondos y recursive demeaning ante la endogeneidad",
+      "resultados": "Más activos externos, más fondos y más categorías a cargo del gestor reducen el desempeño, con un efecto doble al de la rotación",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Atención del gestor y tamaño de la familia de fondos",
+      "relacion_estudio": "",
+      "referencia_apa": "Evans, R., Gil-Bazo, J., & Lipson, M. (2024). Mutual fund performance and manager assets: The negative effect of outside holdings. Financial Management, 53(1), 3–29. https://doi.org/10.1111/fima.12443",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A27",
+      "numero": 27,
+      "estado": "en_elaboracion",
+      "titulo_original": "Capital allocation and the market for mutual funds: Inspecting the mechanism",
+      "titulo_es": "",
+      "autores": [
+        "van Binsbergen, J. H., Kim, J. H., & Kim, S."
+      ],
+      "anio": 2026,
+      "revista": "Journal of Financial and Quantitative Analysis",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1017/S0022109025102408",
+      "enlace_editorial": "https://doi.org/10.1017/S0022109025102408",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Medir la importancia de los rendimientos decrecientes a escala en la asignación de capital",
+      "datos_metodologia": "Muestra y periodo: 3 066 fondos activos de renta variable doméstica de EE. UU., 1991–2014\n\nMétodo: Estimación de parámetros heterogéneos de escala y calibración de un modelo racional de gestión activa",
+      "resultados": "Los rendimientos más decrecientes atenúan la sensibilidad de los flujos al desempeño y explican buena parte de las diferencias de patrimonio",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Tamaño del fondo y rendimientos decrecientes",
+      "relacion_estudio": "",
+      "referencia_apa": "van Binsbergen, J. H., Kim, J. H., & Kim, S. (2026). Capital allocation and the market for mutual funds: Inspecting the mechanism. Journal of Financial and Quantitative Analysis, 61(5), 2133–2168. https://doi.org/10.1017/S0022109025102408",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A28",
+      "numero": 28,
+      "estado": "en_elaboracion",
+      "titulo_original": "Active mutual fund common owners' returns and proxy voting behavior",
+      "titulo_es": "",
+      "autores": [
+        "Charoenwong, B., Ni, Z., & Ye, Q."
+      ],
+      "anio": 2026,
+      "revista": "Journal of Financial and Quantitative Analysis",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1017/S0022109025102214",
+      "enlace_editorial": "https://doi.org/10.1017/S0022109025102214",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Estudiar los retornos y el voto de los fondos activos que poseen acciones de empresas competidoras",
+      "datos_metodologia": "Muestra y periodo: Fondos activos de renta variable de EE. UU., enero de 1999 a diciembre de 2018\n\nMétodo: Regresiones de desempeño ajustado por riesgo con controles de concentración y registros de votación",
+      "resultados": "Logran mayores retornos ajustados por riesgo incluso netos de comisiones, cobran más y votan contra el pago por desempeño",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Comisiones y rentabilidad neta de los fondos activos",
+      "relacion_estudio": "",
+      "referencia_apa": "Charoenwong, B., Ni, Z., & Ye, Q. (2026). Active mutual fund common owners' returns and proxy voting behavior. Journal of Financial and Quantitative Analysis, 61(4), 1765–1802. https://doi.org/10.1017/S0022109025102214",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A29",
+      "numero": 29,
+      "estado": "en_elaboracion",
+      "titulo_original": "Uncovering the risk-return trade-off through ridge regressions",
+      "titulo_es": "",
+      "autores": [
+        "Alemany, N., Aragó, V., & Salvador, E."
+      ],
+      "anio": 2025,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2024.106420",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2024.106420",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Estimar una relación entre riesgo y rentabilidad del mercado que varía en el tiempo",
+      "datos_metodologia": "Muestra y periodo: Precios diarios de siete índices bursátiles de EE. UU., Europa, Asia y Australia, 2003–2022\n\nMétodo: Regresiones ridge con parámetros variables en el tiempo",
+      "resultados": "La relación es positiva casi todo el periodo, pero se vuelve negativa en recesiones profundas",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Relación entre riesgo y rentabilidad variable en el tiempo",
+      "relacion_estudio": "",
+      "referencia_apa": "Alemany, N., Aragó, V., & Salvador, E. (2025). Uncovering the risk-return trade-off through ridge regressions. Finance Research Letters, 71, Artículo 106420. https://doi.org/10.1016/j.frl.2024.106420",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    },
+    {
+      "id": "A30",
+      "numero": 30,
+      "estado": "en_elaboracion",
+      "titulo_original": "Portfolio optimisation using alternative risk measures",
+      "titulo_es": "",
+      "autores": [
+        "Lorimer, D. A., van Schalkwyk, C. H., & Szczygielski, J. J."
+      ],
+      "anio": 2024,
+      "revista": "Finance Research Letters",
+      "indexacion_scopus": null,
+      "cuartil": "Q1",
+      "cuartil_anio": 2025,
+      "cuartil_categoria": "",
+      "cuartil_verificado": false,
+      "doi": "10.1016/j.frl.2024.105758",
+      "enlace_editorial": "https://doi.org/10.1016/j.frl.2024.105758",
+      "eje_tematico": "",
+      "problema": "",
+      "objetivo": "Comparar carteras optimizadas con medidas de riesgo alternativas a la varianza",
+      "datos_metodologia": "Muestra y periodo: 10 índices sectoriales S&P Global 1200, 24 grupos industriales y 69 industrias MSCI, datos diarios de 2012 a 2022\n\nMétodo: Optimización por descenso de gradiente con medidas de riesgo observadas y pronosticadas (EWMA) y ratio de Sharpe",
+      "resultados": "Las medidas asimétricas y sin desvíos al cuadrado dan mayores retornos; destacan la semidesviación absoluta y la semidesviación a la baja",
+      "conclusiones": "",
+      "justificacion_seleccion": "",
+      "aporte": "Medidas de riesgo alternativas a la varianza",
+      "relacion_estudio": "",
+      "referencia_apa": "Lorimer, D. A., van Schalkwyk, C. H., & Szczygielski, J. J. (2024). Portfolio optimisation using alternative risk measures. Finance Research Letters, 67, Artículo 105758. https://doi.org/10.1016/j.frl.2024.105758",
+      "miniatura": "",
+      "documentos": {
+        "articulo_en": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "traduccion_es": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "poster_pdf": {
+          "estado": "pendiente",
+          "visualizacion_url": "",
+          "descarga_url": ""
+        },
+        "proyecto_zip": {
+          "estado": "pendiente",
+          "descarga_url": ""
+        }
+      }
+    }
+  ],
+  "fuente_metadatos": "Matriz_Bibliografica_APA7.zip (matriz_bibliografica_apa7.typ), entregada por la estudiante. Títulos, autores, revistas, años, DOI, objetivo, muestra, método, hallazgo y aportes han sido transcritos de esta matriz. Los Q1/Q2 son SJR 2025 consignados en la matriz: no equivalen a verificación individual en Scopus; se conserva cuartil_verificado=false."
+}

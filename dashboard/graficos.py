@@ -517,3 +517,53 @@ def para_exportar(fig: go.Figure, nota: str) -> go.Figure:
     f.add_annotation(text=nota, x=0, xref="paper", y=-(inferior - 10) / zona, yref="paper", yanchor="bottom",
                      xanchor="left", showarrow=False, align="left", font=dict(size=10, color=PALETAS["light"]["texto2"]))
     return f
+
+
+# --------------------------------------------------------------------------
+# Contexto macroeconómico (BCRPData) y correlaciones entre tipos
+# --------------------------------------------------------------------------
+def fig_tc_tasas(mensual: pd.DataFrame, ini: str, fin: str, p: dict) -> go.Figure:
+    """Tipo de cambio de fin de periodo y tasas interbancarias mensuales (series de la API de BCRPData)."""
+    titulo = "Contexto BCRPData: tipo de cambio y tasas interbancarias"
+    if mensual.empty or mensual.mes.nunique() < 2:
+        return _vacio(p, titulo, "Se necesitan al menos 2 meses")
+    m = mensual.sort_values("fecha")
+    fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.12,
+                        subplot_titles=["Tipo de cambio interbancario, fin de periodo (S/ por US$)", "Tasa interbancaria anual promedio del mes (%)"])
+    fig.add_trace(go.Scatter(x=m.fecha, y=m.tc_fin, mode="lines", name="TC fin de periodo", line=dict(color=p["slots"][0], width=2.2),
+                             hovertemplate="%{x|%Y-%m}: S/ %{y:.4f} por US$<extra></extra>"), row=1, col=1)
+    fig.add_trace(go.Scatter(x=m.fecha, y=m.tasa_pen, mode="lines", name="Tasa interbancaria PEN", line=dict(color=p["slots"][1], width=2),
+                             hovertemplate="%{x|%Y-%m}: %{y:.3f} % anual<extra></extra>"), row=2, col=1)
+    fig.add_trace(go.Scatter(x=m.fecha, y=m.tasa_usd, mode="lines", name="Tasa interbancaria USD", line=dict(color=p["slots"][2], width=2),
+                             hovertemplate="%{x|%Y-%m}: %{y:.3f} % anual<extra></extra>"), row=2, col=1)
+    estilo(fig, p, titulo, f"Series mensuales usadas en el panel (var_tc y rf) · {ini} a {fin}", alto=520, paneles=True)
+    fig.update_yaxes(title_text="S/ por US$", row=1, col=1)
+    fig.update_yaxes(title_text="% anual", row=2, col=1)
+    fechas_es(fig, m.fecha)
+    fig.update_layout(hovermode="x unified")
+    return fig
+
+
+def fig_correlacion(cat: pd.DataFrame, p: dict, sub: str, min_meses: int = 12) -> go.Figure:
+    """Matriz de correlación entre la rentabilidad mensual promedio de cada tipo (descriptiva), por moneda."""
+    titulo = "Correlación entre tipos de fondo (rentabilidad mensual promedio)"
+    monedas = [m for m in _monedas(cat)]
+    paneles = []
+    for mon in monedas:
+        pv = cat[cat.moneda.eq(mon)].pivot(index="mes", columns="tipo", values="rent")
+        pv = pv.dropna(axis=1, thresh=min_meses)
+        if pv.shape[1] >= 2 and len(pv) >= min_meses:
+            paneles.append((mon, pv.corr(min_periods=min_meses), len(pv)))
+    if not paneles:
+        return _vacio(p, titulo, f"Se necesitan al menos 2 tipos y {min_meses} meses comunes")
+    fig = make_subplots(rows=1, cols=len(paneles), subplot_titles=[f"{NOMBRE_MONEDA[m]} · {n} meses" for m, _, n in paneles], horizontal_spacing=0.14)
+    for j, (mon, c, n) in enumerate(paneles, start=1):
+        orden = [t for t in ORDEN_TIPOS if t in c.index]
+        c = c.loc[orden, orden]
+        fig.add_trace(go.Heatmap(z=c.values, x=orden, y=orden, zmin=-1, zmax=1, colorscale="RdBu", reversescale=True, showscale=(j == len(paneles)),
+                                 colorbar=dict(title="Correlación", len=0.8), text=c.round(2).astype(str).values, texttemplate="%{text}",
+                                 hovertemplate="%{y} × %{x}: %{z:.2f}<extra></extra>"), row=1, col=j)
+    estilo(fig, p, titulo, sub, alto=470, leyenda=False, paneles=True)
+    fig.update_yaxes(autorange="reversed")
+    fig.update_xaxes(showgrid=False, tickangle=-30)
+    return fig

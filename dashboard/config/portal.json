@@ -1,0 +1,18 @@
+{
+  "universidad": "Universidad Nacional del Centro del Perú",
+  "facultad": "Facultad de Economía",
+  "autora": "Amy Pamela Guadalupe Cordova",
+  "docente": "Ciro Iván Machacuay Meza",
+  "curso": "Finanzas I",
+  "unidad": "Unidad II",
+  "periodo": "2026-II",
+  "tema": "Tema 79",
+  "titulo": "Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo",
+  "repositorio_url": "https://github.com/AmyGuadalupe/Finanzas-Segundo-Trabajo",
+  "dashboard_url": "https://amy-guadalupe-fondos-mutuos-peru-u2.streamlit.app/",
+  "foto_autora": "assets/foto_autora.jpg",
+  "escudo_institucional": "assets/escudo_uncp.png",
+  "colab_url": "",
+  "numero_posters": 30,
+  "nota_fuentes": "Fuentes efectivamente utilizadas: boletines mensuales de la Asociación de Administradoras de Fondos del Perú (descarga programática de PDF) y BCRPData (API). Los datos no se extrajeron directamente de la SMV."
+}

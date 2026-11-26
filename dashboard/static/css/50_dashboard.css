@@ -1,0 +1,86 @@
+/* =====================================================================
+   50 · DASHBOARD financiero (sección 02)
+   Mantiene la estructura previa: barra lateral de filtros, encabezado,
+   línea de tiempo y pestañas. Solo añade capas visuales.
+   ===================================================================== */
+
+/* ---- hero oscuro del dashboard: fondo con malla sutil y entrada en dos tiempos */
+.fm-hero{position:relative;overflow:hidden;margin:.4rem 0 1.4rem;padding:1.6rem 1.8rem 1.4rem;
+  border-radius:22px;color:#f1f3ee;isolation:isolate;
+  background:
+    radial-gradient(1200px 320px at 85% -20%,rgba(19,145,127,.28),transparent 60%),
+    radial-gradient(760px 320px at -10% 120%,rgba(90,166,196,.22),transparent 60%),
+    linear-gradient(135deg,#0f1b2a 0%,#13263a 55%,#0d1a26 100%);
+  animation:fmEntra .55s var(--ease) both}
+.fm-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:
+    linear-gradient(to right,rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:38px 38px;mask-image:radial-gradient(ellipse at 55% 40%,#000 0,transparent 75%)}
+.fm-hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;z-index:-1;
+  background:radial-gradient(circle,rgba(19,145,127,.4),transparent 70%);filter:blur(12px);
+  animation:fmRespira 9s ease-in-out infinite}
+.fm-hero h1{font-family:var(--serif);font-weight:650;font-size:clamp(1.6rem,3.2vw,2.3rem);margin:.2rem 0 .3rem;color:#ffffff}
+.fm-hero p{color:rgba(241,243,238,.78);margin:.1rem 0 .9rem;max-width:72ch}
+.fm-hero .fm-chips{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:.4rem}
+.fm-hero .fm-chips span{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e9ecea;font-size:.78rem;letter-spacing:.02em;
+  backdrop-filter:blur(4px);animation:fmEntra .6s var(--ease) both;animation-delay:calc(var(--i,0)*45ms + .15s)}
+.fm-hero .fm-chips span:nth-child(1){--i:0}.fm-hero .fm-chips span:nth-child(2){--i:1}
+.fm-hero .fm-chips span:nth-child(3){--i:2}.fm-hero .fm-chips span:nth-child(4){--i:3}
+.fm-hero .fm-chips span:nth-child(5){--i:4}.fm-hero .fm-chips span:nth-child(6){--i:5}
+
+/* ---- barra lateral (filtros) ligeramente estilizada, sin cambiar su estructura */
+[data-testid="stSidebar"]{background:linear-gradient(180deg,#faf9f6 0,#f1efe8 100%);border-right:1px solid var(--linea)}
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"]{font-weight:650;color:var(--tinta);font-size:.84rem;margin-bottom:2px}
+[data-testid="stSidebar"] [data-testid="stRadio"] label,[data-testid="stSidebar"] [data-testid="stSelectbox"] div[role="combobox"]{transition:background .25s,border-color .25s}
+[data-testid="stSidebar"] [data-testid="stSelectbox"] div[role="combobox"]:hover{border-color:var(--acento)!important}
+
+/* ---- gráficos: borde redondeado y ligera elevación en hover */
+[data-testid="stPlotlyChart"]{border-radius:14px;overflow:hidden;transition:box-shadow .3s}
+[data-testid="stPlotlyChart"]:hover{box-shadow:0 12px 32px -22px rgba(40,36,28,.25)}
+[data-testid="stPlotlyChart"] .main-svg{animation:fmEntra .55s var(--ease) both}
+
+/* ---- KPI cards del panorama financiero */
+.fm-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:.4rem 0 1rem}
+.fm-kpis .fm-card{position:relative;padding:14px 16px 12px;border:1px solid var(--linea);border-radius:14px;
+  background:linear-gradient(180deg,#ffffff 0,#f8f7f3 100%);overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s;
+  animation:fmEntra .6s var(--ease) both;animation-delay:calc(var(--i,0)*40ms)}
+.fm-kpis .fm-card::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--acento),#5aa6c4);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.fm-kpis .fm-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px -20px rgba(40,36,28,.3);border-color:#c9c3b5}
+.fm-kpis .fm-card:hover::after{transform:scaleX(1)}
+.fm-kpis .fm-card .l,.fm-kpis .fm-card small{display:block;font-size:.72rem;letter-spacing:.03em;color:#6a7284;text-transform:uppercase;font-weight:650;line-height:1.25}
+.fm-kpis .fm-card .v{display:block;margin-top:.3rem;font-family:var(--serif);font-size:clamp(1.25rem,2.1vw,1.55rem);font-weight:650;color:var(--tinta);
+  font-variant-numeric:tabular-nums;transition:color .3s}
+.fm-kpis .fm-card:hover .v{color:var(--acento2,#13917f)}
+.fm-kpis .fm-card .t,.fm-kpis .fm-card .d{display:block;font-size:.7rem;color:#6a7284;margin-top:.2rem;font-style:italic}
+
+/* nth-child enumera las 6 tarjetas para escalonar su entrada */
+.fm-kpis .fm-card:nth-child(1){--i:0}.fm-kpis .fm-card:nth-child(2){--i:1}.fm-kpis .fm-card:nth-child(3){--i:2}
+.fm-kpis .fm-card:nth-child(4){--i:3}.fm-kpis .fm-card:nth-child(5){--i:4}.fm-kpis .fm-card:nth-child(6){--i:5}
+
+/* separador de moneda */
+.fm-moneda{margin:1.2rem 0 .4rem;font-family:var(--serif);font-size:1.15rem;font-weight:650;color:var(--tinta);
+  display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--linea);padding-top:1rem}
+.fm-moneda small{font-size:.75rem;color:#6a7284;font-weight:400;font-family:var(--sans,system-ui)}
+
+/* ---- pestañas del dashboard: subrayado animado */
+[data-testid="stTabs"] [role="tablist"]{gap:4px;border-bottom:1px solid var(--linea);padding-bottom:0;flex-wrap:wrap}
+[data-testid="stTabs"] [role="tab"]{position:relative;border:0;background:transparent;color:#4a5368;font-weight:600;padding:.55rem .9rem;transition:color .25s}
+[data-testid="stTabs"] [role="tab"]::after{content:"";position:absolute;left:12%;right:12%;bottom:-1px;height:2px;background:var(--acento);transform:scaleX(0);transform-origin:center;transition:transform .35s var(--ease)}
+[data-testid="stTabs"] [role="tab"]:hover{color:var(--tinta)}
+[data-testid="stTabs"] [role="tab"][aria-selected="true"]{color:var(--tinta)}
+[data-testid="stTabs"] [role="tab"][aria-selected="true"]::after{transform:scaleX(1)}
+[data-testid="stTabs"] [role="tabpanel"]{animation:fmEntra .45s var(--ease) both}
+
+/* ---- categoría por tipo (st.radio horizontal): se vuelve "píldoras" */
+[data-testid="stRadio"][aria-label*="Categoría"] > div{display:flex;gap:6px;flex-wrap:wrap}
+[data-testid="stRadio"][aria-label*="Categoría"] label{padding:.4rem .9rem;border:1px solid var(--linea);border-radius:999px;background:var(--superficie);cursor:pointer;transition:all .25s var(--ease)}
+[data-testid="stRadio"][aria-label*="Categoría"] label:hover{border-color:var(--acento);color:var(--acento)}
+[data-testid="stRadio"][aria-label*="Categoría"] label:has(input:checked){background:var(--acento);color:#fff;border-color:var(--acento);box-shadow:0 2px 10px -4px rgba(19,145,127,.6)}
+[data-testid="stRadio"][aria-label*="Categoría"] label input{display:none}
+
+/* ---- deslizador del periodo */
+[data-testid="stSlider"] [role="slider"],[data-baseweb="slider"] [role="slider"]{box-shadow:0 4px 12px -4px rgba(19,145,127,.5);transition:transform .2s}
+[data-testid="stSlider"] [role="slider"]:hover,[data-baseweb="slider"] [role="slider"]:hover{transform:scale(1.15)}

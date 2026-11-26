@@ -291,9 +291,10 @@ def test_app_interactua_y_descarga_lo_filtrado(panel, monkeypatch):
     from streamlit.testing.v1 import AppTest
     monkeypatch.chdir(RAIZ)
     at = AppTest.from_file(str(DASH / "app.py"), default_timeout=240)
+    at.query_params["v"] = "s2"
     at.run()
     assert not at.exception, [e.value for e in at.exception]
-    assert len(at.tabs) == 7 and len(at.get("plotly_chart")) >= 12
+    assert len(at.tabs) == 10 and len(at.get("plotly_chart")) >= 12
 
     # Filtros: tipo, moneda y periodo mediante botón de la línea de tiempo
     at.multiselect(key="f_tipos").set_value(["Deuda"])
@@ -306,22 +307,20 @@ def test_app_interactua_y_descarga_lo_filtrado(panel, monkeypatch):
     meses = sorted(panel.mes.unique())
     assert (ini, fin) == (meses[-12], meses[-1])
 
-    # Descarga Excel preparada con esos filtros
-    at.button(key="b_xlsx").click()
-    at.run()
-    firma, contenido = at.session_state["prep_xlsx"]
-    obs = pd.read_excel(io.BytesIO(contenido), sheet_name="observaciones", dtype={"mes": str})
-    esperado = panel[panel.tipo.eq("Deuda") & panel.moneda.eq("USD") & panel.mes.between(ini, fin)]
-    assert len(obs) == len(esperado) and set(obs.tipo) == {"Deuda"} and set(obs.moneda) == {"USD"}
-    assert obs.mes.min() == ini and obs.mes.max() == fin
+    # Las descargas del portal son directas (XLSX/CSV) y usan exactamente los filtros activos
     etiquetas = lambda: [getattr(e.proto, "label", "") for e in at.get("download_button")]  # noqa: E731
-    assert "Descargar Excel de observaciones" in etiquetas()
+    assert "Descargar registros filtrados" in etiquetas()
+    assert "Descargar base completa" in etiquetas()
+    import tabs_dashboard as td
+    assert td.FORMATOS["Excel (XLSX)"][0] == "xlsx" and len(td.FORMATOS) == 3
 
-    # Cambiar un filtro invalida el archivo preparado: el botón de descarga desaparece
+    # La base completa de la pestaña dedicada es independiente de los filtros
+    import datos as _d
+    assert len(_d.procesado_original(RAIZ)) == len(panel)
+
     at.radio(key="f_moneda").set_value("PEN")
     at.run()
-    assert at.session_state["prep_xlsx"][0] == firma
-    assert "Descargar Excel de observaciones" not in etiquetas()
+    assert not at.exception
 
     # Restablecer
     next(b for b in at.button if b.label == "Restablecer filtros").click()
@@ -335,6 +334,7 @@ def test_vista_por_fondo_serie_y_reporte(panel, monkeypatch):
     from streamlit.testing.v1 import AppTest
     monkeypatch.chdir(DASH)  # también debe funcionar ejecutando desde dashboard/
     at = AppTest.from_file(str(DASH / "app.py"), default_timeout=240)
+    at.query_params["v"] = "s2"
     at.run()
     ids = sorted(panel.id_fondo_serie.unique())[:3]
     at.multiselect(key="f_series").set_value(ids)

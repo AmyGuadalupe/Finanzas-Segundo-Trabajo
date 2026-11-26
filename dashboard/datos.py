@@ -8,6 +8,7 @@ local. No usa rutas absolutas, Google Drive ni credenciales.
 from __future__ import annotations
 
 import hashlib
+from functools import lru_cache
 import os
 import re
 from pathlib import Path
@@ -64,7 +65,8 @@ def localizar_proyecto() -> Path:
     """Devuelve la carpeta que contiene datos_procesados/ y salidas/.
 
     Orden: variable FM_PROYECTO_RAIZ (opcional, para pruebas), carpeta padre de
-    dashboard/ (estructura del repositorio), carpeta N.º 3 junto a dashboard/,
+    dashboard/ (estructura anterior), carpeta N.º 3 junto a dashboard/,
+    carpeta general con nombre completo / carpeta N.º 3 (rúbrica actual),
     y el directorio de trabajo.
     """
     candidatos = []
@@ -176,3 +178,58 @@ def diccionario_variables(raiz: Path) -> pd.DataFrame | None:
     cab, *cuerpo = filas
     cuerpo = [f for f in cuerpo if len(f) == len(cab) and f[0] in COLUMNAS_PANEL]
     return pd.DataFrame(cuerpo, columns=cab) if cuerpo else None
+
+
+# --------------------------------------------------------------------------- complementarios y transparencia
+def cargar_complementaria(raiz: Path) -> pd.DataFrame | None:
+    """Base integrada observada (antes de seleccionar el panel): contiene ETF y Estructurados.
+
+    Es un archivo de apoyo de la investigación; no forma parte del panel econométrico balanceado.
+    """
+    p = raiz / "datos_procesados" / "base_integrada_observada.csv"
+    if not p.is_file():
+        return None
+    d = pd.read_csv(p, dtype={"mes": str})
+    d["fecha"] = pd.to_datetime(d.mes + "-01")
+    return d
+
+
+def leer_hashes(raiz: Path) -> pd.DataFrame:
+    """Manifiesto hash_sha256.txt como tabla (sha256, archivo); vacío si no existe."""
+    p = raiz / "hash_sha256.txt"
+    filas = []
+    if p.is_file():
+        for linea in p.read_text(encoding="utf-8").splitlines():
+            partes = linea.strip().split(maxsplit=1)
+            if len(partes) == 2 and re.fullmatch(r"[0-9a-f]{64}", partes[0]):
+                filas.append({"sha256": partes[0], "archivo": partes[1].strip()})
+    return pd.DataFrame(filas, columns=["sha256", "archivo"])
+
+
+def verificar_hashes(raiz: Path, manifiesto: pd.DataFrame) -> pd.DataFrame:
+    """Recalcula el SHA-256 de cada archivo del manifiesto y lo compara (solo lectura)."""
+    estados, calc = [], []
+    for ruta in manifiesto.archivo:
+        f = raiz / ruta
+        if not f.is_file():
+            estados.append("No está en esta copia")
+            calc.append("")
+            continue
+        h = sha256(f)
+        calc.append(h)
+        estados.append("Coincide" if h == manifiesto.loc[manifiesto.archivo.eq(ruta), "sha256"].iloc[0] else "NO coincide")
+    out = manifiesto.copy()
+    out["sha256_recalculado"] = calc
+    out["estado"] = estados
+    return out
+
+
+@lru_cache(maxsize=2)
+def _procesado_original(ruta: str, firma: str) -> pd.DataFrame:
+    return pd.read_csv(ruta, dtype={"mes": str})
+
+
+def procesado_original(raiz: Path) -> pd.DataFrame:
+    """Base procesada tal como se entregó (mismas filas, columnas y orden); sin columnas de presentación."""
+    ruta = ruta_procesado(raiz)
+    return _procesado_original(str(ruta), firma_archivo(ruta)).copy()
