@@ -46,6 +46,9 @@ TABLAS = {
     "tabla20_cobertura_tipos_observados": ["tipo", "moneda", "series_observadas", "filas_observadas", "meses_observados", "series_panel"],
     "tabla21_desempeno_observado_contextual": ["id_fondo_serie", "tipo", "moneda", "inicio", "fin", "meses", "rent_anualizada", "vol_anualizada", "sharpe_anualizado"],
     "tabla22_desempeno_sin_winsorizar": ["id_fondo_serie", "tipo", "moneda", "meses", "rent_anualizada", "vol_anualizada", "sharpe_anualizado"],
+    "tabla23_indice_riqueza": ["mes", "tipo", "moneda", "rent_promedio", "indice", "caida_desde_maximo"],
+    "tabla24_diferencias_mensuales_deuda": ["moneda", "tipo", "referencia", "mes", "diferencia_exceso_pp"],
+    "tabla25_regresion_parcial_mensual": ["mes", "var_tc", "rent_parcial_media", "series"],
     "tabla_limites_tukey": ["tipo", "moneda", "q1", "q3", "lim_inf", "lim_sup"],
     "tabla_contexto_bcrp": ["mes", "tasa_pen", "tasa_usd", "tc_fin", "var_tc", "rf_pen", "rf_usd"],
 }

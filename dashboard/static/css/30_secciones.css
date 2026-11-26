@@ -89,3 +89,10 @@
 @keyframes fmBrillo{0%,60%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 .fm-prev .et{position:absolute;left:10px;bottom:8px;font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a8577;background:rgba(255,255,255,.8);padding:2px 8px;border-radius:999px}
 .fm-bloque-paquete{margin-top:14px}
+
+/* v3 · contador discreto y navegación secuencial sin cambiar la rueda original */
+.fm-indicador-seccion{display:inline-block;margin-top:.35rem;color:var(--acento);font-size:.7rem;letter-spacing:.16em;font-weight:700}
+.st-key-p_ant button,.st-key-p_sig button{border-color:var(--linea);transition:transform .22s var(--ease),border-color .22s,color .22s;white-space:normal}
+.st-key-p_ant button:hover{transform:translateX(-3px);border-color:var(--acento)}
+.st-key-p_sig button:hover{transform:translateX(3px);border-color:var(--acento)}
+@media (prefers-reduced-motion:reduce){.st-key-p_ant button:hover,.st-key-p_sig button:hover{transform:none}}

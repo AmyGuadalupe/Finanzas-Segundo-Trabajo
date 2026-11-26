@@ -10,6 +10,7 @@ import pandas as pd
 import streamlit as st
 
 import cargas
+import catalogo_figuras as cf
 import econometria as eco
 import nav
 import portal_config as pc
@@ -71,8 +72,25 @@ def resultados() -> None:
     c[2].metric("Meses comunes", pan.mes.nunique())
     c[3].metric("R² del modelo principal", f"{t3.r2.iloc[0]:.3f}" if t3 is not None else "n.d.")
     st.button(PAGINA_DOCS, icon=":material/monitoring:", key="res_a_dash", on_click=nav.ir, args=("s2",), type="primary")
+    nuevo = cf.nueva_version_completa(proy.raiz)
+    if not nuevo:
+        st.info("Los archivos de gráficos actuales todavía no están completos en GitHub. "
+                "Se muestran los disponibles, con un aviso cuando proceden de la versión anterior. "
+                "La base de datos y los modelos no se modifican.")
     tabs = st.tabs(["Desempeño por tipo y moneda", "Modelo econométrico", "Contrastes y distribución"])
-    img = lambda n: proy.raiz / "salidas" / n  # noqa: E731
+
+    def _figura(f: cf.Figura) -> None:
+        ruta, titulo, es_nueva = cf.resolver(proy.raiz, f)
+        if ruta:
+            st.markdown(f"**{titulo}**")
+            st.image(str(ruta), width="stretch")
+            if es_nueva:
+                st.caption(f.descripcion + " Fuente: AAF y BCRPData; figura generada por 04_analisis.py.")
+            else:
+                st.caption("Versión anterior del gráfico; se sustituirá al publicar las salidas nuevas del pipeline.")
+        else:
+            st.warning(f"No se encontró la figura {f.numero} entre las salidas de la investigación.")
+
     with tabs[0]:
         t2 = proy.tabla("tabla2_riesgo_rentabilidad_por_tipo")
         if t2 is not None:
@@ -84,10 +102,14 @@ def resultados() -> None:
                 "sharpe_mediana": st.column_config.NumberColumn("Sharpe", format="%.3f"),
                 "meses_perdida_mediana": st.column_config.NumberColumn("Meses con pérdida (%)", format="%.1f")})
             st.caption("Medianas entre fondos-series, igual peso por serie; las monedas no se mezclan. Los grupos de 2 o 3 series son descriptivos.")
-        for n, t in [("figura1_riesgo_rentabilidad.png", "Figura 1 · Riesgo y rentabilidad por fondo-serie"), ("figura2_sharpe_por_tipo.png", "Figura 2 · Sharpe por tipo de fondo"),
-                     ("figura3_rentabilidad_mensual.png", "Figura 3 · Rentabilidad mensual por tipo")]:
-            if img(n).is_file():
-                st.image(str(img(n)), caption=t, width="stretch")
+        _figura(cf.FIGURAS[0])
+        _figura(cf.FIGURAS[1])
+        if not nuevo:
+            ruta_anterior = proy.raiz / "salidas" / "figura3_rentabilidad_mensual.png"
+            if ruta_anterior.is_file():
+                st.markdown("**Gráfico anterior · Rentabilidad mensual por tipo (versión previa)**")
+                st.image(str(ruta_anterior), width="stretch")
+
     with tabs[1]:
         if t3 is not None:
             st.markdown(f"**Tabla 3 · Modelo principal** · MCO con errores agrupados por fondo-serie y mes · n = {int(t3.n.iloc[0])} · "
@@ -98,17 +120,28 @@ def resultados() -> None:
             for t in eco.interpretar(t3):
                 st.markdown("- " + t)
             st.info(eco.ADVERTENCIA_GENERAL, icon=":material/balance:")
-        if img("figura4_coeficientes.png").is_file():
-            st.image(str(img("figura4_coeficientes.png")), caption="Figura 4 · Coeficientes e intervalos de confianza del 95 %", width="stretch")
+        _figura(cf.FIGURAS[4])
+        t25 = proy.tabla("tabla25_regresion_parcial_mensual")
+        if t25 is not None:
+            with st.expander("Consultar los 61 valores mensuales que sustentan la Figura 5"):
+                st.dataframe(t25, hide_index=True, width="stretch")
+                st.caption("Los valores son resultados oficiales del pipeline; la gráfica no depende de filtros de la interfaz.")
+
     with tabs[2]:
         t14 = proy.tabla("tabla14_contrastes_tipo")
         if t14 is not None:
             st.markdown("**Tabla 14 · Contrastes del exceso mensual frente a Deuda** (diferencia de medianas, HAC(3), corrección de Holm)")
             st.dataframe(t14, hide_index=True, width="stretch")
             st.caption("Exploratorio, no causal. Las diferencias se expresan en puntos porcentuales mensuales.")
-        for n, t in [("figura6_contrastes_tipo.png", "Figura 6 · Contrastes por tipo y moneda"), ("figura5_distribucion_sharpe.png", "Figura 5 · Distribución del Sharpe por tipo")]:
-            if img(n).is_file():
-                st.image(str(img(n)), caption=t, width="stretch")
+        _figura(cf.FIGURAS[2])
+        _figura(cf.FIGURAS[3])
+        for nombre, rotulo in [("tabla24_diferencias_mensuales_deuda", "Diferencias mensuales de la Figura 4"),
+                              ("tabla23_indice_riqueza", "Índice de riqueza y caídas de la Figura 2")]:
+            t = proy.tabla(nombre)
+            if t is not None:
+                with st.expander(f"Consultar datos originales: {rotulo}"):
+                    st.dataframe(t, hide_index=True, width="stretch")
+                    st.caption("Archivo CSV oficial de salidas/, sin aplicar los filtros interactivos.")
 
 
 def _flujo() -> None:
