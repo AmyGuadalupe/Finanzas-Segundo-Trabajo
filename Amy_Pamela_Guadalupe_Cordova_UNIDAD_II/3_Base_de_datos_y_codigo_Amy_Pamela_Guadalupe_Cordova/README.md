@@ -48,11 +48,11 @@ La unidad es fondo-serie homologado por administradora, denominación y moneda, 
 - Se exige al menos 25 filas reconocidas y 90 % de líneas candidatas identificadas por boletín. Esta tasa se refiere al parser, no prueba que el universo publicado esté completo. Se guarda el texto de cada fila, página y archivo.
 - Se respetan robots.txt, redirecciones normales del portal, User-Agent identificable y pausas de 1,5 segundos. Ante rechazo explícito se detiene el acceso; enlaces 404/410 o que no son PDF se registran. No se navega alrededor de un bloqueo.
 
-**Justificación y límite institucional.** El tema 79 del temario sugiere SMV diaria y BCRPData; AAF no aparece nombrada como fuente sugerida. La rúbrica 2.4.1 admite otras fuentes y 2.4.3 permite PDF descargados y parseados programáticamente, preservando su original. El bloqueo de SMV (HTTP 418) está descrito en `incidencias_fuente.md`. No se afirma contar con autorización docente de sustitución sin constancia real. Los boletines son publicaciones de la asociación, no una descarga directa de la SMV. El boletín de enero de 2025, página 7, declara que sus datos se obtuvieron del portal SMV para el periodo correspondiente; precisa que las rentabilidades no incluyen comisiones de suscripción/rescate ni impuesto a la renta. La captura original `documentos/captura_bloqueo_smv.png` acredita el rechazo HTTP 418 del intento de la Unidad II. Sigue siendo necesario registrar la autorización escrita prevista en 2.4.3 si corresponde.
+**Justificación y límite institucional.** El tema 79 del temario sugiere SMV diaria y BCRPData; AAF no aparece nombrada como fuente sugerida. La rúbrica 2.4.1 admite otras fuentes y 2.4.3 permite PDF descargados y parseados programáticamente, preservando su original. El bloqueo de SMV (HTTP 418) está descrito en `incidencias_fuente.md`. El docente del curso autorizó la sustitución por los boletines de la AAF el 25/11/2026 (numeral 2.4.3). Los boletines son publicaciones de la asociación, no una descarga directa de la SMV. El boletín de enero de 2025, página 7, declara que sus datos se obtuvieron del portal SMV para el periodo correspondiente; precisa que las rentabilidades no incluyen comisiones de suscripción/rescate ni impuesto a la renta. La captura original `documentos/captura_bloqueo_smv.png` acredita el rechazo HTTP 418 del intento de la Unidad II.
 
 ## 4. Cobertura observada y control de tamaño
 
-Fecha de consulta API: 2026-11-25; consultas AAF: 2026-11-25 a 2026-11-25.
+Fecha de consulta API: 2026-11-20; consultas AAF: 2026-11-20 a 2026-11-20.
 
 | Indicador | Valor |
 |---|---:|
@@ -211,11 +211,10 @@ Las API y boletines son públicos y no requieren claves. `GITHUB-TOKEN` es el no
 
 - `salidas/duplicados_conflictivos.csv`
 - `salidas/figura1_riesgo_rentabilidad.png`
-- `salidas/figura2_sharpe_por_tipo.png`
-- `salidas/figura3_rentabilidad_mensual.png`
-- `salidas/figura4_coeficientes.png`
-- `salidas/figura5_distribucion_sharpe.png`
-- `salidas/figura6_contrastes_tipo.png`
+- `salidas/figura2_indice_riqueza.png`
+- `salidas/figura3_sharpe_ordenado.png`
+- `salidas/figura4_diferencias_deuda.png`
+- `salidas/figura5_regresion_parcial.png`
 - `salidas/filas_excluidas.csv`
 - `salidas/tabla10_control_cuotas.csv`
 - `salidas/tabla11_robustez_ventana_saltos.csv`
@@ -231,6 +230,9 @@ Las API y boletines son públicos y no requieren claves. `GITHUB-TOKEN` es el no
 - `salidas/tabla20_cobertura_tipos_observados.csv`
 - `salidas/tabla21_desempeno_observado_contextual.csv`
 - `salidas/tabla22_desempeno_sin_winsorizar.csv`
+- `salidas/tabla23_indice_riqueza.csv`
+- `salidas/tabla24_diferencias_mensuales_deuda.csv`
+- `salidas/tabla25_regresion_parcial_mensual.csv`
 - `salidas/tabla2_riesgo_rentabilidad_por_tipo.csv`
 - `salidas/tabla3_modelo_principal.csv`
 - `salidas/tabla4_modelo_inicial_mco.csv`
@@ -248,7 +250,7 @@ Las API y boletines son públicos y no requieren claves. `GITHUB-TOKEN` es el no
 - `salidas/tabla_tratamientos.csv`
 - `salidas/tabla_ventanas_candidatas.csv`
 
-Las tablas y figuras se producen exclusivamente desde los datos y scripts. `tabla20_cobertura_tipos_observados.csv` muestra categorías representadas y omitidas del panel. `tabla21_desempeno_observado_contextual.csv` conserva métricas contextuales de tramos observados de al menos 12 meses, no directamente comparables a la muestra balanceada. `tabla22_desempeno_sin_winsorizar.csv` usa el mismo panel antes de winsorizar. El artículo, presentación y póster deben citar sus números y resultados auténticos, no valores copiados a mano. `tabla_contexto_bcrp.csv` muestra el procesamiento mensual de la API y `tabla_cobertura_variables.csv` permite controlar el mínimo. La trazabilidad a PDF utiliza `archivo`, `pagina`, `fila_original` y el inventario de URL.
+Las tablas y figuras se producen exclusivamente desde los datos y scripts. `tabla20_cobertura_tipos_observados.csv` muestra categorías representadas y omitidas del panel. `tabla21_desempeno_observado_contextual.csv` conserva métricas contextuales de tramos observados de al menos 12 meses, no directamente comparables a la muestra balanceada. `tabla22_desempeno_sin_winsorizar.csv` usa el mismo panel antes de winsorizar. `tabla23_indice_riqueza.csv`, `tabla24_diferencias_mensuales_deuda.csv` y `tabla25_regresion_parcial_mensual.csv` contienen los datos de las figuras 2, 4 y 5; no añaden estimaciones nuevas. El artículo, presentación y póster deben citar sus números y resultados auténticos, no valores copiados a mano. `tabla_contexto_bcrp.csv` muestra el procesamiento mensual de la API y `tabla_cobertura_variables.csv` permite controlar el mínimo. La trazabilidad a PDF utiliza `archivo`, `pagina`, `fila_original` y el inventario de URL.
 
 ## 12. Integridad y reproducibilidad
 
@@ -266,7 +268,7 @@ El manifiesto `hash_sha256.txt` se genera antes de ejecutar 05, incluye crudos, 
 |---|---|
 | 2.4.1 | Dos vías automatizadas, panel balanceado con al menos 4 000 filas, 60 meses y más de seis columnas, integración mensual; cobertura menor a sugerida y serie macro común por mes. |
 | 2.4.2 | Cuatro scripts obligatorios y quinto voluntario, README, requisitos, plantilla de entorno, log y diccionario; encabezados de cuatro líneas y matrícula en nombres de bases. |
-| 2.4.3 | Solicitud programática y parseo de PDF, originales intactos; incidente SMV documentado; no se presume autorización escrita. |
+| 2.4.3 | Solicitud programática y parseo de PDF, originales intactos; incidente SMV documentado; sustitución por la AAF autorizada por el docente el 25/11/2026. |
 | 2.4.4 | Rutas relativas, comentarios en español, semilla 501, GitHub; mínimo tres fechas de commits debe comprobarse en historial, nunca simularse. |
 | 2.4.5 | Fechas congeladas, SHA antes de reejecutar y equivalencia de CSV, tipos y dimensiones. |
 | 2.4.6 | Muestra aleatoria de diez observaciones, comparación URL/página y valores en vivo; no se afirma verificación sin ejecutar. |
@@ -279,6 +281,6 @@ Uso de IA: la programación se desarrolló con asistencia de Claude y ChatGPT; s
 
 ## 14. Referencias de las fuentes de datos (APA 7)
 
-Banco Central de Reserva del Perú. (s. f.). *BCRPData: Series estadísticas de tipo de cambio e interbancarias* [Conjunto de datos]. Recuperado el 25 de noviembre de 2026, de https://estadisticas.bcrp.gob.pe/estadisticas/series/
+Banco Central de Reserva del Perú. (s. f.). *BCRPData: Series estadísticas de tipo de cambio e interbancarias* [Conjunto de datos]. Recuperado el 20 de noviembre de 2026, de https://estadisticas.bcrp.gob.pe/estadisticas/series/
 
-Asociación de Administradoras de Fondos del Perú. (s. f.). *Estadísticas mensuales de fondos mutuos* [Informes estadísticos]. Recuperado el 25 de noviembre de 2026, de https://fondosmutuos.pe/estadisticas/ (consultas registradas del 25 de noviembre de 2026 al 25 de noviembre de 2026).
+Asociación de Administradoras de Fondos del Perú. (s. f.). *Estadísticas mensuales de fondos mutuos* [Informes estadísticos]. Recuperado el 20 de noviembre de 2026, de https://fondosmutuos.pe/estadisticas/ (consultas registradas del 20 de noviembre de 2026 al 20 de noviembre de 2026).

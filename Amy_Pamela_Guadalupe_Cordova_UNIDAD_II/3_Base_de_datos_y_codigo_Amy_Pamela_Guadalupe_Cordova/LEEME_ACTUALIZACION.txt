@@ -1,0 +1,24 @@
+ACTUALIZACIÓN DE LA CARPETA 3 (26 de noviembre de 2026)
+
+Qué cambió
+- codigo/04_analisis.py: nuevo código de figuras (cinco figuras que no repiten las tablas)
+  y tres tablas de apoyo (tabla23, tabla24 y tabla25). Las estimaciones no cambiaron.
+- codigo/00_pipeline_colab.ipynb: la celda 15 copia el nuevo 04_analisis.py; las celdas 4 y 22
+  escriben los textos con la autorización del docente; sin salidas guardadas en las celdas 18 y 23.
+- salidas/: cinco figuras nuevas y tablas 23 a 25; las tablas 1 a 22 son idénticas a las anteriores.
+- hash_sha256.txt, README.md, diccionario_variables.md, incidencias_fuente.md,
+  documentos/bitacora_ia.md y log_ejecucion.txt actualizados.
+
+Cómo aplicarla en el repositorio
+1. Reemplace las carpetas codigo/ y salidas/ por las de este ZIP.
+2. Reemplace en la raíz README.md, diccionario_variables.md, hash_sha256.txt,
+   incidencias_fuente.md y log_ejecucion.txt, y también documentos/bitacora_ia.md.
+3. No toque datos_crudos/ ni datos_procesados/: no cambiaron y no vienen en este ZIP,
+   porque la carpeta recibida no traía los 77 boletines PDF.
+4. Si en lugar de reemplazar salidas/ copia archivo por archivo, borre estas cinco figuras:
+   figura2_sharpe_por_tipo.png, figura3_rentabilidad_mensual.png, figura4_coeficientes.png,
+   figura5_distribucion_sharpe.png y figura6_contrastes_tipo.png.
+5. Con las versiones de requirements.txt, ejecute en el repositorio completo:
+       python codigo/05_verificacion_fuente.py --sin-internet
+   y suba los archivos que regenere (verificacion_local.md, verificacion_equivalencia.csv y
+   muestra_cotejo_2024200501G.csv). Los que trae este ZIP describen la ejecución anterior.

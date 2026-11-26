@@ -1,0 +1,367 @@
+moneda,tipo,referencia,mes,diferencia_exceso_pp
+PEN,Flexibles,Deuda,2020-08,0.475
+PEN,Flexibles,Deuda,2020-09,0.085
+PEN,Flexibles,Deuda,2020-10,0.105
+PEN,Flexibles,Deuda,2020-11,1.015
+PEN,Flexibles,Deuda,2020-12,0.705
+PEN,Flexibles,Deuda,2021-01,0.135
+PEN,Flexibles,Deuda,2021-02,0.125
+PEN,Flexibles,Deuda,2021-03,0.05
+PEN,Flexibles,Deuda,2021-04,-0.21
+PEN,Flexibles,Deuda,2021-05,0.305
+PEN,Flexibles,Deuda,2021-06,0.06
+PEN,Flexibles,Deuda,2021-07,-0.23
+PEN,Flexibles,Deuda,2021-08,0.005
+PEN,Flexibles,Deuda,2021-09,-0.7
+PEN,Flexibles,Deuda,2021-10,0.315
+PEN,Flexibles,Deuda,2021-11,-0.295
+PEN,Flexibles,Deuda,2021-12,0.33
+PEN,Flexibles,Deuda,2022-01,-0.995
+PEN,Flexibles,Deuda,2022-02,-0.195
+PEN,Flexibles,Deuda,2022-03,-0.65
+PEN,Flexibles,Deuda,2022-04,-0.125
+PEN,Flexibles,Deuda,2022-05,0.07
+PEN,Flexibles,Deuda,2022-06,-0.92
+PEN,Flexibles,Deuda,2022-07,-1.055
+PEN,Flexibles,Deuda,2022-08,-0.335
+PEN,Flexibles,Deuda,2022-09,-0.565
+PEN,Flexibles,Deuda,2022-10,-0.455
+PEN,Flexibles,Deuda,2022-11,-0.485
+PEN,Flexibles,Deuda,2022-12,-1.045
+PEN,Flexibles,Deuda,2023-01,-1.005
+PEN,Flexibles,Deuda,2023-02,-1.08
+PEN,Flexibles,Deuda,2023-03,-1.42
+PEN,Flexibles,Deuda,2023-04,-0.615
+PEN,Flexibles,Deuda,2023-05,-1.37
+PEN,Flexibles,Deuda,2023-06,-1.64
+PEN,Flexibles,Deuda,2023-07,-1.68
+PEN,Flexibles,Deuda,2023-08,-1.195
+PEN,Flexibles,Deuda,2023-09,-0.195
+PEN,Flexibles,Deuda,2023-10,-0.185
+PEN,Flexibles,Deuda,2023-11,-0.16
+PEN,Flexibles,Deuda,2023-12,-0.29
+PEN,Flexibles,Deuda,2024-01,-0.3628546744
+PEN,Flexibles,Deuda,2024-02,-0.15
+PEN,Flexibles,Deuda,2024-03,0.2921453256
+PEN,Flexibles,Deuda,2024-04,-0.135
+PEN,Flexibles,Deuda,2024-05,-0.1084955637
+PEN,Flexibles,Deuda,2024-06,-0.1084955637
+PEN,Flexibles,Deuda,2024-07,-0.095
+PEN,Flexibles,Deuda,2024-08,-0.075
+PEN,Flexibles,Deuda,2024-09,-0.1
+PEN,Flexibles,Deuda,2024-10,-0.185
+PEN,Flexibles,Deuda,2024-11,-0.13
+PEN,Flexibles,Deuda,2024-12,-0.195
+PEN,Flexibles,Deuda,2025-01,-0.17
+PEN,Flexibles,Deuda,2025-02,-0.7753950439
+PEN,Flexibles,Deuda,2025-03,-0.345
+PEN,Flexibles,Deuda,2025-04,-0.445
+PEN,Flexibles,Deuda,2025-05,-0.8180198241
+PEN,Flexibles,Deuda,2025-06,-0.33
+PEN,Flexibles,Deuda,2025-07,-0.115
+PEN,Flexibles,Deuda,2025-08,-0.465
+PEN,Fondo de fondos,Deuda,2020-08,1.875
+PEN,Fondo de fondos,Deuda,2020-09,-0.665
+PEN,Fondo de fondos,Deuda,2020-10,-0.165
+PEN,Fondo de fondos,Deuda,2020-11,4.225
+PEN,Fondo de fondos,Deuda,2020-12,2.825
+PEN,Fondo de fondos,Deuda,2021-01,-0.53
+PEN,Fondo de fondos,Deuda,2021-02,-0.34
+PEN,Fondo de fondos,Deuda,2021-03,0.355
+PEN,Fondo de fondos,Deuda,2021-04,0.84
+PEN,Fondo de fondos,Deuda,2021-05,0.885
+PEN,Fondo de fondos,Deuda,2021-06,0.205
+PEN,Fondo de fondos,Deuda,2021-07,1.305
+PEN,Fondo de fondos,Deuda,2021-08,0.6
+PEN,Fondo de fondos,Deuda,2021-09,-0.81
+PEN,Fondo de fondos,Deuda,2021-10,-0.48
+PEN,Fondo de fondos,Deuda,2021-11,-0.14
+PEN,Fondo de fondos,Deuda,2021-12,-0.66
+PEN,Fondo de fondos,Deuda,2022-01,-3.375
+PEN,Fondo de fondos,Deuda,2022-02,-3.995
+PEN,Fondo de fondos,Deuda,2022-03,-1.145
+PEN,Fondo de fondos,Deuda,2022-04,-2.665
+PEN,Fondo de fondos,Deuda,2022-05,-1.765
+PEN,Fondo de fondos,Deuda,2022-06,-1.785
+PEN,Fondo de fondos,Deuda,2022-07,2.79
+PEN,Fondo de fondos,Deuda,2022-08,-2.45
+PEN,Fondo de fondos,Deuda,2022-09,-2.31
+PEN,Fondo de fondos,Deuda,2022-10,0.55
+PEN,Fondo de fondos,Deuda,2022-11,2.115
+PEN,Fondo de fondos,Deuda,2022-12,-2.095
+PEN,Fondo de fondos,Deuda,2023-01,2.92
+PEN,Fondo de fondos,Deuda,2023-02,-2.895
+PEN,Fondo de fondos,Deuda,2023-03,-0.18
+PEN,Fondo de fondos,Deuda,2023-04,-1.07
+PEN,Fondo de fondos,Deuda,2023-05,-2.215
+PEN,Fondo de fondos,Deuda,2023-06,0.075
+PEN,Fondo de fondos,Deuda,2023-07,0.455
+PEN,Fondo de fondos,Deuda,2023-08,0.235
+PEN,Fondo de fondos,Deuda,2023-09,-0.37
+PEN,Fondo de fondos,Deuda,2023-10,-0.665
+PEN,Fondo de fondos,Deuda,2023-11,0.575
+PEN,Fondo de fondos,Deuda,2023-12,1.185
+PEN,Fondo de fondos,Deuda,2024-01,1.986056024
+PEN,Fondo de fondos,Deuda,2024-02,-0.49
+PEN,Fondo de fondos,Deuda,2024-03,-0.835
+PEN,Fondo de fondos,Deuda,2024-04,-1.545
+PEN,Fondo de fondos,Deuda,2024-05,1.804535047
+PEN,Fondo de fondos,Deuda,2024-06,1.804535047
+PEN,Fondo de fondos,Deuda,2024-07,-2.39
+PEN,Fondo de fondos,Deuda,2024-08,2.04
+PEN,Fondo de fondos,Deuda,2024-09,-0.23
+PEN,Fondo de fondos,Deuda,2024-10,-0.66
+PEN,Fondo de fondos,Deuda,2024-11,0.78
+PEN,Fondo de fondos,Deuda,2024-12,-0.67
+PEN,Fondo de fondos,Deuda,2025-01,0.625
+PEN,Fondo de fondos,Deuda,2025-02,-0.74
+PEN,Fondo de fondos,Deuda,2025-03,-2.014430703
+PEN,Fondo de fondos,Deuda,2025-04,0.315
+PEN,Fondo de fondos,Deuda,2025-05,1.171980176
+PEN,Fondo de fondos,Deuda,2025-06,0.56
+PEN,Fondo de fondos,Deuda,2025-07,1.15
+PEN,Fondo de fondos,Deuda,2025-08,0.055
+USD,Acciones,Deuda,2020-08,5.7
+USD,Acciones,Deuda,2020-09,-2.855
+USD,Acciones,Deuda,2020-10,-1.51
+USD,Acciones,Deuda,2020-11,11.175
+USD,Acciones,Deuda,2020-12,5.945
+USD,Acciones,Deuda,2021-01,1.19
+USD,Acciones,Deuda,2021-02,1.91
+USD,Acciones,Deuda,2021-03,-0.71
+USD,Acciones,Deuda,2021-04,3.79
+USD,Acciones,Deuda,2021-05,0.72
+USD,Acciones,Deuda,2021-06,1.035
+USD,Acciones,Deuda,2021-07,0.69
+USD,Acciones,Deuda,2021-08,2.18
+USD,Acciones,Deuda,2021-09,-4.49
+USD,Acciones,Deuda,2021-10,4.525
+USD,Acciones,Deuda,2021-11,-2.58
+USD,Acciones,Deuda,2021-12,3.785
+USD,Acciones,Deuda,2022-01,-5.38
+USD,Acciones,Deuda,2022-02,-2.44
+USD,Acciones,Deuda,2022-03,1.71
+USD,Acciones,Deuda,2022-04,-7.89
+USD,Acciones,Deuda,2022-05,0.87
+USD,Acciones,Deuda,2022-06,-9.145
+USD,Acciones,Deuda,2022-07,6.045
+USD,Acciones,Deuda,2022-08,-3.95
+USD,Acciones,Deuda,2022-09,-9.15
+USD,Acciones,Deuda,2022-10,5.96
+USD,Acciones,Deuda,2022-11,6.48
+USD,Acciones,Deuda,2022-12,-5.545
+USD,Acciones,Deuda,2023-01,6.225
+USD,Acciones,Deuda,2023-02,-3.6
+USD,Acciones,Deuda,2023-03,2.225
+USD,Acciones,Deuda,2023-04,-0.13
+USD,Acciones,Deuda,2023-05,-0.76
+USD,Acciones,Deuda,2023-06,5.075
+USD,Acciones,Deuda,2023-07,2.6
+USD,Acciones,Deuda,2023-08,-2.92
+USD,Acciones,Deuda,2023-09,-4.39
+USD,Acciones,Deuda,2023-10,-3.76
+USD,Acciones,Deuda,2023-11,6.485
+USD,Acciones,Deuda,2023-12,3.8
+USD,Acciones,Deuda,2024-01,-0.195
+USD,Acciones,Deuda,2024-02,3.99
+USD,Acciones,Deuda,2024-03,2.76
+USD,Acciones,Deuda,2024-04,-4.095
+USD,Acciones,Deuda,2024-05,2.253987877
+USD,Acciones,Deuda,2024-06,2.253987877
+USD,Acciones,Deuda,2024-07,0.35
+USD,Acciones,Deuda,2024-08,-0.04
+USD,Acciones,Deuda,2024-09,1.58
+USD,Acciones,Deuda,2024-10,-0.4
+USD,Acciones,Deuda,2024-11,3.38
+USD,Acciones,Deuda,2024-12,-3.885
+USD,Acciones,Deuda,2025-01,2.525
+USD,Acciones,Deuda,2025-02,-2.625
+USD,Acciones,Deuda,2025-03,-4.92
+USD,Acciones,Deuda,2025-04,-0.735
+USD,Acciones,Deuda,2025-05,4.685
+USD,Acciones,Deuda,2025-06,4.79
+USD,Acciones,Deuda,2025-07,1.37
+USD,Acciones,Deuda,2025-08,1.415
+USD,Flexibles,Deuda,2020-08,0.055
+USD,Flexibles,Deuda,2020-09,0.205
+USD,Flexibles,Deuda,2020-10,-0.035
+USD,Flexibles,Deuda,2020-11,0.355
+USD,Flexibles,Deuda,2020-12,0.105
+USD,Flexibles,Deuda,2021-01,0.05
+USD,Flexibles,Deuda,2021-02,0.125
+USD,Flexibles,Deuda,2021-03,0.095
+USD,Flexibles,Deuda,2021-04,0.2
+USD,Flexibles,Deuda,2021-05,0.04
+USD,Flexibles,Deuda,2021-06,-0.01
+USD,Flexibles,Deuda,2021-07,0.12
+USD,Flexibles,Deuda,2021-08,0.12
+USD,Flexibles,Deuda,2021-09,0.02
+USD,Flexibles,Deuda,2021-10,0.045
+USD,Flexibles,Deuda,2021-11,-0.135
+USD,Flexibles,Deuda,2021-12,0.11
+USD,Flexibles,Deuda,2022-01,-0.295
+USD,Flexibles,Deuda,2022-02,-0.04
+USD,Flexibles,Deuda,2022-03,0.02
+USD,Flexibles,Deuda,2022-04,0.08
+USD,Flexibles,Deuda,2022-05,0.015
+USD,Flexibles,Deuda,2022-06,-0.01
+USD,Flexibles,Deuda,2022-07,-0.195
+USD,Flexibles,Deuda,2022-08,-0.165
+USD,Flexibles,Deuda,2022-09,-0.08039661004
+USD,Flexibles,Deuda,2022-10,-0.145
+USD,Flexibles,Deuda,2022-11,-0.07
+USD,Flexibles,Deuda,2022-12,-0.21
+USD,Flexibles,Deuda,2023-01,-0.23
+USD,Flexibles,Deuda,2023-02,-0.235
+USD,Flexibles,Deuda,2023-03,-0.475
+USD,Flexibles,Deuda,2023-04,-0.23
+USD,Flexibles,Deuda,2023-05,-0.21
+USD,Flexibles,Deuda,2023-06,-0.45
+USD,Flexibles,Deuda,2023-07,-0.5
+USD,Flexibles,Deuda,2023-08,-0.315
+USD,Flexibles,Deuda,2023-09,-0.08
+USD,Flexibles,Deuda,2023-10,-0.08
+USD,Flexibles,Deuda,2023-11,-0.09
+USD,Flexibles,Deuda,2023-12,-0.185
+USD,Flexibles,Deuda,2024-01,-0.515
+USD,Flexibles,Deuda,2024-02,-0.05
+USD,Flexibles,Deuda,2024-03,0.065
+USD,Flexibles,Deuda,2024-04,0.115
+USD,Flexibles,Deuda,2024-05,-0.1553496475
+USD,Flexibles,Deuda,2024-06,-0.1553496475
+USD,Flexibles,Deuda,2024-07,-0.08
+USD,Flexibles,Deuda,2024-08,-0.32
+USD,Flexibles,Deuda,2024-09,-0.13
+USD,Flexibles,Deuda,2024-10,0.1
+USD,Flexibles,Deuda,2024-11,-0.08391424084
+USD,Flexibles,Deuda,2024-12,-0.03
+USD,Flexibles,Deuda,2025-01,-0.185
+USD,Flexibles,Deuda,2025-02,-0.86
+USD,Flexibles,Deuda,2025-03,-0.325
+USD,Flexibles,Deuda,2025-04,-0.523299846
+USD,Flexibles,Deuda,2025-05,-0.6482081155
+USD,Flexibles,Deuda,2025-06,-0.31
+USD,Flexibles,Deuda,2025-07,-0.135
+USD,Flexibles,Deuda,2025-08,-0.46
+USD,Fondo de fondos,Deuda,2020-08,1.3
+USD,Fondo de fondos,Deuda,2020-09,-1.26
+USD,Fondo de fondos,Deuda,2020-10,-0.42
+USD,Fondo de fondos,Deuda,2020-11,6.19
+USD,Fondo de fondos,Deuda,2020-12,2.29
+USD,Fondo de fondos,Deuda,2021-01,-0.6
+USD,Fondo de fondos,Deuda,2021-02,-0.12
+USD,Fondo de fondos,Deuda,2021-03,-0.3
+USD,Fondo de fondos,Deuda,2021-04,1.99
+USD,Fondo de fondos,Deuda,2021-05,0.48
+USD,Fondo de fondos,Deuda,2021-06,0.72
+USD,Fondo de fondos,Deuda,2021-07,0.34
+USD,Fondo de fondos,Deuda,2021-08,0.48
+USD,Fondo de fondos,Deuda,2021-09,-2.12
+USD,Fondo de fondos,Deuda,2021-10,0.79
+USD,Fondo de fondos,Deuda,2021-11,-1.15
+USD,Fondo de fondos,Deuda,2021-12,1.13
+USD,Fondo de fondos,Deuda,2022-01,-2.79
+USD,Fondo de fondos,Deuda,2022-02,-2.02
+USD,Fondo de fondos,Deuda,2022-03,0.04
+USD,Fondo de fondos,Deuda,2022-04,-3.99
+USD,Fondo de fondos,Deuda,2022-05,-0.55
+USD,Fondo de fondos,Deuda,2022-06,-5.33
+USD,Fondo de fondos,Deuda,2022-07,3.1
+USD,Fondo de fondos,Deuda,2022-08,-1.68
+USD,Fondo de fondos,Deuda,2022-09,-5.8
+USD,Fondo de fondos,Deuda,2022-10,1.64
+USD,Fondo de fondos,Deuda,2022-11,3.66
+USD,Fondo de fondos,Deuda,2022-12,-0.92
+USD,Fondo de fondos,Deuda,2023-01,3.26
+USD,Fondo de fondos,Deuda,2023-02,-2.22
+USD,Fondo de fondos,Deuda,2023-03,0.6
+USD,Fondo de fondos,Deuda,2023-04,0.2
+USD,Fondo de fondos,Deuda,2023-05,-0.83
+USD,Fondo de fondos,Deuda,2023-06,1.21
+USD,Fondo de fondos,Deuda,2023-07,1.16
+USD,Fondo de fondos,Deuda,2023-08,-1.33
+USD,Fondo de fondos,Deuda,2023-09,-2.89
+USD,Fondo de fondos,Deuda,2023-10,-2.06
+USD,Fondo de fondos,Deuda,2023-11,4.26
+USD,Fondo de fondos,Deuda,2023-12,2.84
+USD,Fondo de fondos,Deuda,2024-01,-0.16
+USD,Fondo de fondos,Deuda,2024-02,0.73
+USD,Fondo de fondos,Deuda,2024-03,0.88
+USD,Fondo de fondos,Deuda,2024-04,-1.95
+USD,Fondo de fondos,Deuda,2024-05,0.692752766
+USD,Fondo de fondos,Deuda,2024-06,0.692752766
+USD,Fondo de fondos,Deuda,2024-07,0.69
+USD,Fondo de fondos,Deuda,2024-08,1.09
+USD,Fondo de fondos,Deuda,2024-09,0.85
+USD,Fondo de fondos,Deuda,2024-10,-1.76
+USD,Fondo de fondos,Deuda,2024-11,0.31
+USD,Fondo de fondos,Deuda,2024-12,-1.33
+USD,Fondo de fondos,Deuda,2025-01,0.67
+USD,Fondo de fondos,Deuda,2025-02,-0.17
+USD,Fondo de fondos,Deuda,2025-03,-1.31
+USD,Fondo de fondos,Deuda,2025-04,-0.42
+USD,Fondo de fondos,Deuda,2025-05,1.88
+USD,Fondo de fondos,Deuda,2025-06,1.52
+USD,Fondo de fondos,Deuda,2025-07,0.38
+USD,Fondo de fondos,Deuda,2025-08,0.68
+USD,Mixtos,Deuda,2020-08,1.81
+USD,Mixtos,Deuda,2020-09,-2.42
+USD,Mixtos,Deuda,2020-10,-0.66
+USD,Mixtos,Deuda,2020-11,4.82
+USD,Mixtos,Deuda,2020-12,2.63
+USD,Mixtos,Deuda,2021-01,0.42
+USD,Mixtos,Deuda,2021-02,2.64
+USD,Mixtos,Deuda,2021-03,-3.24
+USD,Mixtos,Deuda,2021-04,-3.96
+USD,Mixtos,Deuda,2021-05,1.53
+USD,Mixtos,Deuda,2021-06,-4.94
+USD,Mixtos,Deuda,2021-07,-4.05
+USD,Mixtos,Deuda,2021-08,-1.39
+USD,Mixtos,Deuda,2021-09,0.67
+USD,Mixtos,Deuda,2021-10,8.08
+USD,Mixtos,Deuda,2021-11,-0.85
+USD,Mixtos,Deuda,2021-12,1.45
+USD,Mixtos,Deuda,2022-01,5.16
+USD,Mixtos,Deuda,2022-02,1.37
+USD,Mixtos,Deuda,2022-03,2.81
+USD,Mixtos,Deuda,2022-04,-6.52
+USD,Mixtos,Deuda,2022-05,-1.98
+USD,Mixtos,Deuda,2022-06,-6.11
+USD,Mixtos,Deuda,2022-07,0.1
+USD,Mixtos,Deuda,2022-08,0.01
+USD,Mixtos,Deuda,2022-09,-0.96
+USD,Mixtos,Deuda,2022-10,3.59
+USD,Mixtos,Deuda,2022-11,4.356392202
+USD,Mixtos,Deuda,2022-12,-2.24
+USD,Mixtos,Deuda,2023-01,1.55
+USD,Mixtos,Deuda,2023-02,-1.04
+USD,Mixtos,Deuda,2023-03,0.4
+USD,Mixtos,Deuda,2023-04,-0.61
+USD,Mixtos,Deuda,2023-05,-1.43
+USD,Mixtos,Deuda,2023-06,2.6
+USD,Mixtos,Deuda,2023-07,3.06
+USD,Mixtos,Deuda,2023-08,-1.47
+USD,Mixtos,Deuda,2023-09,-2.46
+USD,Mixtos,Deuda,2023-10,-2.22
+USD,Mixtos,Deuda,2023-11,1.61
+USD,Mixtos,Deuda,2023-12,7.89
+USD,Mixtos,Deuda,2024-01,0.26
+USD,Mixtos,Deuda,2024-02,2.38
+USD,Mixtos,Deuda,2024-03,0.91
+USD,Mixtos,Deuda,2024-04,0.02
+USD,Mixtos,Deuda,2024-05,-0.3908942869
+USD,Mixtos,Deuda,2024-06,-0.3908942869
+USD,Mixtos,Deuda,2024-07,0.57
+USD,Mixtos,Deuda,2024-08,-1.7
+USD,Mixtos,Deuda,2024-09,1.77
+USD,Mixtos,Deuda,2024-10,-0.41
+USD,Mixtos,Deuda,2024-11,-1.2
+USD,Mixtos,Deuda,2024-12,-1.01
+USD,Mixtos,Deuda,2025-01,0.15
+USD,Mixtos,Deuda,2025-02,0.04
+USD,Mixtos,Deuda,2025-03,2.24
+USD,Mixtos,Deuda,2025-04,-0.6
+USD,Mixtos,Deuda,2025-05,1.13
+USD,Mixtos,Deuda,2025-06,2.15
+USD,Mixtos,Deuda,2025-07,-0.13
+USD,Mixtos,Deuda,2025-08,1.32

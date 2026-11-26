@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-25
+# Fecha de extracción: 2026-11-20
 """Panel balanceado: desempeño ajustado al riesgo y un modelo de tres X.
 Inferencia agrupada por fondo/serie y mes; asociación, no causalidad.
 """
@@ -12,6 +12,11 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from matplotlib.colors import SymLogNorm
+from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
+from matplotlib.ticker import FuncFormatter
 import statsmodels.formula.api as smf
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
@@ -20,7 +25,8 @@ FORMULA='rent_mes ~ vol12 + var_tc + rent_lag1 + C(tipo) + C(moneda)'
 
 def guardar(d,n):d.to_csv(S/(n+'.csv'),index=False,float_format='%.10g')
 def figura(fig,n):
-    fig.tight_layout();fig.savefig(S/(n+'.png'),dpi=160,bbox_inches='tight');plt.close(fig)
+    # Las figuras usan diseño restringido (layout='constrained'); aquí solo se guardan.
+    fig.savefig(S/(n+'.png'),dpi=300,bbox_inches='tight');plt.close(fig)
 
 def estimar(d,nombre):
     ajuste=smf.ols(FORMULA,data=d).fit()
@@ -30,6 +36,147 @@ def estimar(d,nombre):
     conf=robusto.conf_int()
     t=pd.DataFrame({'modelo':nombre,'variable':ajuste.model.exog_names,'coeficiente':robusto.params,'error_estandar':robusto.bse,'p_valor':robusto.pvalues,'ic95_inf':conf[:,0],'ic95_sup':conf[:,1],'n':int(ajuste.nobs),'r2':ajuste.rsquared,'fondos_series':d.id_fondo_serie.nunique(),'meses':d.mes.nunique(),'inferencia_valida':np.isfinite(robusto.bse)&(robusto.bse>0)})
     return ajuste,t
+
+# ---------------------------------------------------------------------------
+# Figuras del artículo. Cada una muestra información que no está en las tablas:
+# las series individuales, sus trayectorias mensuales o la variación mensual que
+# identifica el coeficiente cambiario. Ninguna recalcula ni altera resultados.
+# ---------------------------------------------------------------------------
+COLORES={'Acciones':'#0072B2','Mixtos':'#D55E00','Fondo de fondos':'#CC79A7','Deuda':'#E69F00','Flexibles':'#009E73'}
+MARCAS={'Acciones':'o','Mixtos':'v','Fondo de fondos':'D','Deuda':'s','Flexibles':'^'}
+ORDEN=list(COLORES)
+TITULO_MONEDA={'PEN':'Fondos en soles (PEN)','USD':'Fondos en dólares (USD)'}
+MESES=['ene','feb','mar','abr','may','jun','jul','ago','set','oct','nov','dic']
+
+def numero(v,_=None):
+    """Rótulo de eje con coma decimal y signo menos tipográfico."""
+    return f'{v:g}'.replace('.',',').replace('-','−')
+
+def estilo():
+    # Times New Roman o su sustituto métrico; en Colab se usa DejaVu Serif si faltan ambas.
+    # Las figuras miden 6,3 pulgadas de ancho, el ancho de texto del artículo, para
+    # insertarse sin reducción y conservar letras de 8,5 a 9,5 puntos.
+    plt.rcParams.update({'font.family':'serif','font.serif':['Liberation Serif','Times New Roman','DejaVu Serif'],
+        'font.size':9,'axes.spines.top':False,'axes.spines.right':False,'axes.grid':True,'grid.alpha':.25,
+        'grid.linewidth':.5,'axes.linewidth':.7})
+
+def leyenda_tipos(fig,forma='marca',lugar='outside lower center'):
+    if forma=='marca':mangos=[Line2D([],[],marker=MARCAS[t],color=COLORES[t],ls='',ms=6,label=t) for t in ORDEN]
+    elif forma=='linea':mangos=[Line2D([],[],color=COLORES[t],lw=2,label=t) for t in ORDEN]
+    else:mangos=[Patch(color=COLORES[t],label=t) for t in ORDEN]
+    fig.legend(handles=mangos,loc=lugar,ncol=5,frameon=False,columnspacing=1.3,handletextpad=.5,handlelength=1.8)
+
+def figura_riesgo_rentabilidad(f):
+    """Figura 1. Riesgo y rentabilidad anualizados de cada serie. Se señalan las dos
+    razones de Sharpe extremas, que corresponden a series de volatilidad muy baja."""
+    extremos=f.loc[[f.sharpe_anualizado.idxmax(),f.sharpe_anualizado.idxmin()]]
+    fig,axs=plt.subplots(1,2,figsize=(6.3,3.25),sharey=True,layout='constrained')
+    for ax,mon in zip(axs,['PEN','USD']):
+        # Fondo de fondos, el grupo más numeroso, se dibuja primero para no tapar a los demás.
+        for t in ['Fondo de fondos','Deuda','Acciones','Mixtos','Flexibles']:
+            g=f[f.moneda.eq(mon)&f.tipo.eq(t)]
+            ax.scatter(100*g.vol_anualizada,100*g.rent_anualizada,s=24,marker=MARCAS[t],color=COLORES[t],alpha=.85,edgecolor='white',linewidth=.4)
+        for k,(_,r) in enumerate(extremos[extremos.moneda.eq(mon)].iterrows()):
+            arriba=r.sharpe_anualizado>0
+            ax.annotate('Sharpe '+f'{r.sharpe_anualizado:.2f}'.replace('.',',').replace('-','−'),(100*r.vol_anualizada,100*r.rent_anualizada),
+                xytext=(14,12 if arriba else -16),textcoords='offset points',fontsize=8.5,
+                arrowprops=dict(arrowstyle='-',lw=.6,color='#444'))
+        ax.set_xscale('log');ax.axhline(0,color='#555',lw=.8)
+        ax.set_xticks([.5,1,2,5,10,20]);ax.set_xticklabels(['0,5','1','2','5','10','20']);ax.minorticks_off()
+        ax.set_title(TITULO_MONEDA[mon],fontsize=9.5);ax.set_xlabel('Volatilidad anualizada (%, escala logarítmica)')
+    axs[0].set_ylabel('Rentabilidad anualizada (%)');axs[0].yaxis.set_major_formatter(FuncFormatter(numero))
+    leyenda_tipos(fig,'marca');figura(fig,'figura1_riesgo_rentabilidad')
+
+def figura_indice_riqueza(mensual):
+    """Figura 2. Índice de riqueza (julio de 2020 = 100) y caída desde el máximo de una
+    cartera equiponderada de las series de cada tipo, rebalanceada cada mes."""
+    filas=[]
+    for (mon,t),g in mensual.sort_values('mes').groupby(['moneda','tipo']):
+        indice=100*np.cumprod(1+g.rent_mes.to_numpy())
+        maximo=np.maximum.accumulate(np.r_[100.,indice])[1:]
+        filas.append(pd.DataFrame({'mes':g.mes.to_numpy(),'tipo':t,'moneda':mon,'rent_promedio':g.rent_mes.to_numpy(),
+            'indice':indice,'caida_desde_maximo':indice/maximo-1}))
+    riqueza=pd.concat(filas,ignore_index=True);guardar(riqueza,'tabla23_indice_riqueza')
+    fig,axs=plt.subplots(2,2,figsize=(6.3,4.4),sharex=True,sharey='row',gridspec_kw={'height_ratios':[2.1,1]},layout='constrained')
+    for j,mon in enumerate(['PEN','USD']):
+        for t in ORDEN:
+            g=riqueza[riqueza.moneda.eq(mon)&riqueza.tipo.eq(t)]
+            fechas=pd.to_datetime(g.mes+'-01')+pd.offsets.MonthEnd(0)
+            fechas=pd.DatetimeIndex([fechas.iloc[0]-pd.offsets.MonthEnd(1)]).append(pd.DatetimeIndex(fechas))
+            w=np.r_[100.,g.indice.to_numpy()];c=100*np.r_[0.,g.caida_desde_maximo.to_numpy()]
+            axs[0,j].plot(fechas,w,color=COLORES[t],lw=1.4)
+            axs[1,j].plot(fechas,c,color=COLORES[t],lw=1);axs[1,j].fill_between(fechas,c,0,color=COLORES[t],alpha=.06)
+        axs[0,j].axhline(100,color='#555',lw=.7);axs[1,j].axhline(0,color='#555',lw=.7)
+        axs[0,j].set_title(TITULO_MONEDA[mon],fontsize=9.5)
+    axs[0,0].set_ylabel('Índice (julio de 2020 = 100)');axs[1,0].set_ylabel('Caída desde\nel máximo (%)')
+    for ax in axs.ravel():ax.yaxis.set_major_formatter(FuncFormatter(numero))
+    axs[1,0].xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+    leyenda_tipos(fig,'linea');figura(fig,'figura2_indice_riqueza')
+
+def figura_sharpe_ordenado(f):
+    """Figura 3. Razón de Sharpe de cada serie, ordenada de mayor a menor por moneda."""
+    n=f.groupby('moneda').size()
+    fig,axs=plt.subplots(1,2,figsize=(6.3,3.1),sharey=True,gridspec_kw={'width_ratios':[n['PEN'],n['USD']]},layout='constrained')
+    for ax,mon in zip(axs,['PEN','USD']):
+        g=f[f.moneda.eq(mon)].sort_values('sharpe_anualizado',ascending=False).reset_index(drop=True)
+        ax.bar(np.arange(len(g)),g.sharpe_anualizado,color=[COLORES[t] for t in g.tipo],width=.82)
+        ax.axhline(0,color='#555',lw=.7);ax.set_xticks([]);ax.set_xlim(-.8,len(g)-.2);ax.grid(axis='x',alpha=0)
+        ax.set_title(f'{TITULO_MONEDA[mon]}, {len(g)} series',fontsize=9.5)
+    axs[0].set_ylabel('Razón de Sharpe anualizada');axs[0].yaxis.set_major_formatter(FuncFormatter(numero))
+    fig.supxlabel('Series ordenadas de mayor a menor razón de Sharpe',fontsize=9)
+    leyenda_tipos(fig,'barra','outside upper center');figura(fig,'figura3_sharpe_ordenado')
+
+def figura_diferencias_mensuales(dif,cc):
+    """Figura 4. Diferencias mensuales del exceso mediano de cada tipo frente a Deuda.
+    Muestra la trayectoria que resume la Tabla 14 sin repetir sus medias ni valores p;
+    en negrita, los contrastes significativos con la corrección de Holm."""
+    filas=[(r.moneda,r.tipo,r.p_holm) for r in cc.itertuples()]
+    meses=sorted(dif.mes.unique())
+    Z=np.vstack([dif[dif.moneda.eq(m)&dif.tipo.eq(t)].set_index('mes').diferencia_exceso_pp.reindex(meses).to_numpy() for m,t,_ in filas])
+    lim=float(np.ceil(np.nanmax(np.abs(Z))))
+    fig,ax=plt.subplots(figsize=(6.3,2.75),layout='constrained')
+    im=ax.imshow(Z,aspect='auto',cmap='RdBu',norm=SymLogNorm(linthresh=.25,linscale=.7,vmin=-lim,vmax=lim),interpolation='nearest')
+    ax.set_yticks(range(len(filas)));ax.set_yticklabels([f'{t} ({m})' for m,t,_ in filas])
+    for etiqueta,(_,_,p) in zip(ax.get_yticklabels(),filas):
+        if pd.notna(p) and p<.05:etiqueta.set_fontweight('bold')
+    pos=[i for i,m in enumerate(meses) if m.endswith('-01')];ax.set_xticks(pos);ax.set_xticklabels([meses[i][:4] for i in pos])
+    ax.grid(False)
+    for borde in ax.spines.values():borde.set_visible(False)
+    barra=fig.colorbar(im,ax=ax,orientation='horizontal',fraction=.08,pad=.04,aspect=45)
+    marcas=[-lim,-1,-.25,0,.25,1,lim];barra.set_ticks(marcas);barra.set_ticklabels([numero(v) for v in marcas])
+    barra.set_label('Diferencia mensual frente a Deuda (puntos porcentuales; escala logarítmica simétrica)',fontsize=8.5);barra.outline.set_visible(False)
+    figura(fig,'figura4_diferencias_deuda')
+
+def figura_regresion_parcial(df,ajuste,principal):
+    """Figura 5. Residuos parciales de la variación cambiaria (residuo más su componente
+    estimado), promediados por mes. Con el panel balanceado y el tipo de cambio común
+    a todas las series de un mes, la pendiente de los 61 puntos es igual al coeficiente.
+    Se rotulan el mes de mayor depreciación y los tres de menor rentabilidad parcial."""
+    b=ajuste.params['var_tc']
+    parcial=df[['mes','var_tc']].assign(parcial=ajuste.resid.to_numpy()+b*df.var_tc.to_numpy())
+    if parcial.groupby('mes').var_tc.nunique().max()!=1:raise RuntimeError('La variación cambiaria debe ser común dentro de cada mes.')
+    m=parcial.groupby('mes').agg(var_tc=('var_tc','first'),rent_parcial_media=('parcial','mean'),series=('parcial','size')).reset_index()
+    pendiente,intercepto=np.polyfit(m.var_tc,m.rent_parcial_media,1)
+    if not np.isclose(pendiente,b,rtol=1e-8,atol=1e-12):raise RuntimeError('La pendiente mensual no reproduce el coeficiente cambiario.')
+    guardar(m,'tabla25_regresion_parcial_mensual')
+    ic=principal.set_index('variable').loc['var_tc']
+    X=100*m.var_tc;Y=100*m.rent_parcial_media;xs=np.linspace(X.min()-.3,X.max()+.3,50);xb,yb=X.mean(),Y.mean()
+    fig,ax=plt.subplots(figsize=(6.3,3.3),layout='constrained')
+    ax.fill_between(xs,yb+ic.ic95_inf*(xs-xb),yb+ic.ic95_sup*(xs-xb),color='#1F3A5F',alpha=.10,lw=0)
+    ax.plot(xs,100*intercepto+b*xs,color='#1F3A5F',lw=1.6)
+    ax.scatter(X,Y,s=20,color='#1F3A5F',alpha=.75,edgecolor='white',linewidth=.4)
+    bajos=list(Y.sort_values().index[:3])
+    # El mes más bajo se rotula a la izquierda y los otros dos a la derecha, escalonados;
+    # el de mayor depreciación, a la izquierda para no salir del área del gráfico.
+    rotulos=[(X.idxmax(),(-6,5),'right')]+[(i,d,h) for i,(d,h) in zip(bajos,[((-6,-4),'right'),((6,-5),'left'),((6,4),'left')])]
+    for i,desplazamiento,lado in rotulos:
+        anio,mes=m.mes[i].split('-');ax.annotate(f'{MESES[int(mes)-1]} {anio}',(X[i],Y[i]),xytext=desplazamiento,textcoords='offset points',fontsize=8.5,
+            ha=lado,va='center',bbox=dict(boxstyle='round,pad=.15',fc='white',ec='none',alpha=.85))
+    ax.axhline(0,color='#555',lw=.6);ax.axvline(0,color='#555',lw=.6)
+    ax.set_xlabel('Variación mensual del tipo de cambio (%; positivo = depreciación del sol)')
+    ax.set_ylabel('Rentabilidad parcial media (pp)')
+    ax.xaxis.set_major_formatter(FuncFormatter(numero));ax.yaxis.set_major_formatter(FuncFormatter(numero))
+    figura(fig,'figura5_regresion_parcial')
 
 # ---------------------------------------------------------------------------
 # Auditoría financiera y análisis complementario adecuados al panel mensual
@@ -114,7 +261,7 @@ def complementos(d, df, f):
     # No equivale a un test del Sharpe ni a una comparación causal.
     agregado=d.dropna(subset=['exceso']).groupby(['mes','tipo','moneda']).exceso.agg(['median','size']).reset_index()
     agregado=agregado[agregado['size']>=3]
-    contrastes=[]; sharpe_contrastes=[]
+    contrastes=[]; sharpe_contrastes=[]; diferencias=[]
     rng=np.random.default_rng(501)
     for moneda,h in agregado.groupby('moneda'):
         piv=h.pivot(index='mes',columns='tipo',values='median')
@@ -125,6 +272,8 @@ def complementos(d, df, f):
             bloques=np.cumsum(np.r_[True,np.diff(periods)!=1]); bloques_validos=[s.iloc[np.flatnonzero(bloques==k)] for k in np.unique(bloques)]
             z=max(bloques_validos,key=len)
             if len(z)<12:continue
+            # Trayectoria mensual del contraste, publicada en tabla24 y dibujada en la figura 4.
+            diferencias.append(pd.DataFrame({'moneda':moneda,'tipo':tipo,'referencia':'Deuda','mes':z.index,'diferencia_exceso_pp':100*z.to_numpy()}))
             modelo=sm.OLS(z.to_numpy(),np.ones((len(z),1))).fit(cov_type='HAC',cov_kwds={'maxlags':3,'use_correction':True},use_t=True)
             # Remuestreo pareado circular por bloques de tres meses: preserva
             # la dependencia contemporánea de ambos tipos y parcialmente la temporal.
@@ -145,6 +294,8 @@ def complementos(d, df, f):
     if valid.any():cc.loc[valid,'p_holm']=multipletests(cc.loc[valid,'p_valor'],method='holm')[1]
     guardar(cc,'tabla14_contrastes_tipo')
     guardar(pd.DataFrame(sharpe_contrastes),'tabla19_sharpe_contraste_exploratorio')
+    dif=pd.concat(diferencias,ignore_index=True) if diferencias else pd.DataFrame(columns=['moneda','tipo','referencia','mes','diferencia_exceso_pp'])
+    guardar(dif,'tabla24_diferencias_mensuales_deuda')
     # Comparación ajustada al riesgo: distribución del Sharpe entre unidades,
     # se preservan grupos pequeños como descriptivos y se informa el tamaño.
     sharpe=f.groupby(['tipo','moneda']).sharpe_anualizado.agg(n='count',mediana='median',q25=lambda x:x.quantile(.25),q75=lambda x:x.quantile(.75)).reset_index()
@@ -162,18 +313,8 @@ def complementos(d, df, f):
     ff=pd.DataFrame(out,columns=['tipo','moneda','id_fondo_serie','n_meses','rent_anualizada','vol_anualizada','sharpe_anualizado'])
     guardar(ff.groupby(['tipo','moneda']).agg(unidades=('id_fondo_serie','nunique'),rent_mediana=('rent_anualizada','median'),vol_mediana=('vol_anualizada','median'),sharpe_mediana=('sharpe_anualizado','median')).reset_index(),'tabla17_desempeno_sensibilidad')
     cob=pd.DataFrame([{'muestra':'panel','filas':len(d),'series':d.id_fondo_serie.nunique(),'meses':d.mes.nunique()},{'muestra':'MCO completo','filas':len(df),'series':df.id_fondo_serie.nunique(),'meses':df.mes.nunique()},{'muestra':'sin ventanas de salto','filas':len(alt),'series':alt.id_fondo_serie.nunique(),'meses':alt.mes.nunique()},{'muestra':'sin ventanas de todas las alertas','filas':len(alt2),'series':alt2.id_fondo_serie.nunique(),'meses':alt2.mes.nunique()}]);guardar(cob,'tabla18_muestras')
-    # Figuras complementarias con escalas robustas; no recortar puntos ni ejes
-    # para esconder extremos. Los extremos se muestran separadamente en tabla 9.
-    fig,axs=plt.subplots(1,2,figsize=(11,5),sharey=True)
-    for ax,mon in zip(axs,['PEN','USD']):
-        q=sharpe[sharpe.moneda.eq(mon)&sharpe.n.gt(0)].sort_values('mediana')
-        ax.errorbar(q.mediana,q.tipo,xerr=[q.mediana-q.q25,q.q75-q.mediana],fmt='o',capsize=3,color='#315c80');ax.axvline(0,color='gray',lw=1);ax.set(title=mon,xlabel='Sharpe: mediana e intervalo intercuartílico')
-    figura(fig,'figura5_distribucion_sharpe')
-    fig,ax=plt.subplots(figsize=(9,5));sub=cc.dropna(subset=['ic95_inf_pp','ic95_sup_pp'])
-    if not sub.empty:
-        ax.errorbar(sub.diferencia_media_pp,sub.tipo+' | '+sub.moneda,xerr=[sub.diferencia_media_pp-sub.ic95_inf_pp,sub.ic95_sup_pp-sub.diferencia_media_pp],fmt='o',capsize=3,color='#315c80');ax.axvline(0,color='gray',lw=1)
-    else:ax.text(.5,.5,'Sin contrastes estimables con los criterios establecidos',transform=ax.transAxes,ha='center')
-    ax.set(title='Diferencia de exceso mensual mediano frente a deuda',xlabel='Puntos porcentuales; IC95% HAC sin ajuste de multiplicidad');figura(fig,'figura6_contrastes_tipo')
+    # Figura 4: trayectoria mensual de cada contraste; sus medias y valores p quedan en la tabla 14.
+    if not dif.empty:figura_diferencias_mensuales(dif,cc)
     print('\nAUDITORÍA FINANCIERA: alertas',int(a.alerta.sum()),'; saltos >=50%:',int(a.salto_50pct.sum()))
     print(cob.to_string(index=False));print(cc.to_string(index=False))
 
@@ -250,28 +391,12 @@ def main():
     resid['mes_num']=pd.PeriodIndex(resid.mes,freq='M').asi8
     g=resid.groupby('id_fondo_serie');resid['rezago']=g.residuo.shift();resid.loc[resid.mes_num-g.mes_num.shift()!=1,'rezago']=np.nan
     guardar(pd.DataFrame([{'n':len(df),'fondos_series':df.id_fondo_serie.nunique(),'meses':df.mes.nunique(),'corr_residuos_lag1':resid[['residuo','rezago']].corr().iloc[0,1],'advertencia':'Correlación descriptiva; errores agrupados, no prueba causal.'}]),'tabla7_diagnosticos')
-    plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'axes.grid':True,'grid.alpha':.2})
-    fig,axs=plt.subplots(1,2,figsize=(11,4),sharey=True)
-    for ax,mon in zip(axs,['PEN','USD']):
-        for tipo,gg in f[f.moneda.eq(mon)].groupby('tipo'):ax.scatter(gg.vol_anualizada*100,gg.rent_anualizada*100,label=tipo,s=18,alpha=.6)
-        ax.set(title=mon,xlabel='Volatilidad anualizada (%)',ylabel='Rentabilidad anualizada (%)')
-        ax.set_xscale('symlog',linthresh=1);ax.set_yscale('symlog',linthresh=5)
-        if ax.has_data():ax.legend(fontsize=7,loc='best')
-    figura(fig,'figura1_riesgo_rentabilidad')
-    fig,axs=plt.subplots(1,2,figsize=(11,4),sharey=True)
-    for ax,mon in zip(axs,['PEN','USD']):
-        a=resumen[resumen.moneda.eq(mon)].sort_values('sharpe_mediana');ax.barh(a.tipo,a.sharpe_mediana,color='#315c80');ax.set(title=mon,xlabel='Mediana del Sharpe anualizado')
-    figura(fig,'figura2_sharpe_por_tipo')
+    estilo()
+    figura_riesgo_rentabilidad(f)
     mensual=d.groupby(['mes','tipo','moneda']).rent_mes.mean().reset_index();guardar(mensual,'tabla8_rentabilidades_mensuales')
-    fig,axs=plt.subplots(2,1,figsize=(11,7),sharex=True)
-    for ax,mon in zip(axs,['PEN','USD']):
-        for tipo,g in mensual[mensual.moneda.eq(mon)].groupby('tipo'):
-            ax.plot(pd.to_datetime(g.mes+'-01'),100*g.rent_mes,label=tipo,lw=1)
-        ax.set(title=mon,ylabel='Rentabilidad mensual (%)');ax.legend(fontsize=7,ncol=3)
-    figura(fig,'figura3_rentabilidad_mensual')
-    fig,ax=plt.subplots(figsize=(7,4));x=principal[principal.variable.isin(['vol12','var_tc','rent_lag1'])].dropna(subset=['ic95_inf','ic95_sup'])
-    if not x.empty:ax.errorbar(x.coeficiente,x.variable,xerr=[x.coeficiente-x.ic95_inf,x.ic95_sup-x.coeficiente],fmt='o',color='#315c80',capsize=4)
-    ax.axvline(0,color='gray',lw=1);ax.set(xlabel='Coeficiente e intervalo de confianza al 95 %',title='Modelo principal: tres factores');figura(fig,'figura4_coeficientes')
+    figura_indice_riqueza(mensual)
+    figura_sharpe_ordenado(f)
+    figura_regresion_parcial(df,inicial,principal)
     complementos(d,df,f)
     print(resumen.to_string(index=False));print(principal.to_string(index=False))
     with (RAIZ/'log_ejecucion.txt').open('a',encoding='utf-8') as ar:ar.write(f'{datetime.now(timezone(timedelta(hours=-5))):%Y-%m-%d %H:%M:%S} | 04_analisis | {len(df)} filas; tablas y figuras guardadas\n')
