@@ -1,7 +1,7 @@
 # Autora: Amy Pamela Guadalupe Cordova
 # Código de matrícula: 2024200501G
 # Tema 79: Fondos mutuos en el Perú: rentabilidad y riesgo por tipo de fondo
-# Fecha de extracción: 2026-11-20
+# Fecha de extracción: 2026-11-26
 """Panel balanceado: desempeño ajustado al riesgo y un modelo de tres X.
 Inferencia agrupada por fondo/serie y mes; asociación, no causalidad.
 """

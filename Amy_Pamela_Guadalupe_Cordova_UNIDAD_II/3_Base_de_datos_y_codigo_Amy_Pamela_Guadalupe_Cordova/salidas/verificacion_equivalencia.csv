@@ -22,6 +22,9 @@ salidas/tabla1_metricas_por_fondo_serie.csv,66,66,True,True,528,528,1
 salidas/tabla20_cobertura_tipos_observados.csv,14,14,True,True,140,140,1
 salidas/tabla21_desempeno_observado_contextual.csv,245,245,True,True,2205,2205,1
 salidas/tabla22_desempeno_sin_winsorizar.csv,66,66,True,True,462,462,1
+salidas/tabla23_indice_riqueza.csv,610,610,True,True,3660,3660,1
+salidas/tabla24_diferencias_mensuales_deuda.csv,366,366,True,True,1830,1830,1
+salidas/tabla25_regresion_parcial_mensual.csv,61,61,True,True,244,244,1
 salidas/tabla2_riesgo_rentabilidad_por_tipo.csv,10,10,True,True,70,70,1
 salidas/tabla3_modelo_principal.csv,9,9,True,True,108,108,1
 salidas/tabla4_modelo_inicial_mco.csv,9,9,True,True,36,36,1

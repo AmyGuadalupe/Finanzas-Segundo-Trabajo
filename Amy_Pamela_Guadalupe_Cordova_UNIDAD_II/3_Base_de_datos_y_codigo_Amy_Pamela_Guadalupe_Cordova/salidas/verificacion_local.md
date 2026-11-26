@@ -1,14 +1,14 @@
 # Verificación computacional local
 
-Fecha de ejecución: 2026-11-20T07:58:20-05:00
+Fecha de ejecución: 2026-11-26T12:43:10-05:00
 
-Prueba 1. Integridad: 128 hashes originales conformes.
+Prueba 1. Integridad: 130 hashes originales conformes.
 
 Prueba 2. Reparseo de JSON de BCRP y PDF AAF entregados.
 
 Prueba 3. Reestimación de limpieza, variables calculadas, tablas y modelos desde los crudos.
 
-Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 figuras regeneradas; no se exige identidad de bytes PNG entre plataformas.
+Prueba 4. 42 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 5 figuras regeneradas; no se exige identidad de bytes PNG entre plataformas.
 
 - datos_crudos/datos_crudos_2024200501G_aaf.csv: 186552/186552 celdas (100.00%); tipos y claves conformes.
 
@@ -55,6 +55,12 @@ Prueba 4. 39 CSV equivalentes al umbral del 95%; mínimo observado 100.00%. 6 fi
 - salidas/tabla21_desempeno_observado_contextual.csv: 2205/2205 celdas (100.00%); tipos y claves conformes.
 
 - salidas/tabla22_desempeno_sin_winsorizar.csv: 462/462 celdas (100.00%); tipos y claves conformes.
+
+- salidas/tabla23_indice_riqueza.csv: 3660/3660 celdas (100.00%); tipos y claves conformes.
+
+- salidas/tabla24_diferencias_mensuales_deuda.csv: 1830/1830 celdas (100.00%); tipos y claves conformes.
+
+- salidas/tabla25_regresion_parcial_mensual.csv: 244/244 celdas (100.00%); tipos y claves conformes.
 
 - salidas/tabla2_riesgo_rentabilidad_por_tipo.csv: 70/70 celdas (100.00%); tipos y claves conformes.
 
